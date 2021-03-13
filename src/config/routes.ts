@@ -1,5 +1,6 @@
-import Dashboard from 'components/pages/dashboard'
+import Home from 'components/pages/home'
 import PageNotFound from 'components/pages/page-not-found'
+import Roadmap from 'components/pages/roadmap'
 
 export interface IRoutes {
   [key: string]: IRoute
@@ -12,15 +13,20 @@ export interface IRoute {
 }
 
 const routes: IRoutes = {
-  index: {
-    component: Dashboard,
-    name: 'index',
+  home: {
+    component: Home,
+    name: 'home',
     path: '/',
   },
   pageNotFound: {
     component: PageNotFound,
     name: 'Page not found',
-    path: '/page-not-fund',
+    path: '/page-not-found',
+  },
+  roadmap: {
+    component: Roadmap,
+    name: 'Roadmap',
+    path: '/roadmap/:id',
   },
 }
 
