@@ -3,7 +3,7 @@ import React from 'react'
 import RoadmapMilestone from 'types/RoadmapMilestone'
 
 import Milestone from './../milestone'
-import { SWrapper } from './styles'
+import { SMilestoneWrapper, SWrapper } from './styles'
 
 interface ParamTypes {
   roadmapMilestone?: RoadmapMilestone
@@ -17,7 +17,11 @@ const Board = ({ roadmapMilestone }: ParamTypes): JSX.Element => {
   return (
     <SWrapper>
       {roadmapMilestone?.milestones.map(milestone => {
-        return <Milestone key={milestone.name} milestone={milestone} />
+        return (
+          <SMilestoneWrapper key={milestone.name}>
+            <Milestone milestone={milestone} />
+          </SMilestoneWrapper>
+        )
       })}
     </SWrapper>
   )

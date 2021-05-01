@@ -10,12 +10,10 @@ interface MainProps {
 
 const Main = ({ children }: MainProps): JSX.Element => {
   return (
-    <>
-      <SWrapper>
-        <HeaderBar />
-        {children}
-      </SWrapper>
-    </>
+    <SWrapper>
+      <HeaderBar />
+      {children}
+    </SWrapper>
   )
 }
 

@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
 export const SBoardWrapper = styled.div`
-  padding: 16px 16px 0 16px;
+  display: flex;
+  margin: 16px;
   overflow-x: auto;
+  overflow-y: hidden;
 `
 
 export const SWrapper = styled.div`
   display: flex;
   flex: 1;
+  height: calc(100% - 32px);
+  overflow-y: hidden;
 `
