@@ -1,13 +1,19 @@
 import React from 'react'
+
+import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter } from 'react-router-dom'
 
 import RouterSwitch from 'components/organisms/router-switch'
 
+const queryClient = new QueryClient()
+
 const App = (): JSX.Element => {
   return (
-    <BrowserRouter>
-      <RouterSwitch />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <RouterSwitch />
+      </BrowserRouter>
+    </QueryClientProvider>
   )
 }
 

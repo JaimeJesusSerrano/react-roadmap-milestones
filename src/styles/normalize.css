@@ -17,11 +17,17 @@ html {
    ========================================================================== */
 
 /**
+ * Set body height
  * Remove the margin in all browsers.
  */
 
 body {
+  height: 100vh;
   margin: 0;
+}
+
+#root {
+  height: inherit;
 }
 
 /**
