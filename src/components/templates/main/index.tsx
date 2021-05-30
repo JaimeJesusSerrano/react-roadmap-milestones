@@ -2,7 +2,7 @@ import React from 'react'
 
 import HeaderBar from 'components/organisms/header-bar'
 
-import { SWrapper } from './styles'
+import * as S from './styled'
 
 interface MainProps {
   children: React.ReactNode
@@ -10,10 +10,10 @@ interface MainProps {
 
 const Main = ({ children }: MainProps): JSX.Element => {
   return (
-    <SWrapper>
+    <S.Wrapper>
       <HeaderBar />
       {children}
-    </SWrapper>
+    </S.Wrapper>
   )
 }
 

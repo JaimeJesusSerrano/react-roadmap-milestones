@@ -2,14 +2,14 @@ import React from 'react'
 
 import GoalType from 'types/Goal'
 
-import { SWrapper } from './styles'
+import * as S from './styled'
 
 interface ParamTypes {
   goal?: GoalType
 }
 
 const Goal = ({ goal }: ParamTypes): JSX.Element => {
-  return <SWrapper>{goal?.name}</SWrapper>
+  return <S.Wrapper>{goal?.name}</S.Wrapper>
 }
 
 export default Goal

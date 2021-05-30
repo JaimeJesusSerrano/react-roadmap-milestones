@@ -7,7 +7,7 @@ import MainTemplate from 'components/templates/main'
 import { getById as getByIdRoadmapMillestone } from 'services/roadmap-milestone'
 
 import Board from './components/board'
-import { SBoardWrapper, SWrapper } from './styles'
+import * as S from './styled'
 
 interface ParamTypes {
   id: string
@@ -20,11 +20,11 @@ const Roadmap = (): JSX.Element => {
 
   return (
     <MainTemplate>
-      <SWrapper>
-        <SBoardWrapper>
+      <S.Wrapper>
+        <S.BoardWrapper>
           <Board roadmapMilestone={data} />
-        </SBoardWrapper>
-      </SWrapper>
+        </S.BoardWrapper>
+      </S.Wrapper>
     </MainTemplate>
   )
 }
