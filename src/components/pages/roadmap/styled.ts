@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const BoardWrapper = styled.div`
   display: flex;
-  margin: 16px;
   overflow-x: auto;
   overflow-y: hidden;
+  width: 100%;
 `
 
 export const Wrapper = styled.div`

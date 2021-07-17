@@ -16,17 +16,21 @@ export const Header = styled.div`
   min-height: 96px;
 `
 
+interface HeaderTitleParamTypes {
+  isExpanded: boolean
+}
 export const HeaderTitle = styled.div`
   color: white;
   display: flex;
   font-size: 22px;
   justify-content: center;
   margin: 0px 24px 0px 24px;
-  user-select: none;
+  overflow: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'hidden')};
+  text-overflow: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'ellipsis')};
+  white-space: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'nowrap')};
 `
 
 export const HeaderTitleWrapper = styled.div`
-  color: white;
   display: flex;
   font-size: 22px;
   justify-content: center;
@@ -42,10 +46,8 @@ export const MilestonesWrapper = styled.div`
 interface WrapperParamTypes {
   isExpanded: boolean
 }
-
 export const Wrapper = styled.div`
-  background-color: rgba(28, 51, 63, 0.7);
-  border-radius: 16px;
+  background-color: rgb(22, 70, 100);
   height: min-content;
   overflow: auto;
   width: ${(props: WrapperParamTypes) => (props.isExpanded ? '320px' : '120px')};

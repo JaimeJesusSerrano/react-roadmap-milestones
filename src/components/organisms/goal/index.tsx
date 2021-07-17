@@ -9,7 +9,13 @@ interface ParamTypes {
 }
 
 const Goal = ({ goal }: ParamTypes): JSX.Element => {
-  return <S.Wrapper>{goal?.name}</S.Wrapper>
+  return (
+    <S.Wrapper>
+      <S.Status>{goal?.status}</S.Status>
+      <S.Title>{goal?.name}</S.Title>
+      <S.Description>{goal?.description}</S.Description>
+    </S.Wrapper>
+  )
 }
 
 export default Goal

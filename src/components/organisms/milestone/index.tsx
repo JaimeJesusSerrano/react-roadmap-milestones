@@ -8,17 +8,19 @@ import Goal from './../goal'
 import * as S from './styled'
 
 interface ParamTypes {
-  milestone?: MilestoneType
+  data?: MilestoneType
 }
-
-const Milestone = ({ milestone }: ParamTypes): JSX.Element => {
+const Milestone = ({ data }: ParamTypes): JSX.Element => {
+  console.log(data)
   const [isExpanded, setIsExpanded] = useState(true)
 
   return (
     <S.Wrapper isExpanded={isExpanded}>
       <S.Header onClick={() => setIsExpanded(!isExpanded)}>
         <S.HeaderTitleWrapper>
-          <S.HeaderTitle>{milestone?.name}</S.HeaderTitle>
+          <S.HeaderTitle isExpanded={isExpanded} title={data?.name}>
+            {data?.name}
+          </S.HeaderTitle>
           <S.ExpandIconWrapper>
             {isExpanded ? <ChevronUpSvg title='Collapse milestone' /> : <ChevronDownSvg title='Expand milestone' />}
           </S.ExpandIconWrapper>
@@ -26,7 +28,7 @@ const Milestone = ({ milestone }: ParamTypes): JSX.Element => {
       </S.Header>
       {isExpanded && (
         <S.MilestonesWrapper>
-          {milestone?.goals.map(goal => {
+          {data?.goals.map(goal => {
             return <Goal key={goal.name} goal={goal} />
           })}
         </S.MilestonesWrapper>
