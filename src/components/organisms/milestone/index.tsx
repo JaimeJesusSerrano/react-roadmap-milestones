@@ -11,7 +11,6 @@ interface ParamTypes {
   data?: MilestoneType
 }
 const Milestone = ({ data }: ParamTypes): JSX.Element => {
-  console.log(data)
   const [isExpanded, setIsExpanded] = useState(true)
 
   return (
