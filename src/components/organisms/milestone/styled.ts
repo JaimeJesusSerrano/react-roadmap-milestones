@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
 export const ExpandIconWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  height: 100%;
   position: absolute;
   right: 0px;
 
   svg {
-    color: rgb(133, 208, 255);
+    color: ${props => props.theme.palette.blue.light};
   }
 `
 
@@ -47,7 +50,7 @@ interface WrapperParamTypes {
   isExpanded: boolean
 }
 export const Wrapper = styled.div`
-  background-color: rgb(22, 70, 100);
+  background-color: ${props => props.theme.palette.milestone.background};
   height: min-content;
   overflow: auto;
   width: ${(props: WrapperParamTypes) => (props.isExpanded ? '320px' : '120px')};

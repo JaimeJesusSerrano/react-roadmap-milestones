@@ -1,3 +1,3 @@
-import colors from 'assets/colors'
+import palette from 'assets/palette'
 
-export default { colors }
+export default { palette }

@@ -1,17 +1,51 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import ChevronDownSvg from 'assets/svg/chevron-down'
-import ChevronUpSvg from 'assets/svg/chevron-up'
+import PlusSvg from 'assets/svg/plus'
+import SubstractSvg from 'assets/svg/substract'
+import GoalType from 'types/Goal'
+import GoalsByCategoryType from 'types/GoalsByCategory'
 import MilestoneType from 'types/Milestone'
 
+import Category from './../category'
 import Goal from './../goal'
 import * as S from './styled'
 
 interface ParamTypes {
   data?: MilestoneType
 }
+
 const Milestone = ({ data }: ParamTypes): JSX.Element => {
+  const [goalsByCategories, setGoalsByCategories] = useState<GoalsByCategoryType>({})
+  const [goalsWithoutCategory, setGoalsWithoutCategory] = useState<GoalType[]>([])
   const [isExpanded, setIsExpanded] = useState(true)
+
+  const groupGoalsByCategory = (goals: GoalType[]) => {
+    return goals.reduce((previousGoalsByCategories: GoalsByCategoryType, currentGoal: GoalType) => {
+      const currentCategoryName = currentGoal.category?.name || 'undefined'
+      // Group initialization
+      if (!previousGoalsByCategories[currentCategoryName]) {
+        previousGoalsByCategories[currentCategoryName] = []
+      }
+
+      // Grouping
+      previousGoalsByCategories[currentCategoryName].push(currentGoal)
+
+      return previousGoalsByCategories
+    }, {})
+  }
+
+  useEffect(() => {
+    if (!data || !data.goals) {
+      setGoalsByCategories({})
+      setGoalsWithoutCategory([])
+      return
+    }
+
+    const newCategories = groupGoalsByCategory(data.goals)
+    setGoalsWithoutCategory(newCategories['undefined'] || [])
+    delete newCategories['undefined']
+    setGoalsByCategories(newCategories)
+  }, [data?.goals])
 
   return (
     <S.Wrapper isExpanded={isExpanded}>
@@ -21,13 +55,17 @@ const Milestone = ({ data }: ParamTypes): JSX.Element => {
             {data?.name}
           </S.HeaderTitle>
           <S.ExpandIconWrapper>
-            {isExpanded ? <ChevronUpSvg title='Collapse milestone' /> : <ChevronDownSvg title='Expand milestone' />}
+            {isExpanded ? <SubstractSvg title='Collapse milestone' /> : <PlusSvg title='Expand milestone' />}
           </S.ExpandIconWrapper>
         </S.HeaderTitleWrapper>
       </S.Header>
+
       {isExpanded && (
         <S.MilestonesWrapper>
-          {data?.goals.map(goal => {
+          {Object.values(goalsByCategories).map(goals => {
+            return <Category goals={goals} key={goals[0].category?.name} name={goals[0].category?.name} />
+          })}
+          {goalsWithoutCategory.map(goal => {
             return <Goal key={goal.name} goal={goal} />
           })}
         </S.MilestonesWrapper>

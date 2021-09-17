@@ -8,6 +8,7 @@ import * as S from './styled'
 interface ParamTypes {
   data?: RoadmapMilestoneType
 }
+
 const RoadmapMilestone = ({ data }: ParamTypes): JSX.Element => {
   if (!data?.milestones) {
     return <></>
