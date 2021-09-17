@@ -2,13 +2,9 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "plugin:import/errors",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+    "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
+    "plugin:@typescript-eslint/recommended", // Uses the recommended rules from @typescript-eslint/eslint-plugin
+    "plugin:prettier/recommended" // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   "env": {
     "browser": true,
@@ -19,45 +15,18 @@
   },
   "parserOptions": {
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true // // Allows for the parsing of JSX
     },
-    "ecmaVersion": 2020,
-    "sourceType": "module",
+    "ecmaVersion": 2020, // Allows for the parsing of modern ECMAScript features
+    "sourceType": "module", // Allows for the use of imports
     "project": "./tsconfig.json"
   },
   "settings": {
     "react": {
-      "version": "detect"
+      "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
     }
   },
-  "plugins": ["react", "react-hooks", "jest", "@typescript-eslint", "prettier"],
   "rules": {
-    "arrow-parens": 0,
-    "comma-dangle": 0,
-    "function-paren-newline": 0,
-    "implicit-arrow-linebreak": 0,
-    "import/no-extraneous-dependencies": 0,
-    "import/no-unresolved": 0,
-    "import/prefer-default-export": 0,
-    "indent": 0,
-    "jsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/no-static-element-interactions": 0,
-    "jsx-quotes": ["error", "prefer-single"],
-    "max-len": 0,
-    "no-confusing-arrow": 0,
-    "object-curly-newline": 0,
-    "operator-linebreak": 0,
-    "prettier/prettier": ["error", { "endOfLine": "auto" }],
-    "react/button-has-type": 0,
-    "react/forbid-prop-types": 0,
-    "react/jsx-curly-newline": 0,
-    "react/jsx-one-expression-per-line": 0,
-    "react/jsx-props-no-spreading": 0,
-    "react/jsx-wrap-multilines": 0,
-    "react/no-array-index-key": 0,
-    "react/react-in-jsx-scope": 0,
-    "semi": ["error", "never"],
-    "spaced-comment": 0,
-    "template-curly-spacing": ["off"]
+    "prettier/prettier": ["error", { "endOfLine": "auto" }]
   }
 }
