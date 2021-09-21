@@ -30,6 +30,7 @@ export const Title = styled.div`
 export const Wrapper = styled.div`
   background: rgb(16, 50, 70);
   border-radius: 8px;
+  cursor: pointer;
   margin-bottom: 8px;
   margin-top: 8px;
 
