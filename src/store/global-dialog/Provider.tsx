@@ -11,7 +11,7 @@ const Provider = ({ children }: Props): JSX.Element => {
   const [state, dispatch] = useReducer((state: StateType, action: ActionType) => {
     switch (action.type) {
       case SET_OPEN_ACTION:
-        return { ...state, isOpen: action.value.isOpen }
+        return { ...state, Component: action.value.Component, isOpen: action.value.isOpen }
       case SET_STATE_ACTION:
         return action.value
       default:
