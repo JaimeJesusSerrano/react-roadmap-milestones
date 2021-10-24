@@ -18,6 +18,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-03-13'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-04-04'),
           },
           {
             category: {
@@ -32,6 +33,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-04-04'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-04-04'),
           },
           {
             category: {
@@ -46,6 +48,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-04-04'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-04-18'),
           },
           {
             category: {
@@ -60,6 +63,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-04-18'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-05-01'),
           },
           {
             category: {
@@ -74,6 +78,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-04-18'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-05-01'),
           },
           {
             category: {
@@ -88,6 +93,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-04-18'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-05-01'),
           },
           {
             category: {
@@ -102,6 +108,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-04-18'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-05-01'),
           },
           {
             category: {
@@ -117,6 +124,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-05-01'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-05-09'),
           },
         ],
         finishDate: new Date('2021-05-09'),
@@ -139,6 +147,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-05-09'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-05-10'),
           },
           {
             category: {
@@ -153,6 +162,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-05-09'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-05-09'),
           },
           {
             category: {
@@ -167,6 +177,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-05-10'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-07-17'),
           },
           {
             category: {
@@ -181,6 +192,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-05-10'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-07-17'),
           },
           {
             category: {
@@ -195,6 +207,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-05-09'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-07-20'),
           },
           {
             category: {
@@ -209,6 +222,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-07-20'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-07-24'),
           },
         ],
         finishDate: new Date('2021-07-24'),
@@ -231,6 +245,7 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-08-29'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-09-17'),
           },
           {
             category: {
@@ -240,23 +255,27 @@ export const getById = (id: number): RoadmapMilestone => {
             description: 'Add dialog component when click in a goal to expand it information',
             images: [],
             name: 'Goal v3',
+            finishDate: new Date('2021-10-24'),
             shortDescription: '',
             startDate: new Date('2021-09-17'),
             status: 'Ongoing',
             tags: [],
+            updateDate: new Date('2021-10-24'),
           },
           {
             category: {
               name: 'Components',
               color: 'green',
             },
-            description: 'Create dialog component',
+            description: 'Create global dialog component',
             images: [],
             name: 'Dialog v1',
+            finishDate: new Date('2021-10-23'),
             shortDescription: '',
-            startDate: new Date('2021-09-21'),
-            status: 'Ongoing',
+            startDate: new Date('2021-09-17'),
+            status: 'Done',
             tags: [],
+            updateDate: new Date('2021-10-23'),
           },
           {
             category: {
@@ -264,7 +283,7 @@ export const getById = (id: number): RoadmapMilestone => {
               color: 'red',
             },
             description:
-              'Add context infrastructure to store data and it data can be shared between whole application components.',
+              'Add context infrastructure to store data and it data can be shared between whole application components',
             finishDate: new Date('2021-09-21'),
             images: [],
             name: 'Context to store data',
@@ -272,6 +291,21 @@ export const getById = (id: number): RoadmapMilestone => {
             startDate: new Date('2021-09-17'),
             status: 'Done',
             tags: [],
+            updateDate: new Date('2021-09-21'),
+          },
+          {
+            category: {
+              name: 'Infrastructure',
+              color: 'red',
+            },
+            description: 'Create default font styles with rem',
+            images: [],
+            name: 'Create default font styles with rem',
+            shortDescription: '',
+            startDate: new Date('2021-10-24'),
+            status: 'Done',
+            tags: [],
+            updateDate: new Date('2021-10-24'),
           },
         ],
         name: '0.3',

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 
+import GoalDialogDetail from 'components/organisms/goal-dialog-detail'
 import { context as globalDialogContext, SET_OPEN_ACTION as GLOBAL_DIALOG_SET_OPEN_ACTION } from 'store/global-dialog'
 import GoalType from 'types/Goal'
 
@@ -14,7 +15,14 @@ const Goal = ({ goal }: ParamTypes): JSX.Element => {
   const { dispatch } = globalState
 
   return (
-    <S.Wrapper onClick={() => dispatch({ type: GLOBAL_DIALOG_SET_OPEN_ACTION, value: { isOpen: true } })}>
+    <S.Wrapper
+      onClick={() =>
+        dispatch({
+          type: GLOBAL_DIALOG_SET_OPEN_ACTION,
+          value: { isOpen: true, Component: <GoalDialogDetail goal={goal} /> },
+        })
+      }
+    >
       <S.Status>{goal?.status}</S.Status>
       <S.Title>{goal?.name}</S.Title>
       <S.Description>{goal?.description}</S.Description>
