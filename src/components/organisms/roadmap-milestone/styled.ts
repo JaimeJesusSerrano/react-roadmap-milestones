@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SMilestoneWrapper = styled.div`
+export const MilestoneWrapper = styled.div`
   display: flex;
   margin-right: 8px;
   min-width: min-content;
@@ -11,7 +11,10 @@ export const SMilestoneWrapper = styled.div`
   }
 `
 
-export const SWrapper = styled.div`
+export const Wrapper = styled.div`
+  background-color: rgb(13, 38, 53);
   display: flex;
   overflow-y: hidden;
+  padding: 16px;
+  width: 100%;
 `

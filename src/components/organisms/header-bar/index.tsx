@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { SWrapper } from './styles'
+import * as S from './styled'
 
 const HeaderBar = (): JSX.Element => {
-  return <SWrapper>Header bar</SWrapper>
+  return <S.Wrapper>Header bar</S.Wrapper>
 }
 
 export default HeaderBar

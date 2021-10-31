@@ -9,9 +9,10 @@ interface Goal {
   images: string[]
   name: string
   shortDescription: string
-  startDate: Date
+  startDate?: Date
   status: string
   tags: Tag[]
+  updateDate: Date
 }
 
 export default Goal

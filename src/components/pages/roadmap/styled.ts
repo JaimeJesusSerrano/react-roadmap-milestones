@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-export const SBoardWrapper = styled.div`
+export const BoardWrapper = styled.div`
   display: flex;
-  margin: 16px;
   overflow-x: auto;
   overflow-y: hidden;
+  width: 100%;
 `
 
-export const SWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex: 1;
   height: calc(100% - 32px);
