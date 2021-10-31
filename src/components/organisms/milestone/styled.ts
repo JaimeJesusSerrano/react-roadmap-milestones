@@ -25,7 +25,7 @@ interface HeaderTitleParamTypes {
 export const HeaderTitle = styled.div`
   color: white;
   display: flex;
-  font-size: 22px;
+  font-size: 1.5rem;
   justify-content: center;
   margin: 0px 24px 0px 24px;
   overflow: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'hidden')};
@@ -35,7 +35,6 @@ export const HeaderTitle = styled.div`
 
 export const HeaderTitleWrapper = styled.div`
   display: flex;
-  font-size: 22px;
   justify-content: center;
   margin: 16px;
   position: relative;

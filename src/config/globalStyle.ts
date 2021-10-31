@@ -25,6 +25,11 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     src: url('/fonts/roboto/Roboto-Bold.ttf') format('truetype');
   }
+
+  * {
+    font-family: 'Roboto';
+    font-size: 16px;
+  }
 `
 
 export default GlobalStyle

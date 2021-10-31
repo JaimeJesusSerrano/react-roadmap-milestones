@@ -21,18 +21,16 @@ export const LeftHeader = styled.div`
 
 export const LeftHeaderSubtitle = styled.div`
   color: rgb(186, 193, 197);
-  font-family: 'Roboto';
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.8rem;
   line-height: 20px;
   letter-spacing: 1px;
 `
 
 export const LeftHeaderTitle = styled.div`
   color: white;
-  font-family: 'Roboto';
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.9rem;
   line-height: 20px;
   letter-spacing: 1px;
 `

@@ -6,7 +6,7 @@ export const Body = styled.div`
 
 export const BodyDescription = styled.div`
   color: white;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 1.5rem;
@@ -15,7 +15,7 @@ export const BodyDescription = styled.div`
 
 export const BodyDescriptionDate = styled.div`
   color: rgb(186, 193, 197);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 1rem;
@@ -85,7 +85,7 @@ export const Title = styled.div`
   padding: 16px 24px;
 
   font-weight: 400;
-  font-size: 1.375rem;
+  font-size: 1.4rem;
   line-height: 2rem;
   color: rgb(255, 255, 255);
 `

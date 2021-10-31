@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Description = styled.div`
   color: rgb(232, 235, 237);
+  font-size: 0.9rem;
   font-weight: 400;
   padding: 16px;
 `
@@ -12,6 +13,7 @@ export const Status = styled.div`
   border-radius: 8px 8px 0 0;
   color: rgb(232, 235, 237);
   display: flex;
+  font-size: 0.9rem;
   font-weight: 700;
   height: 24px;
   padding-left: 32px;
