@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 
 // import CloseSvg from 'assets/svg/close'
+import defaultGoalImageJpg from 'assets/jpg/default-goal-image.jpg'
 import { context as globalDialogContext, SET_OPEN_ACTION as GLOBAL_DIALOG_SET_OPEN_ACTION } from 'store/global-dialog'
 import GoalType from 'types/Goal'
 
@@ -23,7 +24,9 @@ const GoalDialogDetail = ({ goal }: ParamTypes): JSX.Element => {
       <S.Title>Title</S.Title>
       <S.Body>
         <S.ImageAndDescriptionWrapper>
-          <S.ImageWrapper>{goal?.images?.[0] ? <img src='' /> : 'Default image'}</S.ImageWrapper>
+          <S.ImageWrapper>
+            <img loading='lazy' src={goal?.images?.[0] || defaultGoalImageJpg} />
+          </S.ImageWrapper>
           <S.BodyDescriptionWrapper>
             <S.BodyDescriptionDate>Updated {goal?.updateDate?.toLocaleString() || ''}</S.BodyDescriptionDate>
             <S.BodyDescription>{goal?.description}</S.BodyDescription>
