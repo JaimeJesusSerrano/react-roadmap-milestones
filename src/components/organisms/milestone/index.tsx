@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
-import PlusSvg from 'assets/svg/plus'
-import SubstractSvg from 'assets/svg/substract'
 import GoalType from 'types/Goal'
 import GoalsByCategoryType from 'types/GoalsByCategory'
 import MilestoneType from 'types/Milestone'
 
-import Category from './../category'
-import Goal from './../goal'
-import * as S from './styled'
+import Render from './render'
 
 interface ParamTypes {
   data?: MilestoneType
@@ -17,9 +13,8 @@ interface ParamTypes {
 const Milestone = ({ data }: ParamTypes): JSX.Element => {
   const [goalsByCategories, setGoalsByCategories] = useState<GoalsByCategoryType>({})
   const [goalsWithoutCategory, setGoalsWithoutCategory] = useState<GoalType[]>([])
-  const [isExpanded, setIsExpanded] = useState(true)
 
-  const groupGoalsByCategory = (goals: GoalType[]) => {
+  const groupGoalsByCategory = useCallback((goals: GoalType[]) => {
     return goals.reduce((previousGoalsByCategories: GoalsByCategoryType, currentGoal: GoalType) => {
       const currentCategoryName = currentGoal.category?.name || 'undefined'
       // Group initialization
@@ -32,7 +27,7 @@ const Milestone = ({ data }: ParamTypes): JSX.Element => {
 
       return previousGoalsByCategories
     }, {})
-  }
+  }, [])
 
   useEffect(() => {
     if (!data || !data.goals) {
@@ -47,31 +42,11 @@ const Milestone = ({ data }: ParamTypes): JSX.Element => {
     setGoalsByCategories(newCategories)
   }, [data?.goals])
 
-  return (
-    <S.Wrapper isExpanded={isExpanded}>
-      <S.Header onClick={() => setIsExpanded(!isExpanded)}>
-        <S.HeaderTitleWrapper>
-          <S.HeaderTitle isExpanded={isExpanded} title={data?.name}>
-            {data?.name}
-          </S.HeaderTitle>
-          <S.ExpandIconWrapper>
-            {isExpanded ? <SubstractSvg title='Collapse milestone' /> : <PlusSvg title='Expand milestone' />}
-          </S.ExpandIconWrapper>
-        </S.HeaderTitleWrapper>
-      </S.Header>
+  if (!data) {
+    return <></>
+  }
 
-      {isExpanded && (
-        <S.MilestonesWrapper>
-          {Object.values(goalsByCategories).map(goals => {
-            return <Category goals={goals} key={goals[0].category?.name} name={goals[0].category?.name} />
-          })}
-          {goalsWithoutCategory.map(goal => {
-            return <Goal key={goal.name} goal={goal} />
-          })}
-        </S.MilestonesWrapper>
-      )}
-    </S.Wrapper>
-  )
+  return <Render goalsByCategories={goalsByCategories} goalsWithoutCategory={goalsWithoutCategory} milestone={data} />
 }
 
 export default Milestone
