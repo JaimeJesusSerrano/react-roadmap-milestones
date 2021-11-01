@@ -7,6 +7,16 @@ export const Description = styled.div`
   padding: 16px;
 `
 
+export const ImageWrapper = styled.div`
+  background-color: green;
+  height: 130px;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+`
+
 export const Status = styled.div`
   align-items: center;
   background: rgb(55, 133, 174);
