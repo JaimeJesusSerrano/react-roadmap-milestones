@@ -380,12 +380,14 @@ export const getById = (id: number): RoadmapMilestone => {
               color: 'red',
             },
             description: 'NodeJs version fixed',
+            finishDate: new Date('2021-11-09'),
             images: [],
-            name: 'To avoid several problems, we will establish a NodeJs version',
+            name: 'To avoid several problems when execute npm install, we will establish a NodeJs version',
             shortDescription: '',
-            status: 'Pending',
+            startDate: new Date('2021-11-09'),
+            status: 'Done',
             tags: [],
-            updateDate: new Date('2021-10-31'),
+            updateDate: new Date('2021-11-09'),
           },
         ],
         name: '0.4',
@@ -394,6 +396,19 @@ export const getById = (id: number): RoadmapMilestone => {
       },
       {
         goals: [
+          {
+            category: {
+              name: 'Components',
+              color: 'green',
+            },
+            description: 'Dialog v3. Responsive dialog',
+            images: [],
+            name: 'Dialog v3',
+            shortDescription: '',
+            status: 'Pending',
+            tags: [],
+            updateDate: new Date('2021-11-91'),
+          },
           {
             category: {
               name: 'Components',
