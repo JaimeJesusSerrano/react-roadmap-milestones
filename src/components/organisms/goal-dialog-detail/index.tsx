@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 
-// import CloseSvg from 'assets/svg/close'
+import CloseSvg from 'assets/svg/close'
 import defaultGoalImageJpg from 'assets/jpg/default-goal-image.jpg'
 import { context as globalDialogContext, SET_OPEN_ACTION as GLOBAL_DIALOG_SET_OPEN_ACTION } from 'store/global-dialog'
 import GoalType from 'types/Goal'
@@ -19,7 +19,9 @@ const GoalDialogDetail = ({ goal }: ParamTypes): JSX.Element => {
     <S.Wrapper>
       <S.Header>
         <S.Status>{goal?.status || ''}</S.Status>
-        <S.Close onClick={() => dispatch({ type: GLOBAL_DIALOG_SET_OPEN_ACTION, value: { isOpen: false } })}>X</S.Close>
+        <S.Close onClick={() => dispatch({ type: GLOBAL_DIALOG_SET_OPEN_ACTION, value: { isOpen: false } })}>
+          <CloseSvg />
+        </S.Close>
       </S.Header>
       <S.Title>Title</S.Title>
       <S.Body>
