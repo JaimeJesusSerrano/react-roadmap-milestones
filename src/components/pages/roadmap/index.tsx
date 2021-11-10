@@ -16,9 +16,7 @@ interface ParamTypes {
 const Roadmap = (): JSX.Element => {
   const { id } = useParams<ParamTypes>()
 
-  const { isLoading, isError, data, error } = useQuery('roadmapMilestoneData', () =>
-    getByIdRoadmapMillestone(parseInt(id))
-  )
+  const { data } = useQuery('roadmapMilestoneData', () => getByIdRoadmapMillestone(parseInt(id)))
 
   return (
     <MainTemplate>

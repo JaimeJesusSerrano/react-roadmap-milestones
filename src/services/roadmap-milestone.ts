@@ -1,6 +1,7 @@
 import RoadmapMilestone from 'types/RoadmapMilestone'
 
 export const getById = (id: number): RoadmapMilestone => {
+  console.log(`roadmap/${id}`)
   const roadmapMilestone: RoadmapMilestone = {
     milestones: [
       {
@@ -367,12 +368,14 @@ export const getById = (id: number): RoadmapMilestone => {
               color: 'red',
             },
             description: 'Create new scrollbar style and apply it in whole application',
+            finishDate: new Date('2021-11-10'),
             images: [],
             name: 'New scrollbar style',
             shortDescription: '',
-            status: 'Pending',
+            startDate: new Date('2021-11-10'),
+            status: 'Done',
             tags: [],
-            updateDate: new Date('2021-10-31'),
+            updateDate: new Date('2021-11-10'),
           },
           {
             category: {
@@ -394,11 +397,13 @@ export const getById = (id: number): RoadmapMilestone => {
               name: 'Infrastructure',
               color: 'red',
             },
-            description: 'Is necessary set the project licence to allow than other users use the component',
+            description: 'Is necessary set the project LICENSE to allow than other users use the component',
+            finishDate: new Date('2021-11-10'),
             images: [],
-            name: 'Create licence file',
+            name: 'Create LICENSE file',
             shortDescription: '',
-            status: 'Pending',
+            startDate: new Date('2021-11-10'),
+            status: 'Done',
             tags: [],
             updateDate: new Date('2021-11-10'),
           },
