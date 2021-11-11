@@ -18,7 +18,7 @@ const renderContext = (currentContext: ContextType) => {
   )
 }
 
-describe('globalDialogActions', () => {
+describe('Store > Global Dialog', () => {
   test('initial with dialog closed', () => {
     const context: ContextType = {
       // eslint-disable-next-line
