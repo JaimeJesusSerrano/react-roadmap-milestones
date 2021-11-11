@@ -24,7 +24,7 @@ const GoalDialogDetail = ({ goal }: ParamTypes): JSX.Element => {
           <CloseSvg title='Close' />
         </S.Close>
       </S.Header>
-      <S.Title>Title</S.Title>
+      <S.Title>{goal?.name}</S.Title>
       <S.Body>
         <S.ImageAndDescriptionWrapper>
           <S.ImageWrapper>
