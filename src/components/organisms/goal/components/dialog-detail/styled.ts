@@ -2,6 +2,10 @@ import styled from 'styled-components'
 
 export const Body = styled.div`
   display: flex;
+
+  @media ${props => props.theme.devices.laptopMax} {
+    flex-direction: column;
+  }
 `
 
 export const BodyDescription = styled.div`
@@ -26,7 +30,7 @@ export const BodyDescriptionWrapper = styled.div`
 `
 
 export const Category = styled.span`
-  color: white;
+  color: #ffffff;
 `
 
 export const CategoryTitle = styled.span`
@@ -59,6 +63,11 @@ export const ImageWrapper = styled.div`
   min-height: 294px;
   width: 500px;
 
+  @media ${props => props.theme.devices.laptopMax} {
+    min-height: 0;
+    width: 100%;
+  }
+
   img {
     height: 100%;
     width: 100%;
@@ -70,14 +79,23 @@ export const ImageAndDescriptionWrapper = styled.div`
   flex-direction: column;
   max-width: 500;
   width: 500px;
+
+  @media ${props => props.theme.devices.laptopMax} {
+    width: 100%;
+  }
 `
 
 export const Miscellaneous = styled.div`
   border-left: 1px solid #334752;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   max-width: 300px;
   width: 300px;
+
+  @media ${props => props.theme.devices.laptopMax} {
+    width: 100%;
+  }
 `
 
 export const Status = styled.div`
@@ -86,13 +104,11 @@ export const Status = styled.div`
 
 export const Title = styled.div`
   border-bottom: 1px solid #334752;
-  color: white;
-  padding: 16px 24px;
-
-  font-weight: 400;
+  color: #ffffff;
   font-size: 1.4rem;
+  font-weight: 400;
   line-height: 2rem;
-  color: rgb(255, 255, 255);
+  padding: 16px 24px;
 `
 
 export const Wrapper = styled.div`
@@ -101,4 +117,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
   max-width: 800px;
   width: 800px;
+
+  @media ${props => props.theme.devices.laptopMax} {
+    width: 100%;
+  }
 `
