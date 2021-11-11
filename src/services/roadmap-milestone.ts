@@ -1,4 +1,4 @@
-import RoadmapMilestone from 'types/RoadmapMilestone'
+import RoadmapMilestone from 'types/api/RoadmapMilestone'
 
 export const getById = (id: number): RoadmapMilestone => {
   console.log(`roadmap/${id}`)
@@ -421,6 +421,21 @@ export const getById = (id: number): RoadmapMilestone => {
             status: 'Done',
             tags: [],
             updateDate: new Date('2021-11-10'),
+          },
+          {
+            category: {
+              name: 'Infrastructure',
+              color: 'red',
+            },
+            description: 'We add store Global Dialog test to check its correct behaviour automatically',
+            finishDate: new Date('2021-11-11'),
+            images: [],
+            name: 'Add store test',
+            shortDescription: '',
+            startDate: new Date('2021-11-11'),
+            status: 'Done',
+            tags: [],
+            updateDate: new Date('2021-11-11'),
           },
         ],
         name: '0.4',

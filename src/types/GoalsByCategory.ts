@@ -1,4 +1,4 @@
-import Goal from './Goal'
+import Goal from 'types/api/Goal'
 
 interface GoalsByCategory {
   [key: string]: Goal[]

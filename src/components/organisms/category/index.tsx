@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import ChevronDownSvg from 'assets/svg/chevron-down'
 import ChevronUpSvg from 'assets/svg/chevron-up'
-import GoalType from 'types/Goal'
+import GoalType from 'types/api/Goal'
 
 import Goal from './../goal'
 import * as S from './styled'

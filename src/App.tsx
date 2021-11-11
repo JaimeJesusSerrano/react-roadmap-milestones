@@ -8,7 +8,7 @@ import RouterSwitch from 'components/application/router-switch'
 import GlobalDialog from 'components/organisms/global-dialog'
 import GlobalStyle from 'config/globalStyle'
 import theme from 'config/theme'
-import { Provider as GlobalDialogProvider } from 'store/global-dialog'
+import GlobalDialogProvider from 'store/global-dialog/Provider'
 
 const queryClient = new QueryClient()
 

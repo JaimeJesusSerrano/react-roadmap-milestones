@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 
 import PlusSvg from 'assets/svg/plus'
 import SubstractSvg from 'assets/svg/substract'
-import GoalType from 'types/Goal'
+import GoalType from 'types/api/Goal'
+import MilestoneType from 'types/api/Milestone'
 import GoalsByCategoryType from 'types/GoalsByCategory'
-import MilestoneType from 'types/Milestone'
 
 import Category from './../category'
 import Goal from './../goal'

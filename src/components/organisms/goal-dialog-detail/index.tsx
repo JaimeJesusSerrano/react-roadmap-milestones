@@ -2,8 +2,9 @@ import React, { useContext } from 'react'
 
 import CloseSvg from 'assets/svg/close'
 import defaultGoalImageJpg from 'assets/jpg/default-goal-image.jpg'
-import { context as globalDialogContext, SET_OPEN_ACTION as GLOBAL_DIALOG_SET_OPEN_ACTION } from 'store/global-dialog'
-import GoalType from 'types/Goal'
+import { context as globalDialogContext } from 'store/global-dialog'
+import { SET_OPEN as GLOBAL_DIALOG_SET_OPEN_ACTION } from 'store/global-dialog/actions'
+import GoalType from 'types/api/Goal'
 
 import * as S from './styled'
 
