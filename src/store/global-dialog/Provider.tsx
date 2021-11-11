@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react'
 
-import { context, initialState, SET_OPEN_ACTION, SET_STATE_ACTION } from './index'
+import { SET_OPEN, SET_STATE } from './actions'
+import { context, initialState } from './index'
 import { ActionType, StateType } from './types'
 
 interface Props {
@@ -10,9 +11,9 @@ interface Props {
 const Provider = ({ children }: Props): JSX.Element => {
   const [state, dispatch] = useReducer((state: StateType, action: ActionType) => {
     switch (action.type) {
-      case SET_OPEN_ACTION:
+      case SET_OPEN:
         return { ...state, Component: action.value.Component, isOpen: action.value.isOpen }
-      case SET_STATE_ACTION:
+      case SET_STATE:
         return action.value
       default:
         throw new Error()

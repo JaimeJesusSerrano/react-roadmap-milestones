@@ -1,6 +1,20 @@
-# Getting Started with Create React App
+# React Roadmap Milestones
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Description
+The React Roadmap Milestones component **Under construction** is a board with a lot of features, funcionalities or whatever where a user can see all of them divided by categories and milestones.
+
+Several examples than can help us to understand it:
+- **Cookbook**: maybe you what add recipes of diferrents categories and you what show it by milestones as timeline or book version.
+- **Video game**: where we can see the diferrents features (deployed, in development or to be develop) in several milestones as a timeline.
+- **Software project** like this component. Yes, use this component to explain the evolution of himself.
+- Defenitly **The evolution of any project or idea to be showed by milestones**.
+
+Currently this project show us a fake data where the own evolution of this component in versions.
+
+## Future ideas to be developed (suggestions are accepted)
+- Overwrite styles, to allow config your own CSS.
 
 ## Available Scripts
 
@@ -27,20 +41,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to start the project 
+Executing the next commands:
+- `npm ci` # To install dependencies
+- `npm start` # Previously described

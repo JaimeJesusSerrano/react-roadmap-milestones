@@ -3,7 +3,7 @@ import React from 'react'
 import { useQuery } from 'react-query'
 import { useParams } from 'react-router-dom'
 
-import RoadmapMilestone from 'components/organisms/roadmap-milestone'
+import RoadmapMilestone from 'components/molecules/roadmap-milestone'
 import MainTemplate from 'components/templates/main'
 import { getById as getByIdRoadmapMillestone } from 'services/roadmap-milestone'
 
@@ -16,9 +16,7 @@ interface ParamTypes {
 const Roadmap = (): JSX.Element => {
   const { id } = useParams<ParamTypes>()
 
-  const { isLoading, isError, data, error } = useQuery('roadmapMilestoneData', () =>
-    getByIdRoadmapMillestone(parseInt(id))
-  )
+  const { data } = useQuery('roadmapMilestoneData', () => getByIdRoadmapMillestone(id ? parseInt(id) : 1))
 
   return (
     <MainTemplate>

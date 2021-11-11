@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Milestone from 'components/organisms/milestone'
-import RoadmapMilestoneType from 'types/RoadmapMilestone'
+import Milestone from 'components/molecules/milestone'
+import RoadmapMilestoneType from 'types/api/RoadmapMilestone'
 
 import * as S from './styled'
 

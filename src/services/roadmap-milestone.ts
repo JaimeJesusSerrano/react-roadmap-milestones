@@ -1,6 +1,7 @@
-import RoadmapMilestone from 'types/RoadmapMilestone'
+import RoadmapMilestone from 'types/api/RoadmapMilestone'
 
 export const getById = (id: number): RoadmapMilestone => {
+  console.log(`roadmap/${id}`)
   const roadmapMilestone: RoadmapMilestone = {
     milestones: [
       {
@@ -367,32 +368,96 @@ export const getById = (id: number): RoadmapMilestone => {
               color: 'red',
             },
             description: 'Create new scrollbar style and apply it in whole application',
+            finishDate: new Date('2021-11-10'),
             images: [],
             name: 'New scrollbar style',
             shortDescription: '',
-            status: 'Pending',
+            startDate: new Date('2021-11-10'),
+            status: 'Done',
             tags: [],
-            updateDate: new Date('2021-10-31'),
+            updateDate: new Date('2021-11-10'),
           },
           {
             category: {
               name: 'Infrastructure',
               color: 'red',
             },
-            description: 'NodeJs version fixed',
+            description: 'To avoid several problems when execute npm install, we will establish a NodeJs version',
             finishDate: new Date('2021-11-09'),
             images: [],
-            name: 'To avoid several problems when execute npm install, we will establish a NodeJs version',
+            name: 'NodeJs version fixed',
             shortDescription: '',
             startDate: new Date('2021-11-09'),
             status: 'Done',
             tags: [],
             updateDate: new Date('2021-11-09'),
           },
+          {
+            category: {
+              name: 'Infrastructure',
+              color: 'red',
+            },
+            description: 'Is necessary set the project LICENSE to allow than other users use the component',
+            finishDate: new Date('2021-11-10'),
+            images: [],
+            name: 'Create LICENSE file',
+            shortDescription: '',
+            startDate: new Date('2021-11-10'),
+            status: 'Done',
+            tags: [],
+            updateDate: new Date('2021-11-10'),
+          },
+          {
+            category: {
+              name: 'Infrastructure',
+              color: 'red',
+            },
+            finishDate: new Date('2021-11-10'),
+            description: 'Create readme with instruction to use the Roadmap Milestone component',
+            images: [],
+            name: 'Readme',
+            shortDescription: '',
+            startDate: new Date('2021-11-10'),
+            status: 'Done',
+            tags: [],
+            updateDate: new Date('2021-11-10'),
+          },
+          {
+            category: {
+              name: 'Infrastructure',
+              color: 'red',
+            },
+            description: 'We add store Global Dialog test to check its correct behaviour automatically',
+            finishDate: new Date('2021-11-11'),
+            images: [],
+            name: 'Add store test',
+            shortDescription: '',
+            startDate: new Date('2021-11-11'),
+            status: 'Done',
+            tags: [],
+            updateDate: new Date('2021-11-11'),
+          },
+          {
+            category: {
+              name: 'Infrastructure',
+              color: 'red',
+            },
+            description:
+              'To improve the speed of application we will added a technical upgrade to load page in lazy mode also we will develop a Loader component to show the load',
+            finishDate: new Date('2021-11-11'),
+            images: [],
+            name: 'Lazy page import',
+            shortDescription: '',
+            startDate: new Date('2021-11-11'),
+            status: 'Done',
+            tags: [],
+            updateDate: new Date('2021-11-11'),
+          },
         ],
+        finishDate: new Date('2021-11-11'),
         name: '0.4',
         startDate: new Date('2021-10-31'),
-        status: 'Ongoing',
+        status: 'Done',
       },
       {
         goals: [
@@ -423,21 +488,41 @@ export const getById = (id: number): RoadmapMilestone => {
             tags: [],
             updateDate: new Date('2021-10-31'),
           },
+        ],
+        name: '0.5',
+        status: 'Pending',
+      },
+      {
+        goals: [
           {
             category: {
-              name: 'Infrastructure',
-              color: 'red',
+              name: 'Components',
+              color: 'green',
             },
-            description: 'Create readme with instruction to use the Roadmap Milestone component',
+            description: 'Goal v5. Add different colors to differentiate between completed and uncompleted goals',
             images: [],
-            name: 'Readme',
+            name: 'Goal v5',
             shortDescription: '',
             status: 'Pending',
             tags: [],
-            updateDate: new Date('2021-10-31'),
+            updateDate: new Date('2021-11-10'),
+          },
+          {
+            category: {
+              name: 'Components',
+              color: 'green',
+            },
+            description:
+              'Milestone v6. Add different colors to differentiate between completed and uncompleted milestones',
+            images: [],
+            name: 'Milestone v6',
+            shortDescription: '',
+            status: 'Pending',
+            tags: [],
+            updateDate: new Date('2021-11-10'),
           },
         ],
-        name: '0.5',
+        name: '0.6',
         status: 'Pending',
       },
     ],

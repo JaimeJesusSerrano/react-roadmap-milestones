@@ -1,3 +1,6 @@
 import palette from 'assets/palette'
 
-export default { palette }
+const theme = { palette }
+
+export type ThemeType = typeof theme
+export default theme

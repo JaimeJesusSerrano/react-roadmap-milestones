@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 
-import { context as globalDialogContext, SET_OPEN_ACTION as GLOBAL_DIALOG_SET_OPEN_ACTION } from 'store/global-dialog'
+import { context as globalDialogContext } from 'store/global-dialog'
+import { SET_OPEN as GLOBAL_DIALOG_SET_OPEN_ACTION } from 'store/global-dialog/actions'
 
 import * as S from './styled'
 
