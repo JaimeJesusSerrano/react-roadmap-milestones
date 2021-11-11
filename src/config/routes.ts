@@ -1,4 +1,4 @@
-import Home from 'components/pages/home'
+// import Home from 'components/pages/home'
 import PageNotFound from 'components/pages/page-not-found'
 import Roadmap from 'components/pages/roadmap'
 
@@ -14,7 +14,7 @@ export interface IRoute {
 
 const routes: IRoutes = {
   home: {
-    component: Home,
+    component: Roadmap,
     name: 'home',
     path: '/',
   },
