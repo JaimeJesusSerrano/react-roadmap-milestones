@@ -1,20 +1,21 @@
-import Home from 'components/pages/home'
-import PageNotFound from 'components/pages/page-not-found'
-import Roadmap from 'components/pages/roadmap'
+import { lazy } from 'react'
+
+const PageNotFound = lazy(() => import('components/pages/page-not-found'))
+const Roadmap = lazy(() => import('components/pages/roadmap'))
 
 export interface IRoutes {
   [key: string]: IRoute
 }
 
 export interface IRoute {
-  component: () => JSX.Element
+  component: React.LazyExoticComponent<() => JSX.Element>
   name: string
   path: string
 }
 
 const routes: IRoutes = {
   home: {
-    component: Home,
+    component: Roadmap,
     name: 'home',
     path: '/',
   },

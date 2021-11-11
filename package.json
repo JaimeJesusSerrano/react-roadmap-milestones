@@ -1,7 +1,10 @@
 {
-  "name": "roadmap-milestones",
-  "version": "0.3.0",
+  "name": "react-roadmap-milestones",
+  "version": "0.4.0",
   "private": true,
+  "engines": {
+    "node": ">= 16.0.0"
+  },
   "dependencies": {
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
@@ -18,10 +21,9 @@
     "web-vitals": "1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-scripts start",
+    "test": "react-scripts test --watchAll=false"
   },
   "eslintConfig": {
     "extends": [

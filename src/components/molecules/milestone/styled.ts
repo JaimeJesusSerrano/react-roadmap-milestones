@@ -45,6 +45,26 @@ export const MilestonesWrapper = styled.div`
   padding: 0 8px 8px 8px;
 `
 
+export const Status = styled.div`
+  border: 1px solid ${props => props.theme.palette.categoty.border};
+  border-radius: 8px;
+  color: rgb(186, 193, 197);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1px;
+  padding: 4px 8px 4px 8px;
+  text-transform: uppercase;
+  user-select: none;
+  width: fit-content;
+`
+
+export const StatusWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 0 16px 16px 16px;
+`
+
 interface WrapperParamTypes {
   isExpanded: boolean
 }

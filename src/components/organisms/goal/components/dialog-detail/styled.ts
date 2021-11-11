@@ -58,6 +58,11 @@ export const ImageWrapper = styled.div`
   justify-content: center;
   min-height: 294px;
   width: 500px;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
 `
 
 export const ImageAndDescriptionWrapper = styled.div`

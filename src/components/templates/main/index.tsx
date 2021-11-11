@@ -1,6 +1,6 @@
 import React from 'react'
 
-import HeaderBar from 'components/organisms/header-bar'
+import HeaderBar from 'components/molecules/header-bar'
 
 import * as S from './styled'
 

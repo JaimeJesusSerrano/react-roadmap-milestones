@@ -1,11 +1,14 @@
 import React from 'react'
 
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 
 import App from './App'
 
-test('renders learn react link', () => {
+test('Homepage', async () => {
   render(<App />)
-  const linkElement = screen.getByText(/Home/i)
-  expect(linkElement).toBeInTheDocument()
+
+  await waitFor(() => {
+    const linkElement = screen.getByText(/React Roadmap Milestones component under construction/i)
+    expect(linkElement).toBeInTheDocument()
+  })
 })

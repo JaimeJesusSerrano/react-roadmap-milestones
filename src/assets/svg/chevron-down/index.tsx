@@ -1,20 +1,22 @@
 import React from 'react'
 
-import * as S from 'assets/svg/styled'
+import SvgBase from 'assets/svg/SvgBase'
 
 /* eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any*/
 const Svg = (props: any): JSX.Element => (
-  <S.SvgBase
-    viewBox='0 0 24 24'
+  <SvgBase
     fill='none'
+    height='20px'
     stroke='currentColor'
     strokeLinecap='round'
     strokeLinejoin='round'
     strokeWidth='2'
+    viewBox='0 0 24 24'
+    width='20px'
+    {...props}
   >
-    {props.title && <title>{props.title}</title>}
     <polyline points='6 9 12 15 18 9'></polyline>
-  </S.SvgBase>
+  </SvgBase>
 )
 
 export default Svg
