@@ -437,10 +437,27 @@ export const getById = (id: number): RoadmapMilestone => {
             tags: [],
             updateDate: new Date('2021-11-11'),
           },
+          {
+            category: {
+              name: 'Infrastructure',
+              color: 'red',
+            },
+            description:
+              'To improve the speed of application we will added a technical upgrade to load page in lazy mode also we will develop a Loader component to show the load',
+            finishDate: new Date('2021-11-11'),
+            images: [],
+            name: 'Lazy page import',
+            shortDescription: '',
+            startDate: new Date('2021-11-11'),
+            status: 'Done',
+            tags: [],
+            updateDate: new Date('2021-11-11'),
+          },
         ],
+        finishDate: new Date('2021-11-11'),
         name: '0.4',
         startDate: new Date('2021-10-31'),
-        status: 'Ongoing',
+        status: 'Done',
       },
       {
         goals: [

@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 
 import defaultGoalImageJpg from 'assets/jpg/default-goal-image.jpg'
-import GoalDialogDetail from 'components/organisms/goal-dialog-detail'
 import { context as globalDialogContext } from 'store/global-dialog'
 import { SET_OPEN as GLOBAL_DIALOG_SET_OPEN_ACTION } from 'store/global-dialog/actions'
 import GoalType from 'types/api/Goal'
 
+import GoalDialogDetail from './components/dialog-detail'
 import * as S from './styled'
 
 interface ParamTypes {
