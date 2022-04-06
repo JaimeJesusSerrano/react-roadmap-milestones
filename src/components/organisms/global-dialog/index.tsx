@@ -7,11 +7,11 @@ import * as S from './styled'
 
 const GlobalDialog = (): JSX.Element => {
   const globalDialog = useContext(globalDialogContext)
-  const { dispatch } = globalDialog
+  const { dispatch: dispatchGlobalDialog } = globalDialog
 
   return (
     <S.Dialog
-      onClose={() => dispatch({ type: GLOBAL_DIALOG_SET_OPEN_ACTION, value: { isOpen: false } })}
+      onClose={() => dispatchGlobalDialog({ type: GLOBAL_DIALOG_SET_OPEN_ACTION, value: { isOpen: false } })}
       maxWidth={'lg'}
       open={globalDialog.state.isOpen}
     >

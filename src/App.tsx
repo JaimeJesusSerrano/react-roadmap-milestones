@@ -10,6 +10,7 @@ import GlobalDialog from 'components/organisms/global-dialog'
 import GlobalStyle from 'config/globalStyle'
 import theme from 'config/theme'
 import GlobalDialogProvider from 'store/global-dialog/Provider'
+import GlobalSettingsProvider from 'store/global-settings/Provider'
 
 const queryClient = new QueryClient()
 
@@ -18,14 +19,16 @@ const App = (): JSX.Element => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <QueryClientProvider client={queryClient}>
-        <GlobalDialogProvider>
-          <GlobalDialog />
-          <BrowserRouter>
-            <Suspense fallback={<ScreenLoader />}>
-              <RouterSwitch />
-            </Suspense>
-          </BrowserRouter>
-        </GlobalDialogProvider>
+        <GlobalSettingsProvider>
+          <GlobalDialogProvider>
+            <GlobalDialog />
+            <BrowserRouter>
+              <Suspense fallback={<ScreenLoader />}>
+                <RouterSwitch />
+              </Suspense>
+            </BrowserRouter>
+          </GlobalDialogProvider>
+        </GlobalSettingsProvider>
       </QueryClientProvider>
     </ThemeProvider>
   )
