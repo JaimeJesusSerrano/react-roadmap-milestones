@@ -8,9 +8,10 @@ import Render from './render'
 
 interface ParamTypes {
   data?: MilestoneType
+  isExpanded: boolean
 }
 
-const Milestone = ({ data }: ParamTypes): JSX.Element => {
+const Milestone = ({ data, isExpanded }: ParamTypes): JSX.Element => {
   const [goalsByCategories, setGoalsByCategories] = useState<GoalsByCategoryType>({})
   const [goalsWithoutCategory, setGoalsWithoutCategory] = useState<GoalType[]>([])
 
@@ -46,7 +47,14 @@ const Milestone = ({ data }: ParamTypes): JSX.Element => {
     return <></>
   }
 
-  return <Render goalsByCategories={goalsByCategories} goalsWithoutCategory={goalsWithoutCategory} milestone={data} />
+  return (
+    <Render
+      isExpanded={isExpanded}
+      goalsByCategories={goalsByCategories}
+      goalsWithoutCategory={goalsWithoutCategory}
+      milestone={data}
+    />
+  )
 }
 
 export default Milestone

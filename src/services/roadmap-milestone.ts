@@ -498,12 +498,13 @@ export const getById = (id: number): RoadmapMilestone => {
             },
             description:
               'Milestone v5. Hide completed milestones, add an option to collapse/expand them and select initial behaviour',
+            finishDate: new Date('2022-04-06'),
             images: [],
             name: 'Milestone v5',
             shortDescription: '',
-            status: 'Pending',
+            status: 'Done',
             tags: [],
-            updateDate: new Date('2021-10-31'),
+            updateDate: new Date('2022-04-06'),
           },
           {
             category: {
