@@ -18,12 +18,12 @@ const RoadmapMilestone = ({ data }: ParamTypes): JSX.Element => {
   const [milestones, setMilestones] = useState<MilestoneType[]>()
 
   useEffect(() => {
-    if (globalSettings.state.areShowingPreviousMilestones) {
+    if (globalSettings.state.showMilestonesFinished) {
       setMilestones(data?.milestones || [])
     } else {
-      setMilestones(data?.milestones.filter(milestone => milestone.status !== 'Done'))
+      setMilestones(data?.milestones.filter(milestone => !milestone.finishDate))
     }
-  }, [data, globalSettings.state.areShowingPreviousMilestones])
+  }, [data, globalSettings.state.showMilestonesFinished])
 
   if (!milestones?.length) {
     return <></>
@@ -38,7 +38,7 @@ const RoadmapMilestone = ({ data }: ParamTypes): JSX.Element => {
       {milestones.map(milestone => {
         return (
           <S.MilestoneWrapper key={milestone.name}>
-            <Milestone data={milestone} isExpanded={milestone.status === 'Done' ? false : true} />
+            <Milestone data={milestone} isExpanded={!milestone.finishDate} />
           </S.MilestoneWrapper>
         )
       })}

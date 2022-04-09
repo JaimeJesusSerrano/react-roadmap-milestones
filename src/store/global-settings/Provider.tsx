@@ -12,7 +12,7 @@ const Provider = ({ children }: Props): JSX.Element => {
   const [state, dispatch] = useReducer((state: StateType, action: ActionType) => {
     switch (action.type) {
       case SET_ARE_SHOWING_PREVIOUS_MILESTONES:
-        return { ...state, areShowingPreviousMilestones: action.value.areShowingPreviousMilestones }
+        return { ...state, showMilestonesFinished: action.value.showMilestonesFinished }
       case SET_STATE:
         return action.value
       default:

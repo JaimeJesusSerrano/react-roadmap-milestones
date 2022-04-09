@@ -7,9 +7,7 @@ import { ContextType } from './types'
 
 const ComponentToTest = () => {
   const globalDialog = useContext(context)
-  return (
-    <>{globalDialog.state.areShowingPreviousMilestones ? 'Show previuous milestones' : 'Hide previous milestones'}</>
-  )
+  return <>{globalDialog.state.showMilestonesFinished ? 'Show previuous milestones' : 'Hide previous milestones'}</>
 }
 
 const renderContext = (currentContext: ContextType) => {
@@ -37,7 +35,7 @@ describe('Store > Global settings', () => {
       // eslint-disable-next-line
       dispatch: () => {},
       state: {
-        areShowingPreviousMilestones: true,
+        showMilestonesFinished: true,
       },
     }
 

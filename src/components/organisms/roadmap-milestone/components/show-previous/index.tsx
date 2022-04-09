@@ -13,12 +13,12 @@ const ShowPrevious = (): JSX.Element => {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 
-  return globalSettings.state.areShowingPreviousMilestones ? (
+  return globalSettings.state.showMilestonesFinished ? (
     <VerticalButton
       onClick={() =>
         dispatchGlobalSettings({
           type: GLOBAL_SETTINGS_SET_ARE_SHOWING_PREVIOUS_MILESTONES_ACTION,
-          value: { areShowingPreviousMilestones: false },
+          value: { showMilestonesFinished: false },
         })
       }
     >
@@ -30,7 +30,7 @@ const ShowPrevious = (): JSX.Element => {
       onClick={() =>
         dispatchGlobalSettings({
           type: GLOBAL_SETTINGS_SET_ARE_SHOWING_PREVIOUS_MILESTONES_ACTION,
-          value: { areShowingPreviousMilestones: true },
+          value: { showMilestonesFinished: true },
         })
       }
     >
