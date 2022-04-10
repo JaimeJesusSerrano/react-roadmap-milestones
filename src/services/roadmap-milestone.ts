@@ -527,6 +527,21 @@ export const getById = (id: number): RoadmapMilestone => {
               name: 'Infrastructure',
               color: 'red',
             },
+            description: 'With translation funcionality we can show the principal labels in differents languages',
+            finishDate: new Date('2022-04-10'),
+            images: [],
+            name: 'Add translation functionality',
+            shortDescription: '',
+            startDate: new Date('2022-04-09'),
+            status: 'Done',
+            tags: [],
+            updateDate: new Date('2022-04-10'),
+          },
+          {
+            category: {
+              name: 'Infrastructure',
+              color: 'red',
+            },
             description:
               'Adding all colors to palette theme we get a robust color handling and we will can allow change current styles in the future easier',
             images: [],
