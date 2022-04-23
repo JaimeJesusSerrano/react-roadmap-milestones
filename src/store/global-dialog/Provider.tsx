@@ -1,19 +1,18 @@
 import React, { useReducer } from 'react'
 
-import { SET_OPEN, SET_STATE } from './actions'
 import { context, initialState } from './index'
-import { ActionType, StateType } from './types'
+import * as Types from './types'
 
 interface Props {
   children: React.ReactNode
 }
 
 const Provider = ({ children }: Props): JSX.Element => {
-  const [state, dispatch] = useReducer((state: StateType, action: ActionType) => {
+  const [state, dispatch] = useReducer((state: Types.StateType, action: Types.ActionType) => {
     switch (action.type) {
-      case SET_OPEN:
+      case Types.SET_OPEN:
         return { ...state, Component: action.value.Component, isOpen: action.value.isOpen }
-      case SET_STATE:
+      case Types.SET_STATE:
         return action.value
       default:
         throw new Error()

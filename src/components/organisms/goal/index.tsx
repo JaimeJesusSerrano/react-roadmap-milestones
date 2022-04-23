@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import defaultGoalImageJpg from 'assets/jpg/default-goal-image.jpg'
 import { context as globalDialogContext } from 'store/global-dialog'
-import { SET_OPEN as GLOBAL_DIALOG_SET_OPEN_ACTION } from 'store/global-dialog/actions'
+import * as GlobalDialogActions from 'store/global-dialog/actions'
 import GoalType from 'types/api/Goal'
 
 import GoalDialogDetail from './components/dialog-detail'
@@ -13,17 +13,11 @@ interface ParamTypes {
 }
 
 const Goal = ({ goal }: ParamTypes): JSX.Element => {
-  const globalState = useContext(globalDialogContext)
-  const { dispatch } = globalState
+  const { dispatch: globalDialogDispatch } = useContext(globalDialogContext)
 
   return (
     <S.Wrapper
-      onClick={() =>
-        dispatch({
-          type: GLOBAL_DIALOG_SET_OPEN_ACTION,
-          value: { isOpen: true, Component: <GoalDialogDetail goal={goal} /> },
-        })
-      }
+      onClick={() => globalDialogDispatch(GlobalDialogActions.setOpen(true, <GoalDialogDetail goal={goal} />))}
     >
       <S.Status>{goal?.status}</S.Status>
       <S.Title>{goal?.name}</S.Title>
