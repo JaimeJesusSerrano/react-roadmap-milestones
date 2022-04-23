@@ -1,4 +1,13 @@
-const BASE = 'GLOBAL_SETTINGS'
+import * as Types from './types'
 
-export const SET_ARE_SHOWING_PREVIOUS_MILESTONES = `${BASE}_ARE_SHOWING_PREVIOUS_MILESTONES`
-export const SET_STATE = `${BASE}_SET_STATE`
+export const setAreShowingPreviousMilestones = (
+  showMilestonesFinished: Types.StateType['showMilestonesFinished']
+): Types.ActionType => ({
+  type: Types.SET_ARE_SHOWING_PREVIOUS_MILESTONES,
+  value: { showMilestonesFinished },
+})
+
+export const setState = (newState: Types.ActionType['value']): Types.ActionType => ({
+  type: Types.SET_STATE,
+  value: newState,
+})
