@@ -1,9 +1,12 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import * as S from './styled'
 
 const HeaderBar = (): JSX.Element => {
-  return <S.Wrapper>React Roadmap Milestones component under construction</S.Wrapper>
+  const { t } = useTranslation()
+
+  return <S.Wrapper>{t('header.title')}</S.Wrapper>
 }
 
 export default HeaderBar

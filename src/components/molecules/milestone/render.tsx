@@ -11,13 +11,19 @@ import GoalsByCategoryType from 'types/GoalsByCategory'
 import * as S from './styled'
 
 interface ParamTypes {
+  isExpanded: boolean
   goalsByCategories: GoalsByCategoryType
   goalsWithoutCategory: GoalType[]
   milestone: MilestoneType
 }
 
-const Render = ({ goalsByCategories, goalsWithoutCategory, milestone }: ParamTypes): JSX.Element => {
-  const [isExpanded, setIsExpanded] = useState(true)
+const Render = ({
+  isExpanded: isDefaultExpanded,
+  goalsByCategories,
+  goalsWithoutCategory,
+  milestone,
+}: ParamTypes): JSX.Element => {
+  const [isExpanded, setIsExpanded] = useState(isDefaultExpanded)
 
   return (
     <S.Wrapper isExpanded={isExpanded}>

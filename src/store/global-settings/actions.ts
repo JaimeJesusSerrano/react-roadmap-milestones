@@ -1,0 +1,13 @@
+import * as Types from './types'
+
+export const setAreShowingPreviousMilestones = (
+  showMilestonesFinished: Types.StateType['showMilestonesFinished']
+): Types.ActionType => ({
+  type: Types.SET_ARE_SHOWING_PREVIOUS_MILESTONES,
+  value: { showMilestonesFinished },
+})
+
+export const setState = (newState: Types.ActionType['value']): Types.ActionType => ({
+  type: Types.SET_STATE,
+  value: newState,
+})

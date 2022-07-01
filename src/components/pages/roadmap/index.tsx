@@ -3,7 +3,7 @@ import React from 'react'
 import { useQuery } from 'react-query'
 import { useParams } from 'react-router-dom'
 
-import RoadmapMilestone from 'components/molecules/roadmap-milestone'
+import RoadmapMilestone from 'components/organisms/roadmap-milestone'
 import MainTemplate from 'components/templates/main'
 import { getById as getByIdRoadmapMillestone } from 'services/roadmap-milestone'
 

@@ -8,7 +8,6 @@ export const Description = styled.div`
 `
 
 export const ImageWrapper = styled.div`
-  background-color: green;
   height: 130px;
 
   img {

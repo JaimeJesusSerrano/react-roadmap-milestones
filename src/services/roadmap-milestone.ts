@@ -498,12 +498,13 @@ export const getById = (id: number): RoadmapMilestone => {
             },
             description:
               'Milestone v5. Hide completed milestones, add an option to collapse/expand them and select initial behaviour',
+            finishDate: new Date('2022-04-06'),
             images: [],
             name: 'Milestone v5',
             shortDescription: '',
-            status: 'Pending',
+            status: 'Done',
             tags: [],
-            updateDate: new Date('2021-10-31'),
+            updateDate: new Date('2022-04-06'),
           },
           {
             category: {
@@ -520,6 +521,21 @@ export const getById = (id: number): RoadmapMilestone => {
             status: 'Done',
             tags: [],
             updateDate: new Date('2021-11-11'),
+          },
+          {
+            category: {
+              name: 'Infrastructure',
+              color: 'red',
+            },
+            description: 'With translation funcionality we can show the principal labels in differents languages',
+            finishDate: new Date('2022-04-10'),
+            images: [],
+            name: 'Add translation functionality',
+            shortDescription: '',
+            startDate: new Date('2022-04-09'),
+            status: 'Done',
+            tags: [],
+            updateDate: new Date('2022-04-10'),
           },
           {
             category: {
