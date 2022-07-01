@@ -1,18 +1,34 @@
 import React, { useContext, useEffect, useState } from 'react'
 
-import Milestone from 'components/molecules/milestone'
+import GlobalDialog from 'components/organisms/global-dialog'
+import GlobalDialogProvider from 'store/global-dialog/Provider'
 import { context as globalSettingsContext } from 'store/global-settings'
+import GlobalSettingsProvider from 'store/global-settings/Provider'
 import RoadmapMilestoneType from 'types/api/RoadmapMilestone'
 import MilestoneType from 'types/api/Milestone'
 
-import ShowPrevious from './components/show-previous'
-import * as S from './styled'
+import Render from './render'
 
 interface ParamTypes {
   data?: RoadmapMilestoneType
 }
 
 const RoadmapMilestone = ({ data }: ParamTypes): JSX.Element => {
+  if (!data || !data.milestones) {
+    return <></>
+  }
+
+  return (
+    <GlobalSettingsProvider>
+      <GlobalDialogProvider>
+        <GlobalDialog />
+        <RoadmapMilestoneLogic data={data} />
+      </GlobalDialogProvider>
+    </GlobalSettingsProvider>
+  )
+}
+
+const RoadmapMilestoneLogic = ({ data }: ParamTypes): JSX.Element => {
   const globalSettings = useContext(globalSettingsContext)
 
   const [milestones, setMilestones] = useState<MilestoneType[]>()
@@ -29,21 +45,7 @@ const RoadmapMilestone = ({ data }: ParamTypes): JSX.Element => {
     return <></>
   }
 
-  return (
-    <S.Wrapper>
-      <div style={{ marginRight: 12 }}>
-        <ShowPrevious />
-      </div>
-
-      {milestones.map(milestone => {
-        return (
-          <S.MilestoneWrapper key={milestone.name}>
-            <Milestone data={milestone} isExpanded={!milestone.finishDate} />
-          </S.MilestoneWrapper>
-        )
-      })}
-    </S.Wrapper>
-  )
+  return <Render milestones={milestones} />
 }
 
 export default RoadmapMilestone
