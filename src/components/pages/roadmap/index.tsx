@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 
 import RoadmapMilestone from 'components/organisms/roadmap-milestone'
 import MainTemplate from 'components/templates/main'
-import { getById as getByIdRoadmapMillestone } from 'services/roadmap-milestone'
+import { getById as getByIdRoadmapMilestone } from 'services/roadmap-milestone'
 
 import * as S from './styled'
 
@@ -16,13 +16,15 @@ interface ParamTypes {
 const Roadmap = (): JSX.Element => {
   const { id } = useParams<ParamTypes>()
 
-  const { data } = useQuery('roadmapMilestoneData', () => getByIdRoadmapMillestone(id ? parseInt(id) : 1))
+  const { data: roadmapMilestoneData } = useQuery('roadmapMilestoneData', () =>
+    getByIdRoadmapMilestone(id ? parseInt(id) : 1)
+  )
 
   return (
     <MainTemplate>
       <S.Wrapper>
         <S.BoardWrapper>
-          <RoadmapMilestone data={data} />
+          <RoadmapMilestone roadmapMilestoneData={roadmapMilestoneData} />
         </S.BoardWrapper>
       </S.Wrapper>
     </MainTemplate>
