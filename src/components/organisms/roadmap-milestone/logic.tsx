@@ -1,16 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react'
 
 import { context as globalSettingsContext } from 'store/global-settings'
+import * as GlobalSettingsActions from 'store/global-settings/actions'
 import MilestoneType from 'types/api/Milestone'
+import { Translation } from 'types/Translation'
 
 import Render from './render'
 
 interface ParamTypes {
   milestones: MilestoneType[]
+  translation: Translation
 }
 
-const Logic = ({ milestones }: ParamTypes): JSX.Element => {
+const Logic = ({ milestones, translation }: ParamTypes): JSX.Element => {
   const globalSettings = useContext(globalSettingsContext)
+  const { dispatch: dispatchGlobalSettings } = globalSettings
 
   const [milestonesToShow, setMilestonesToShow] = useState<MilestoneType[]>()
 
@@ -21,6 +25,10 @@ const Logic = ({ milestones }: ParamTypes): JSX.Element => {
       setMilestonesToShow(milestones.filter(milestone => !milestone.finishDate))
     }
   }, [milestones, globalSettings.state.showMilestonesFinished])
+
+  useEffect(() => {
+    dispatchGlobalSettings(GlobalSettingsActions.setTranslation(translation))
+  }, [translation])
 
   if (!milestonesToShow?.length) {
     return <></>

@@ -11,3 +11,8 @@ export const setState = (newState: Types.ActionType['value']): Types.ActionType 
   type: Types.SET_STATE,
   value: newState,
 })
+
+export const setTranslation = (translation: Types.StateType['translation']): Types.ActionType => ({
+  type: Types.SET_TRANSLATION,
+  value: { translation },
+})

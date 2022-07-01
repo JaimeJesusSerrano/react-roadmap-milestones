@@ -14,6 +14,8 @@ const Provider = ({ children }: Props): JSX.Element => {
         return { ...state, showMilestonesFinished: action.value.showMilestonesFinished }
       case Types.SET_STATE:
         return action.value
+      case Types.SET_TRANSLATION:
+        return { ...state, translation: action.value.translation }
       default:
         throw new Error()
     }

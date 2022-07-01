@@ -7,8 +7,8 @@ const translations: Resource = {
         title: 'React Roadmap Milestones component under construction',
       },
       milestoneRoadmap: {
-        showPrevious: 'Show previous',
         hidePrevious: 'Hide previous',
+        showPrevious: 'Show previous',
       },
     },
   },
@@ -18,8 +18,8 @@ const translations: Resource = {
         title: 'React Roadmap Milestones componente en construcción',
       },
       milestoneRoadmap: {
-        showPrevious: 'Mostrar anteriores',
         hidePrevious: 'Ocultar anteriores',
+        showPrevious: 'Mostrar anteriores',
       },
     },
   },

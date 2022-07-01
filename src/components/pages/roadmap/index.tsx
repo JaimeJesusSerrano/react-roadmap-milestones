@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { useTranslation } from 'react-i18next'
 import { useQuery } from 'react-query'
 import { useParams } from 'react-router-dom'
 
@@ -15,6 +16,7 @@ interface ParamTypes {
 
 const Roadmap = (): JSX.Element => {
   const { id } = useParams<ParamTypes>()
+  const { t } = useTranslation()
 
   const { data: roadmapMilestoneData } = useQuery('roadmapMilestoneData', () =>
     getByIdRoadmapMilestone(id ? parseInt(id) : 1)
@@ -24,7 +26,15 @@ const Roadmap = (): JSX.Element => {
     <MainTemplate>
       <S.Wrapper>
         <S.BoardWrapper>
-          <RoadmapMilestone roadmapMilestoneData={roadmapMilestoneData} />
+          <RoadmapMilestone
+            roadmapMilestoneData={roadmapMilestoneData}
+            translation={{
+              previousButton: {
+                hidePrevious: t('milestoneRoadmap.hidePrevious'),
+                showPrevious: t('milestoneRoadmap.showPrevious'),
+              },
+            }}
+          />
         </S.BoardWrapper>
       </S.Wrapper>
     </MainTemplate>

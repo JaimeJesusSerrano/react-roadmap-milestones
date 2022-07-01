@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 
 import { render, screen } from '@testing-library/react'
 
+import defaultTranslation from 'config/defaultTranslation'
+
 import { context, initialState } from './index'
 import { ContextType } from './types'
 
@@ -36,6 +38,7 @@ describe('Store > Global settings', () => {
       dispatch: () => {},
       state: {
         showMilestonesFinished: true,
+        translation: defaultTranslation,
       },
     }
 
