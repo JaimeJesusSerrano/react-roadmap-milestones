@@ -1,5 +1,5 @@
 export default {
-  categoty: {
+  category: {
     background: '#1a5a7f',
     border: '#3785ae',
     chevron: '#ade1ff ',

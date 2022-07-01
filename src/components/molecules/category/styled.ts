@@ -36,14 +36,14 @@ export const LeftHeaderTitle = styled.div`
 `
 
 export const RightHeader = styled.div`
-  color: ${props => props.theme.palette.categoty.chevron};
+  color: ${props => props.theme.palette.category.chevron};
   display: flex;
   flex-direction: row;
 `
 
 export const Wrapper = styled.div`
-  background-color: ${props => props.theme.palette.categoty.background};
-  border: 1px solid ${props => props.theme.palette.categoty.border};
+  background-color: ${props => props.theme.palette.category.background};
+  border: 1px solid ${props => props.theme.palette.category.border};
   border-radius: 8px;
   display: flex;
   flex-direction: column;
