@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
 import PlusSvg from 'assets/svg/plus'
-import SubstractSvg from 'assets/svg/substract'
+import SubtractSvg from 'assets/svg/subtract'
 import VerticalButton from 'components/atoms/vertical-button'
 import { context as globalSettingsContext } from 'store/global-settings'
 import * as GlobalSettingsActions from 'store/global-settings/actions'
@@ -17,7 +17,7 @@ const ShowPrevious = (): JSX.Element => {
       onClick={() => dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(false))}
     >
       <S.ShowHidePreviousText>{globalSettings.state.translation.previousButton.hidePrevious}</S.ShowHidePreviousText>
-      <SubstractSvg title={globalSettings.state.translation.previousButton.hidePrevious} />
+      <SubtractSvg title={globalSettings.state.translation.previousButton.hidePrevious} />
     </VerticalButton>
   ) : (
     <VerticalButton onClick={() => dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(true))}>

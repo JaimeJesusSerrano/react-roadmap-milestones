@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import PlusSvg from 'assets/svg/plus'
-import SubstractSvg from 'assets/svg/substract'
+import SubtractSvg from 'assets/svg/subtract'
 import Category from 'components/molecules/category'
 import Goal from 'components/organisms/goal'
 import GoalType from 'types/api/Goal'
@@ -33,7 +33,7 @@ const Render = ({
             {milestone.name}
           </S.HeaderTitle>
           <S.ExpandIconWrapper>
-            {isExpanded ? <SubstractSvg title='Collapse milestone' /> : <PlusSvg title='Expand milestone' />}
+            {isExpanded ? <SubtractSvg title='Collapse milestone' /> : <PlusSvg title='Expand milestone' />}
           </S.ExpandIconWrapper>
         </S.HeaderTitleWrapper>
         <S.StatusWrapper>
