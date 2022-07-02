@@ -1,4 +1,6 @@
-export default {
+import { Palette } from 'types/Theme'
+
+const palette: Palette = {
   category: {
     background: '#1a5a7f',
     border: '#3785ae',
@@ -17,3 +19,5 @@ export default {
     hover: '#949a9d',
   },
 }
+
+export default palette

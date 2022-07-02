@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { ThemeType } from 'config/theme'
+import { Theme } from 'types/Theme'
 
-const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
+const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   @font-face {
     font-display: block;
     font-family: 'Roboto';
