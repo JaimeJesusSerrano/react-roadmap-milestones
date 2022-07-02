@@ -8,20 +8,24 @@ import defaultTranslation from 'config/defaultTranslation'
 import GlobalStyle from 'config/globalStyle'
 import GlobalDialogProvider from 'store/global-dialog/Provider'
 import GlobalSettingsProvider from 'store/global-settings/Provider'
-import RoadmapMilestoneType from 'types/api/RoadmapMilestone'
+import RoadmapMilestonesType from 'types/api/RoadmapMilestones'
 import { Theme, ThemeOverride } from 'types/Theme'
 import { Translation } from 'types/Translation'
 
 import Logic from './logic'
 
 interface ParamTypes {
-  roadmapMilestoneData?: RoadmapMilestoneType
+  roadmapMilestonesData?: RoadmapMilestonesType
   theme?: ThemeOverride
   translation?: Translation
 }
 
-const RoadmapMilestone = ({ roadmapMilestoneData, theme: themeOverride, translation }: ParamTypes): JSX.Element => {
-  if (!roadmapMilestoneData || !roadmapMilestoneData.milestones) {
+const RoadmapMilestones: React.FunctionComponent<ParamTypes> = ({
+  roadmapMilestonesData,
+  theme: themeOverride,
+  translation,
+}) => {
+  if (!roadmapMilestonesData || !roadmapMilestonesData.milestones) {
     return <></>
   }
 
@@ -37,11 +41,12 @@ const RoadmapMilestone = ({ roadmapMilestoneData, theme: themeOverride, translat
       <GlobalSettingsProvider>
         <GlobalDialogProvider>
           <GlobalDialog />
-          <Logic milestones={roadmapMilestoneData.milestones} translation={translation || defaultTranslation} />
+          <Logic milestones={roadmapMilestonesData.milestones} translation={translation || defaultTranslation} />
         </GlobalDialogProvider>
       </GlobalSettingsProvider>
     </ThemeProvider>
   )
 }
 
-export default RoadmapMilestone
+export { RoadmapMilestones }
+export default RoadmapMilestones

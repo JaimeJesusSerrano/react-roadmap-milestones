@@ -1,9 +1,9 @@
 import Milestone from './Milestone'
 
-interface RoadmapMilestone {
+interface RoadmapMilestones {
   milestones: Milestone[]
   name: string
   startDate: Date
 }
 
-export default RoadmapMilestone
+export default RoadmapMilestones

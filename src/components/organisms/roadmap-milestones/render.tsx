@@ -10,7 +10,7 @@ interface ParamTypes {
   milestones: MilestoneType[]
 }
 
-const RoadmapMilestone = ({ milestones }: ParamTypes): JSX.Element => {
+const Render = ({ milestones }: ParamTypes): JSX.Element => {
   return (
     <S.Wrapper>
       <div style={{ marginRight: 12 }}>
@@ -28,4 +28,4 @@ const RoadmapMilestone = ({ milestones }: ParamTypes): JSX.Element => {
   )
 }
 
-export default RoadmapMilestone
+export default Render
