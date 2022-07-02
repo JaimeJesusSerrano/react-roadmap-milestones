@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react'
 
-import GoalType from 'types/api/Goal'
-import MilestoneType from 'types/api/Milestone'
-import GoalsByCategoryType from 'types/GoalsByCategory'
+import GoalType from '../../../types/Goal'
+import MilestoneType from  '../../../types/Milestone'
+import GoalsByCategoryType from '../../../types/GoalsByCategory'
 
 import Render from './render'
 

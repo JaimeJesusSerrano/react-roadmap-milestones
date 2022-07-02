@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Milestone from 'components/molecules/milestone'
-import MilestoneType from 'types/api/Milestone'
+import Milestone from '../../../components/molecules/milestone'
+import MilestoneType from  '../../../types/Milestone'
 
 import ShowPrevious from './components/show-previous'
 import * as S from './styled'

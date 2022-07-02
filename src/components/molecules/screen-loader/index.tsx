@@ -2,7 +2,7 @@ import React from 'react'
 
 import Backdrop from '@mui/material/Backdrop'
 
-import LoaderAnimation from 'components/atoms/loader-animation'
+import LoaderAnimation from '../../../components/atoms/loader-animation'
 
 import * as S from './styled'
 

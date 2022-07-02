@@ -1,6 +1,6 @@
-import Goal from 'types/api/Goal'
+import Goal from './Goal'
 
-interface GoalsByCategory {
+export interface GoalsByCategory {
   [key: string]: Goal[]
 }
 

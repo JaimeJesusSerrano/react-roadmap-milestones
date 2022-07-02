@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-import ChevronDownSvg from 'assets/svg/chevron-down'
-import ChevronUpSvg from 'assets/svg/chevron-up'
-import Goal from 'components/organisms/goal'
-import GoalType from 'types/api/Goal'
+import ChevronDownSvg from '../../../assets/svg/chevron-down'
+import ChevronUpSvg from '../../../assets/svg/chevron-up'
+import Goal from '../../../components/organisms/goal'
+import GoalType from '../../../types/Goal'
 
 import * as S from './styled'
 

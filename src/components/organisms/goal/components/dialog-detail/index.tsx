@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 
-import defaultGoalImageJpg from 'assets/jpg/default-goal-image.jpg'
-import CloseSvg from 'assets/svg/close'
-import { context as globalDialogContext } from 'store/global-dialog'
-import * as GlobalDialogActions from 'store/global-dialog/actions'
-import GoalType from 'types/api/Goal'
+import ImageNotFoundSvg from '../../../../../assets/svg/image-not-found'
+import CloseSvg from '../../../../../assets/svg/close'
+import { context as globalDialogContext } from '../../../../../store/global-dialog'
+import * as GlobalDialogActions from '../../../../../store/global-dialog/actions'
+import GoalType from '../../../../../types/Goal'
 
 import * as S from './styled'
 
@@ -27,7 +27,11 @@ const GoalDialogDetail = ({ goal }: ParamTypes): JSX.Element => {
       <S.Body>
         <S.ImageAndDescriptionWrapper>
           <S.ImageWrapper>
-            <img loading='lazy' src={goal?.images?.[0] || defaultGoalImageJpg} />
+            {goal?.images?.[0] ? (
+              <img loading='lazy' src={goal?.images?.[0]} />
+            ) : (
+              <ImageNotFoundSvg height='90%' title='Image not found' width='90%' />
+            )}
           </S.ImageWrapper>
           <S.BodyDescriptionWrapper>
             <S.BodyDescriptionDate>Updated {goal?.updateDate?.toLocaleString() || ''}</S.BodyDescriptionDate>

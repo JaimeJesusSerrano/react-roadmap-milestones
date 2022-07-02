@@ -1,6 +1,6 @@
 import Milestone from './Milestone'
 
-interface RoadmapMilestones {
+export interface RoadmapMilestones {
   milestones: Milestone[]
   name: string
   startDate: Date

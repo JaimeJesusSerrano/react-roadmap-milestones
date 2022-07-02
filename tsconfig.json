@@ -2,7 +2,7 @@
   "compilerOptions": {
     // "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "src",
+    // "baseUrl": "src",
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

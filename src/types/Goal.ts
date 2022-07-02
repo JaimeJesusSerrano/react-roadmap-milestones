@@ -1,7 +1,7 @@
 import Category from './Category'
 import Tag from './Tag'
 
-interface Goal {
+export interface Goal {
   category?: Category
   description: string
   estimatedFinishDate?: Date

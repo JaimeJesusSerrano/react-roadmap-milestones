@@ -1,6 +1,6 @@
 import Goal from './Goal'
 
-interface Milestone {
+export interface Milestone {
   estimatedFinishDate?: Date
   finishDate?: Date
   goals: Goal[]

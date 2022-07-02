@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { Theme } from 'types/Theme'
+import { Theme } from '../types/Theme'
 
 const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   @font-face {

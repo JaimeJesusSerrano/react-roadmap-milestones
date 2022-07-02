@@ -1,4 +1,4 @@
-import { Breakpoints } from 'types/Theme'
+import { Breakpoints } from '../types/Theme'
 
 const breakpoints: Breakpoints = {
   mobile: 0,

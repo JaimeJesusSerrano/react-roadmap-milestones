@@ -1,6 +1,6 @@
-import { ActionType as ActionTypeBase, ContextType as ContextTypeBase } from 'types/Context'
+import { ActionType as ActionTypeBase, ContextType as ContextTypeBase } from '../../types/Context'
 
-import { Translation } from 'types/Translation'
+import { Translation } from '../../types/Translation'
 
 const BASE = 'GLOBAL_SETTINGS'
 

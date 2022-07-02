@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-import PlusSvg from 'assets/svg/plus'
-import SubtractSvg from 'assets/svg/subtract'
-import Category from 'components/molecules/category'
-import Goal from 'components/organisms/goal'
-import GoalType from 'types/api/Goal'
-import MilestoneType from 'types/api/Milestone'
-import GoalsByCategoryType from 'types/GoalsByCategory'
+import PlusSvg from '../../../assets/svg/plus'
+import SubtractSvg from '../../../assets/svg/subtract'
+import Category from '../../../components/molecules/category'
+import Goal from '../../../components/organisms/goal'
+import GoalType from '../../../types/Goal'
+import MilestoneType from  '../../../types/Milestone'
+import GoalsByCategoryType from '../../../types/GoalsByCategory'
 
 import * as S from './styled'
 

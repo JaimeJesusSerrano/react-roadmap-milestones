@@ -1,4 +1,4 @@
-import { ActionType as ActionTypeBase, ContextType as ContextTypeBase } from 'types/Context'
+import { ActionType as ActionTypeBase, ContextType as ContextTypeBase } from '../../types/Context'
 
 const BASE = 'GLOBAL_DIALOG'
 
