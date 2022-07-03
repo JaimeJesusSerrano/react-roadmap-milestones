@@ -10,8 +10,8 @@ const GlobalDialog = (): JSX.Element => {
 
   return (
     <S.Dialog
-      onClose={() => globalDialogDispatch(GlobalDialogActions.setOpen(false))}
       maxWidth={'lg'}
+      onClose={() => globalDialogDispatch(GlobalDialogActions.setOpen(false))}
       open={globalDialogState.isOpen}
     >
       {globalDialogState.Component ? globalDialogState.Component : <></>}
