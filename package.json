@@ -10,7 +10,6 @@
   "engines": {
     "node": ">= 16.0.0"
   },
-  "dependencies": {},
   "scripts": {
     "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
@@ -34,6 +33,7 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {},
   "devDependencies": {
     "@mui/material": "5.8.4",
     "@types/jest": "27.4.1",
