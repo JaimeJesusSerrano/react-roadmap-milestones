@@ -24,5 +24,6 @@
     "target": "es6",
     "types": ["node"],
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "include": ["**/*"],
+  "exclude": ["dist", "node_modules"],
 }
