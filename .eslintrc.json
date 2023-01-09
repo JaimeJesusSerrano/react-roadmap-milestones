@@ -29,6 +29,7 @@
   "rules": {
     "no-empty-function": "off",
     "no-param-reassign": "off",
+    "import/no-named-as-default": "off",
     "import/prefer-default-export": "off",
     "prettier/prettier": ["error", {
       "endOfLine": "auto",
@@ -43,6 +44,7 @@
       "unnamedComponents": "arrow-function"
     }],
     "react/jsx-props-no-spreading": "off",
+    "react/jsx-no-useless-fragment": "off",
     "react/require-default-props": "off"
   }
 }

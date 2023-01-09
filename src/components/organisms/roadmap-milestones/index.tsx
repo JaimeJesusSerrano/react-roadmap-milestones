@@ -2,11 +2,11 @@ import React from 'react'
 
 import { ThemeProvider } from 'styled-components'
 
-import GlobalDialog from '../../../components/organisms/global-dialog'
+import GlobalDialog from '../global-dialog'
 import defaultTheme from '../../../config/defaultTheme'
 import defaultTranslation from '../../../config/defaultTranslation'
 import GlobalStyle from '../../../config/globalStyle'
-import GlobalDialogProvider from '../../../store//global-dialog/Provider'
+import GlobalDialogProvider from '../../../store/global-dialog/Provider'
 import GlobalSettingsProvider from '../../../store/global-settings/Provider'
 import RoadmapMilestonesType from '../../../types/RoadmapMilestones'
 import { Theme, ThemeOverride } from '../../../types/Theme'
@@ -26,7 +26,7 @@ const RoadmapMilestones: React.FunctionComponent<ParamTypes> = ({
   translation,
 }) => {
   if (!roadmapMilestonesData || !roadmapMilestonesData.milestones) {
-    return <></>
+    return null
   }
 
   const theme: Theme = {
@@ -41,7 +41,10 @@ const RoadmapMilestones: React.FunctionComponent<ParamTypes> = ({
       <GlobalSettingsProvider>
         <GlobalDialogProvider>
           <GlobalDialog />
-          <Logic milestones={roadmapMilestonesData.milestones} translation={translation || defaultTranslation} />
+          <Logic
+            milestones={roadmapMilestonesData.milestones}
+            translation={translation || defaultTranslation}
+          />
         </GlobalDialogProvider>
       </GlobalSettingsProvider>
     </ThemeProvider>

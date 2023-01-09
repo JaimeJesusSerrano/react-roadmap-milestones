@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import ChevronDownSvg from '../../../assets/svg/chevron-down'
 import ChevronUpSvg from '../../../assets/svg/chevron-up'
-import Goal from '../../../components/organisms/goal'
+import Goal from '../../organisms/goal'
 import GoalType from '../../../types/Goal'
 
 import * as S from './styled'
@@ -24,15 +24,19 @@ const Category = ({ goals, name = '' }: ParamTypes): JSX.Element => {
         </S.LeftHeader>
 
         <S.RightHeader>
-          {isExpanded ? <ChevronUpSvg title='Collapse category' /> : <ChevronDownSvg title='Expand category' />}
+          {isExpanded ? (
+            <ChevronUpSvg title="Collapse category" />
+          ) : (
+            <ChevronDownSvg title="Expand category" />
+          )}
         </S.RightHeader>
       </S.Header>
 
       {isExpanded && goals?.length && (
         <S.GoalsWrapper>
-          {goals?.map(goal => {
-            return <Goal key={goal.name} goal={goal} />
-          })}
+          {goals?.map(goal => (
+            <Goal key={goal.name} goal={goal} />
+          ))}
         </S.GoalsWrapper>
       )}
     </S.Wrapper>

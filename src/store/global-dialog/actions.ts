@@ -2,7 +2,7 @@ import * as Types from './types'
 
 export const setOpen = (
   isOpen: Types.StateType['isOpen'],
-  Component?: Types.StateType['Component']
+  Component?: Types.StateType['Component'],
 ): Types.ActionType => ({
   type: Types.SET_OPEN,
   value: { isOpen, Component },

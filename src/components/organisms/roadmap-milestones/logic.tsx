@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 
 import { context as globalSettingsContext } from '../../../store/global-settings'
 import * as GlobalSettingsActions from '../../../store/global-settings/actions'
-import MilestoneType from  '../../../types/Milestone'
+import MilestoneType from '../../../types/Milestone'
 import { Translation } from '../../../types/Translation'
 
 import Render from './render'
@@ -12,7 +12,7 @@ interface ParamTypes {
   translation: Translation
 }
 
-const Logic = ({ milestones, translation }: ParamTypes): JSX.Element => {
+const Logic = ({ milestones, translation }: ParamTypes): JSX.Element | null => {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 
@@ -31,7 +31,7 @@ const Logic = ({ milestones, translation }: ParamTypes): JSX.Element => {
   }, [translation])
 
   if (!milestonesToShow?.length) {
-    return <></>
+    return null
   }
 
   return <Render milestones={milestonesToShow} />

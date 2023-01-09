@@ -13,8 +13,6 @@ export interface StateType {
   translation: Translation
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ActionType = ActionTypeBase<any>
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ContextType = ContextTypeBase<any, StateType>

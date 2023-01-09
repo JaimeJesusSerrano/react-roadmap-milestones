@@ -17,15 +17,17 @@ const Goal = ({ goal }: ParamTypes): JSX.Element => {
 
   return (
     <S.Wrapper
-      onClick={() => globalDialogDispatch(GlobalDialogActions.setOpen(true, <GoalDialogDetail goal={goal} />))}
+      onClick={() =>
+        globalDialogDispatch(GlobalDialogActions.setOpen(true, <GoalDialogDetail goal={goal} />))
+      }
     >
       <S.Status>{goal?.status}</S.Status>
       <S.Title>{goal?.name}</S.Title>
       <S.ImageWrapper>
         {goal?.images?.[0] ? (
-          <img loading='lazy' src={goal?.images?.[0]} />
+          <img alt="Goal" loading="lazy" src={goal?.images?.[0]} />
         ) : (
-          <ImageNotFoundSvg height='100%' title='Image not found' width='100%' />
+          <ImageNotFoundSvg height="100%" title="Image not found" width="100%" />
         )}
       </S.ImageWrapper>
       <S.Description>{goal?.description}</S.Description>

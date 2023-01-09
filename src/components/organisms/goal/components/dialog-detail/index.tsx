@@ -20,7 +20,7 @@ const GoalDialogDetail = ({ goal }: ParamTypes): JSX.Element => {
       <S.Header>
         <S.Status>{goal?.status || ''}</S.Status>
         <S.Close onClick={() => globalDialogDispatch(GlobalDialogActions.setOpen(false))}>
-          <CloseSvg title='Close' />
+          <CloseSvg title="Close" />
         </S.Close>
       </S.Header>
       <S.Title>{goal?.name}</S.Title>
@@ -28,13 +28,15 @@ const GoalDialogDetail = ({ goal }: ParamTypes): JSX.Element => {
         <S.ImageAndDescriptionWrapper>
           <S.ImageWrapper>
             {goal?.images?.[0] ? (
-              <img loading='lazy' src={goal?.images?.[0]} />
+              <img alt="Goal" loading="lazy" src={goal?.images?.[0]} />
             ) : (
-              <ImageNotFoundSvg height='90%' title='Image not found' width='90%' />
+              <ImageNotFoundSvg height="90%" title="Image not found" width="90%" />
             )}
           </S.ImageWrapper>
           <S.BodyDescriptionWrapper>
-            <S.BodyDescriptionDate>Updated {goal?.updateDate?.toLocaleString() || ''}</S.BodyDescriptionDate>
+            <S.BodyDescriptionDate>
+              Updated {goal?.updateDate?.toLocaleString() || ''}
+            </S.BodyDescriptionDate>
             <S.BodyDescription>{goal?.description}</S.BodyDescription>
           </S.BodyDescriptionWrapper>
         </S.ImageAndDescriptionWrapper>

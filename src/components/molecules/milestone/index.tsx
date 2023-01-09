@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 
 import GoalType from '../../../types/Goal'
-import MilestoneType from  '../../../types/Milestone'
+import MilestoneType from '../../../types/Milestone'
 import GoalsByCategoryType from '../../../types/GoalsByCategory'
 
 import Render from './render'
@@ -11,24 +11,26 @@ interface ParamTypes {
   isExpanded: boolean
 }
 
-const Milestone = ({ data, isExpanded }: ParamTypes): JSX.Element => {
+const Milestone = ({ data, isExpanded }: ParamTypes): JSX.Element | null => {
   const [goalsByCategories, setGoalsByCategories] = useState<GoalsByCategoryType>({})
   const [goalsWithoutCategory, setGoalsWithoutCategory] = useState<GoalType[]>([])
 
-  const groupGoalsByCategory = useCallback((goals: GoalType[]) => {
-    return goals.reduce((previousGoalsByCategories: GoalsByCategoryType, currentGoal: GoalType) => {
-      const currentCategoryName = currentGoal.category?.name || 'undefined'
-      // Group initialization
-      if (!previousGoalsByCategories[currentCategoryName]) {
-        previousGoalsByCategories[currentCategoryName] = []
-      }
+  const groupGoalsByCategory = useCallback(
+    (goals: GoalType[]) =>
+      goals.reduce((previousGoalsByCategories: GoalsByCategoryType, currentGoal: GoalType) => {
+        const currentCategoryName = currentGoal.category?.name || 'undefined'
+        // Group initialization
+        if (!previousGoalsByCategories[currentCategoryName]) {
+          previousGoalsByCategories[currentCategoryName] = []
+        }
 
-      // Grouping
-      previousGoalsByCategories[currentCategoryName].push(currentGoal)
+        // Grouping
+        previousGoalsByCategories[currentCategoryName].push(currentGoal)
 
-      return previousGoalsByCategories
-    }, {})
-  }, [])
+        return previousGoalsByCategories
+      }, {}),
+    [],
+  )
 
   useEffect(() => {
     if (!data || !data.goals) {
@@ -38,13 +40,13 @@ const Milestone = ({ data, isExpanded }: ParamTypes): JSX.Element => {
     }
 
     const newCategories = groupGoalsByCategory(data.goals)
-    setGoalsWithoutCategory(newCategories['undefined'] || [])
-    delete newCategories['undefined']
+    setGoalsWithoutCategory(newCategories.undefined || [])
+    delete newCategories.undefined
     setGoalsByCategories(newCategories)
   }, [data?.goals])
 
   if (!data) {
-    return <></>
+    return null
   }
 
   return (

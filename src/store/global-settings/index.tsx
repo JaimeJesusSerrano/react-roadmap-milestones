@@ -10,7 +10,6 @@ const initialState: StateType = {
 }
 
 const context = createContext<ContextType>({
-  // eslint-disable-next-line
   dispatch: () => {},
   state: initialState,
 })
