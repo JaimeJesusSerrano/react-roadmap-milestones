@@ -1,14 +1,11 @@
 {
-  "name": "react-roadmap-milestones",
+  "name": "@jaimejesusserrano/react-roadmap-milestones",
   "version": "0.6.0",
   "private": true,
-  "author": {
-    "name": "Jaime Jesús Serrano",
-    "email": "jaimejesusserrano@gmail.com"
-  },
+  "author": "Jaime Jesús Serrano <jaimejesusserrano@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JaimeJesusSerrano/react-roadmap-milestones.git"
+    "url": "git+https://github.com/JaimeJesusSerrano/react-roadmap-milestones.git"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/ems/index.js",
@@ -61,5 +58,19 @@
   "peerDependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
-  }
+  },
+  "types": "./dist/cjs/index.d.ts",
+  "description": "The React Roadmap Milestones component is a board with a lot of features, functionalities or whatever where a user can see all of them divided by categories and milestones",
+  "bugs": {
+    "url": "https://github.com/JaimeJesusSerrano/react-roadmap-milestones/issues"
+  },
+  "homepage": "https://github.com/JaimeJesusSerrano/react-roadmap-milestones#readme",
+  "keywords": [
+    "milestone",
+    "milestones",
+    "category",
+    "categories",
+    "board"
+  ],
+  "license": "MIT"
 }
