@@ -1,7 +1,5 @@
 # React Roadmap Milestones
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Description
 The React Roadmap Milestones component **Under construction** is a board with a lot of features, functionalities or whatever where a user can see all of them divided by categories and milestones.
 
@@ -20,28 +18,10 @@ Currently this project show us a fake data where the own evolution of this compo
 
 In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Builds the component.
 
 ## How to start the project 
-Executing the next commands:
-- `npm ci` # To install dependencies
-- `npm start` # Previously described
+Add and use this component in your project. Example of use:
+  - `https://github.com/JaimeJesusSerrano/react-roadmap-milestones-example`
