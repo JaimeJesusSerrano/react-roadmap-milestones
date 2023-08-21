@@ -19,7 +19,7 @@
     "noUnusedLocals": true,
     "outDir": "dist/esm",
     "skipLibCheck": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "strict": true,
     "target": "es6",
     "types": ["node"],
