@@ -10,37 +10,36 @@ const ComponentToTest = () => {
   return <>{globalDialog.state.Component}</>
 }
 
-const renderContext = (currentContext: ContextType) => {
-  return render(
+const renderContext = (currentContext: ContextType) =>
+  render(
     <context.Provider value={currentContext}>
       <ComponentToTest />
-    </context.Provider>
+    </context.Provider>,
   )
-}
 
 describe('Store > Global Dialog', () => {
   test('initial with dialog closed', () => {
-    const context: ContextType = {
+    const newContext: ContextType = {
       // eslint-disable-next-line
       dispatch: () => {},
       state: initialState,
     }
 
-    renderContext(context)
-    expect(screen.queryByText('Dialog openned')).not.toBeInTheDocument()
+    renderContext(newContext)
+    expect(screen.queryByText('Dialog opened')).not.toBeInTheDocument()
   })
 
-  test('dialog openned', () => {
-    const context: ContextType = {
+  test('dialog opened', () => {
+    const newContext: ContextType = {
       // eslint-disable-next-line
       dispatch: () => {},
       state: {
-        Component: <>Dialog openned</>,
+        Component: <>Dialog opened</>,
         isOpen: true,
       },
     }
 
-    renderContext(context)
-    expect(screen.getByText('Dialog openned')).toBeInTheDocument()
+    renderContext(newContext)
+    expect(screen.getByText('Dialog opened')).toBeInTheDocument()
   })
 })

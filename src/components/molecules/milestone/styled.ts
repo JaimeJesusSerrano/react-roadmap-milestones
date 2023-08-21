@@ -46,7 +46,7 @@ export const MilestonesWrapper = styled.div`
 `
 
 export const Status = styled.div`
-  border: 1px solid ${props => props.theme.palette.categoty.border};
+  border: 1px solid ${props => props.theme.palette.category.border};
   border-radius: 8px;
   color: rgb(186, 193, 197);
   font-size: 0.8rem;

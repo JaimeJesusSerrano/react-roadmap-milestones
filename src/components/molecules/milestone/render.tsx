@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-import PlusSvg from 'assets/svg/plus'
-import SubstractSvg from 'assets/svg/substract'
-import Category from 'components/molecules/category'
-import Goal from 'components/organisms/goal'
-import GoalType from 'types/api/Goal'
-import MilestoneType from 'types/api/Milestone'
-import GoalsByCategoryType from 'types/GoalsByCategory'
+import PlusSvg from '../../../assets/svg/plus'
+import SubtractSvg from '../../../assets/svg/subtract'
+import Category from '../category'
+import Goal from '../../organisms/goal'
+import GoalType from '../../../types/Goal'
+import MilestoneType from '../../../types/Milestone'
+import GoalsByCategoryType from '../../../types/GoalsByCategory'
 
 import * as S from './styled'
 
@@ -33,7 +33,11 @@ const Render = ({
             {milestone.name}
           </S.HeaderTitle>
           <S.ExpandIconWrapper>
-            {isExpanded ? <SubstractSvg title='Collapse milestone' /> : <PlusSvg title='Expand milestone' />}
+            {isExpanded ? (
+              <SubtractSvg title="Collapse milestone" />
+            ) : (
+              <PlusSvg title="Expand milestone" />
+            )}
           </S.ExpandIconWrapper>
         </S.HeaderTitleWrapper>
         <S.StatusWrapper>
@@ -43,12 +47,12 @@ const Render = ({
 
       {isExpanded && (
         <S.MilestonesWrapper>
-          {Object.values(goalsByCategories).map(goals => {
-            return <Category goals={goals} key={goals[0].category?.name} name={goals[0].category?.name} />
-          })}
-          {goalsWithoutCategory.map(goal => {
-            return <Goal key={goal.name} goal={goal} />
-          })}
+          {Object.values(goalsByCategories).map(goals => (
+            <Category goals={goals} key={goals[0].category?.name} name={goals[0].category?.name} />
+          ))}
+          {goalsWithoutCategory.map(goal => (
+            <Goal key={goal.name} goal={goal} />
+          ))}
         </S.MilestonesWrapper>
       )}
     </S.Wrapper>
