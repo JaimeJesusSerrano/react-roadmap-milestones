@@ -33,11 +33,7 @@ const Category = ({ goals, name = '' }: ParamTypes): JSX.Element => {
       </S.Header>
 
       {isExpanded && goals?.length && (
-        <S.GoalsWrapper>
-          {goals?.map(goal => (
-            <Goal key={goal.name} goal={goal} />
-          ))}
-        </S.GoalsWrapper>
+        <S.GoalsWrapper>{goals?.map(goal => <Goal key={goal.name} goal={goal} />)}</S.GoalsWrapper>
       )}
     </S.Wrapper>
   )

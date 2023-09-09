@@ -49,6 +49,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
   margin-bottom: 8px;
   position: relative;
-  transition: box-shadow 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  transition:
+    box-shadow 350ms ease-in-out 0s,
+    background-color 350ms ease-in-out 0s;
   width: 100%;
 `
