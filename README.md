@@ -24,4 +24,7 @@ Builds the component.
 
 ## How to start the project 
 Add and use this component in your project. Example of use:
-  - `https://github.com/JaimeJesusSerrano/react-roadmap-milestones-example`
+- [react-roadmap-milestones-example](https://github.com/JaimeJesusSerrano/react-roadmap-milestones-example)
+
+## To update the package in NPM
+npm publish
