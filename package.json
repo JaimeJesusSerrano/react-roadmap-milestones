@@ -1,6 +1,6 @@
 {
   "name": "@jaimejesusserrano/react-roadmap-milestones",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "private": false,
   "author": "Jaime Jesús Serrano <jaimejesusserrano@gmail.com>",
   "repository": {
@@ -30,6 +30,8 @@
     ]
   },
   "dependencies": {
+    "@emotion/react": "11.11.1",
+    "@emotion/styled": "11.11.0",
     "@mui/material": "5.11.4",
     "styled-components": "5.3.6"
   },
