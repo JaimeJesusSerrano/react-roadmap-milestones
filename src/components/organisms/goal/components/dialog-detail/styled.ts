@@ -61,6 +61,10 @@ export const ImageNotFoundWrapper = styled.div`
   height: 100%;
   padding: 8px;
   width: 100%;
+
+  svg {
+    max-height: 294px;
+  }
 `
 
 export const ImageWrapper = styled.div`
@@ -68,7 +72,6 @@ export const ImageWrapper = styled.div`
   border-bottom: 1px solid #334752;
   display: flex;
   justify-content: center;
-  height: 294px;
   width: 500px;
 
   @media ${props => props.theme.devices.laptopMax} {
@@ -77,8 +80,7 @@ export const ImageWrapper = styled.div`
   }
 
   img {
-    height: 100%;
-    width: 100%;
+    max-height: 294px;
   }
 `
 
