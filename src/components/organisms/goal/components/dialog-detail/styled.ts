@@ -47,6 +47,7 @@ export const Close = styled.div`
 `
 
 export const Header = styled.div`
+  align-items: center;
   background-color: rgb(55, 133, 174);
   color: rgb(232, 235, 237);
   display: flex;
@@ -55,12 +56,22 @@ export const Header = styled.div`
   padding: 8px 16px;
 `
 
+export const ImageNotFoundWrapper = styled.div`
+  background-color: #78848c;
+  height: 100%;
+  padding: 8px;
+  width: 100%;
+
+  svg {
+    max-height: 294px;
+  }
+`
+
 export const ImageWrapper = styled.div`
   align-items: center;
   border-bottom: 1px solid #334752;
   display: flex;
   justify-content: center;
-  min-height: 294px;
   width: 500px;
 
   @media ${props => props.theme.devices.laptopMax} {
@@ -69,15 +80,14 @@ export const ImageWrapper = styled.div`
   }
 
   img {
-    height: 100%;
-    width: 100%;
+    max-height: 294px;
   }
 `
 
 export const ImageAndDescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 500;
+  max-width: 500px;
   width: 500px;
 
   @media ${props => props.theme.devices.laptopMax} {

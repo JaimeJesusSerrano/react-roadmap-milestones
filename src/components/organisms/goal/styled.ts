@@ -7,12 +7,24 @@ export const Description = styled.div`
   padding: 16px;
 `
 
+export const ImageNotFoundWrapper = styled.div`
+  background-color: #78848c;
+  height: 100%;
+  padding: 8px;
+  width: 100%;
+
+  svg {
+    max-height: 130px;
+  }
+`
+
 export const ImageWrapper = styled.div`
-  height: 130px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
 
   img {
-    height: 100%;
-    width: 100%;
+    max-height: 130px;
   }
 `
 
