@@ -47,6 +47,7 @@ export const Close = styled.div`
 `
 
 export const Header = styled.div`
+  align-items: center;
   background-color: rgb(55, 133, 174);
   color: rgb(232, 235, 237);
   display: flex;
