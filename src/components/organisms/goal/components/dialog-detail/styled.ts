@@ -67,6 +67,7 @@ export const ImageWrapper = styled.div`
   border-bottom: 1px solid #334752;
   display: flex;
   justify-content: center;
+  height: 294px;
   width: 500px;
 
   @media ${props => props.theme.devices.laptopMax} {
