@@ -55,12 +55,18 @@ export const Header = styled.div`
   padding: 8px 16px;
 `
 
+export const ImageNotFoundWrapper = styled.div`
+  background-color: #78848c;
+  height: 100%;
+  padding: 8px;
+  width: 100%;
+`
+
 export const ImageWrapper = styled.div`
   align-items: center;
   border-bottom: 1px solid #334752;
   display: flex;
   justify-content: center;
-  min-height: 294px;
   width: 500px;
 
   @media ${props => props.theme.devices.laptopMax} {
@@ -77,7 +83,7 @@ export const ImageWrapper = styled.div`
 export const ImageAndDescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 500;
+  max-width: 500px;
   width: 500px;
 
   @media ${props => props.theme.devices.laptopMax} {

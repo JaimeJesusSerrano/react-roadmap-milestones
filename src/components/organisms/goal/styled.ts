@@ -7,6 +7,13 @@ export const Description = styled.div`
   padding: 16px;
 `
 
+export const ImageNotFoundWrapper = styled.div`
+  background-color: #78848c;
+  height: 100%;
+  padding: 8px;
+  width: 100%;
+`
+
 export const ImageWrapper = styled.div`
   height: 130px;
 

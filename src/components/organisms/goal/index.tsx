@@ -27,7 +27,9 @@ const Goal = ({ goal }: ParamTypes): JSX.Element => {
         {goal?.images?.[0] ? (
           <img alt="Goal" loading="lazy" src={goal?.images?.[0]} />
         ) : (
-          <ImageNotFoundSvg height="100%" title="Image not found" width="100%" />
+          <S.ImageNotFoundWrapper>
+            <ImageNotFoundSvg height="100%" title="Image not found" width="100%" />
+          </S.ImageNotFoundWrapper>
         )}
       </S.ImageWrapper>
       <S.Description>{goal?.description}</S.Description>
