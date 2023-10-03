@@ -7,14 +7,19 @@ import ShowPrevious from './components/show-previous'
 import * as S from './styled'
 
 interface ParamTypes {
+  areThereMilestonesFinished: boolean
   milestones: MilestoneType[]
 }
 
-const Render = ({ milestones }: ParamTypes): JSX.Element => (
+const Render = ({ areThereMilestonesFinished, milestones }: ParamTypes): JSX.Element => (
   <S.Wrapper>
-    <div style={{ marginRight: 12 }}>
-      <ShowPrevious />
-    </div>
+    {areThereMilestonesFinished ? (
+      <div style={{ marginRight: 12 }}>
+        <ShowPrevious />
+      </div>
+    ) : (
+      <></>
+    )}
 
     {milestones.map(milestone => (
       <S.MilestoneWrapper key={milestone.name}>

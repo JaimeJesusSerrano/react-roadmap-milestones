@@ -32,7 +32,6 @@ const Render = ({
           <S.HeaderTitle isExpanded={isExpanded} title={milestone.name}>
             {milestone.name}
           </S.HeaderTitle>
-          {/* TODO If there is not old milestones, then don't show this section */}
           <S.ExpandIconWrapper>
             {isExpanded ? (
               <SubtractSvg title="Collapse milestone" />

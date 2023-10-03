@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useMemo } from 'react'
 
 import { context as globalSettingsContext } from '../../../store/global-settings'
 import * as GlobalSettingsActions from '../../../store/global-settings/actions'
@@ -16,15 +16,21 @@ const Logic = ({ milestones, translation }: ParamTypes): JSX.Element | null => {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 
-  const [milestonesToShow, setMilestonesToShow] = useState<MilestoneType[]>()
+  const milestonesToShow = useMemo(() => {
+    if (!milestones) return []
 
-  useEffect(() => {
     if (globalSettings.state.showMilestonesFinished) {
-      setMilestonesToShow(milestones || [])
-    } else {
-      setMilestonesToShow(milestones.filter(milestone => !milestone.finishDate))
+      return milestones
     }
+
+    return milestones.filter(milestone => !milestone.finishDate)
   }, [milestones, globalSettings.state.showMilestonesFinished])
+
+  const areThereMilestonesFinished = useMemo(() => {
+    if (!milestones) return false
+
+    return !!milestones.filter(milestone => milestone.finishDate).length
+  }, [milestones])
 
   useEffect(() => {
     dispatchGlobalSettings(GlobalSettingsActions.setTranslation(translation))
@@ -34,7 +40,9 @@ const Logic = ({ milestones, translation }: ParamTypes): JSX.Element | null => {
     return null
   }
 
-  return <Render milestones={milestonesToShow} />
+  return (
+    <Render areThereMilestonesFinished={areThereMilestonesFinished} milestones={milestonesToShow} />
+  )
 }
 
 export default Logic
