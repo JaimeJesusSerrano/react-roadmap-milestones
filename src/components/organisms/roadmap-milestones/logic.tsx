@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 
 import { context as globalSettingsContext } from '../../../store/global-settings'
 import * as GlobalSettingsActions from '../../../store/global-settings/actions'
-import MilestoneType from '../../../types/Milestone'
+import MilestoneType from '../../../types/model/Milestone'
 import { Translation } from '../../../types/Translation'
 
 import Render from './render'

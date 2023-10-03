@@ -4,7 +4,7 @@ import ImageNotFoundSvg from '../../../../../assets/svg/image-not-found'
 import CloseSvg from '../../../../../assets/svg/close'
 import { context as globalDialogContext } from '../../../../../store/global-dialog'
 import * as GlobalDialogActions from '../../../../../store/global-dialog/actions'
-import GoalType from '../../../../../types/Goal'
+import GoalType from '../../../../../types/model/Goal'
 
 import * as S from './styled'
 

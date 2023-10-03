@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import ImageNotFoundSvg from '../../../assets/svg/image-not-found'
 import { context as globalDialogContext } from '../../../store/global-dialog'
 import * as GlobalDialogActions from '../../../store/global-dialog/actions'
-import GoalType from '../../../types/Goal'
+import GoalType from '../../../types/model/Goal'
 
 import GoalDialogDetail from './components/dialog-detail'
 import * as S from './styled'

@@ -4,9 +4,9 @@ import PlusSvg from '../../../assets/svg/plus'
 import SubtractSvg from '../../../assets/svg/subtract'
 import Category from '../category'
 import Goal from '../../organisms/goal'
-import GoalType from '../../../types/Goal'
-import MilestoneType from '../../../types/Milestone'
-import GoalsByCategoryType from '../../../types/GoalsByCategory'
+import GoalType from '../../../types/model/Goal'
+import MilestoneType from '../../../types/model/Milestone'
+import GoalsByCategoryType from '../../../types/model/GoalsByCategory'
 
 import * as S from './styled'
 
@@ -32,6 +32,7 @@ const Render = ({
           <S.HeaderTitle isExpanded={isExpanded} title={milestone.name}>
             {milestone.name}
           </S.HeaderTitle>
+          {/* TODO If there is not old milestones, then don't show this section */}
           <S.ExpandIconWrapper>
             {isExpanded ? (
               <SubtractSvg title="Collapse milestone" />
