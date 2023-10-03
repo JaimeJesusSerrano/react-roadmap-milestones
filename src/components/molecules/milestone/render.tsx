@@ -28,10 +28,7 @@ const Render = ({
   return (
     <S.Wrapper isExpanded={isExpanded}>
       <S.Header onClick={() => setIsExpanded(!isExpanded)}>
-        <S.HeaderTitleWrapper>
-          <S.HeaderTitle isExpanded={isExpanded} title={milestone.name}>
-            {milestone.name}
-          </S.HeaderTitle>
+        <S.HeaderTitleWrapper isExpanded={isExpanded}>
           <S.ExpandIconWrapper>
             {isExpanded ? (
               <SubtractSvg title="Collapse milestone" />
@@ -39,6 +36,9 @@ const Render = ({
               <PlusSvg title="Expand milestone" />
             )}
           </S.ExpandIconWrapper>
+          <S.HeaderTitle isExpanded={isExpanded} title={milestone.name}>
+            {milestone.name}
+          </S.HeaderTitle>
         </S.HeaderTitleWrapper>
         <S.StatusWrapper>
           <S.Status title={milestone.status}>{milestone.status}</S.Status>

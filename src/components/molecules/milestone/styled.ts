@@ -3,9 +3,8 @@ import styled from 'styled-components'
 export const ExpandIconWrapper = styled.div`
   align-items: center;
   display: flex;
+  justify-content: flex-end;
   height: 100%;
-  position: absolute;
-  right: 0px;
 
   svg {
     color: ${props => props.theme.palette.blue.light};
@@ -24,19 +23,22 @@ interface HeaderTitleParamTypes {
 }
 export const HeaderTitle = styled.div`
   color: white;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: center;
-  margin: 0px 24px 0px 24px;
+  font-size: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '1.5rem' : '1.25rem')};
   overflow: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'hidden')};
+  text-align: center;
   text-overflow: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'ellipsis')};
   white-space: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'nowrap')};
 `
 
+interface HeaderTitleWrapperParamTypes {
+  isExpanded: boolean
+}
 export const HeaderTitleWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 16px;
+  margin: ${(props: HeaderTitleWrapperParamTypes) =>
+    props.isExpanded ? '16px' : '16px 8px 16px 8px'};
   position: relative;
   user-select: none;
 `
