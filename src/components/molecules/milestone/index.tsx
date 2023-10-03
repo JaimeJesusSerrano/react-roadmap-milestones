@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react'
 
-import GoalType from '../../../types/model/Goal'
-import MilestoneType from '../../../types/model/Milestone'
-import GoalsByCategoryType from '../../../types/model/GoalsByCategory'
+import type IGoal from '../../../types/model/Goal'
+import type MilestoneType from '../../../types/model/Milestone'
+import type GoalsByCategoryType from '../../../types/model/GoalsByCategory'
 
 import Render from './render'
 
@@ -13,11 +13,11 @@ interface ParamTypes {
 
 const Milestone = ({ data, isExpanded }: ParamTypes): JSX.Element | null => {
   const [goalsByCategories, setGoalsByCategories] = useState<GoalsByCategoryType>({})
-  const [goalsWithoutCategory, setGoalsWithoutCategory] = useState<GoalType[]>([])
+  const [goalsWithoutCategory, setGoalsWithoutCategory] = useState<IGoal[]>([])
 
   const groupGoalsByCategory = useCallback(
-    (goals: GoalType[]) =>
-      goals.reduce((previousGoalsByCategories: GoalsByCategoryType, currentGoal: GoalType) => {
+    (goals: IGoal[]) =>
+      goals.reduce((previousGoalsByCategories: GoalsByCategoryType, currentGoal: IGoal) => {
         const currentCategoryName = currentGoal.category?.name || 'undefined'
         // Group initialization
         if (!previousGoalsByCategories[currentCategoryName]) {

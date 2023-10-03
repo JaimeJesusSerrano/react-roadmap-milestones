@@ -1,14 +1,14 @@
 import React from 'react'
 
+import type IMilestone from '../../../types/model/Milestone'
 import Milestone from '../../molecules/milestone'
-import MilestoneType from '../../../types/model/Milestone'
 
 import ShowPrevious from './components/show-previous'
 import * as S from './styled'
 
 interface ParamTypes {
   areThereMilestonesFinished: boolean
-  milestones: MilestoneType[]
+  milestones: IMilestone[]
 }
 
 const Render = ({ areThereMilestonesFinished, milestones }: ParamTypes): JSX.Element => (

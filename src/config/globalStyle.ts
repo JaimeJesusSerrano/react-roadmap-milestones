@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { Theme } from '../types/Theme'
+import type { Theme } from '../types/app/Theme'
 
 const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   /* width */

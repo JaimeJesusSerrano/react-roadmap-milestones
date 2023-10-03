@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
+import type IGoal from '../../../types/model/Goal'
 import ChevronDownSvg from '../../../assets/svg/chevron-down'
 import ChevronUpSvg from '../../../assets/svg/chevron-up'
 import Goal from '../../organisms/goal'
-import GoalType from '../../../types/model/Goal'
 
 import * as S from './styled'
 
 interface ParamTypes {
-  goals?: GoalType[]
+  goals?: IGoal[]
   name?: string
 }
 

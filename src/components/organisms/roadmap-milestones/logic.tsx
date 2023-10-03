@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useMemo } from 'react'
 
+import type { Translation as ITranslation } from '../../../types/app/Translation'
+import type IMilestone from '../../../types/model/Milestone'
 import { context as globalSettingsContext } from '../../../store/global-settings'
 import * as GlobalSettingsActions from '../../../store/global-settings/actions'
-import MilestoneType from '../../../types/model/Milestone'
-import { Translation } from '../../../types/Translation'
 
 import Render from './render'
 
 interface ParamTypes {
-  milestones: MilestoneType[]
-  translation: Translation
+  milestones: IMilestone[]
+  translation: ITranslation
 }
 
 const Logic = ({ milestones, translation }: ParamTypes): JSX.Element | null => {

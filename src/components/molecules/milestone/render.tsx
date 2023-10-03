@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 
+import type IGoal from '../../../types/model/Goal'
+import type IMilestone from '../../../types/model/Milestone'
+import type IGoalsByCategory from '../../../types/model/GoalsByCategory'
 import PlusSvg from '../../../assets/svg/plus'
 import SubtractSvg from '../../../assets/svg/subtract'
 import Category from '../category'
 import Goal from '../../organisms/goal'
-import GoalType from '../../../types/model/Goal'
-import MilestoneType from '../../../types/model/Milestone'
-import GoalsByCategoryType from '../../../types/model/GoalsByCategory'
 
 import * as S from './styled'
 
 interface ParamTypes {
   isExpanded: boolean
-  goalsByCategories: GoalsByCategoryType
-  goalsWithoutCategory: GoalType[]
-  milestone: MilestoneType
+  goalsByCategories: IGoalsByCategory
+  goalsWithoutCategory: IGoal[]
+  milestone: IMilestone
 }
 
 const Render = ({

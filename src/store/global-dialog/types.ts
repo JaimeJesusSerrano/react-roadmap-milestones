@@ -1,4 +1,7 @@
-import { ActionType as ActionTypeBase, ContextType as ContextTypeBase } from '../../types/Context'
+import type {
+  ActionType as IActionTypeBase,
+  ContextType as IContextTypeBase,
+} from '../../types/app/Context'
 
 const BASE = 'GLOBAL_DIALOG'
 
@@ -10,6 +13,6 @@ export interface StateType {
   isOpen: boolean
 }
 
-export type ActionType = ActionTypeBase<any>
+export type ActionType = IActionTypeBase<any>
 
-export type ContextType = ContextTypeBase<any, StateType>
+export type ContextType = IContextTypeBase<any, StateType>

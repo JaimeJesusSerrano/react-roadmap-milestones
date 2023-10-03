@@ -1,15 +1,15 @@
 import React, { useContext } from 'react'
 
+import type IGoal from '../../../types/model/Goal'
 import ImageNotFoundSvg from '../../../assets/svg/image-not-found'
 import { context as globalDialogContext } from '../../../store/global-dialog'
 import * as GlobalDialogActions from '../../../store/global-dialog/actions'
-import GoalType from '../../../types/model/Goal'
 
 import GoalDialogDetail from './components/dialog-detail'
 import * as S from './styled'
 
 interface ParamTypes {
-  goal?: GoalType
+  goal?: IGoal
 }
 
 const Goal = ({ goal }: ParamTypes): JSX.Element => {
