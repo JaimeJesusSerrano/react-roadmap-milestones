@@ -23,7 +23,7 @@ const Render = ({ areThereMilestonesFinished, milestones }: ParamTypes): JSX.Ele
 
     {milestones.map(milestone => (
       <S.MilestoneWrapper key={milestone.name}>
-        <Milestone data={milestone} isExpanded={!milestone.finishDate} />
+        <Milestone isExpanded={!milestone.finishDate} milestone={milestone} />
       </S.MilestoneWrapper>
     ))}
   </S.Wrapper>
