@@ -18,7 +18,7 @@ const GoalDialogDetail = ({ goal }: ParamTypes): JSX.Element => {
   return (
     <S.Wrapper>
       <S.Header>
-        <S.Status>{goal.status || ''}</S.Status>
+        <S.Status>{goal.status}</S.Status>
         <S.Close onClick={() => globalDialogDispatch(GlobalDialogActions.setOpen(false))}>
           <CloseSvg title="Close" />
         </S.Close>

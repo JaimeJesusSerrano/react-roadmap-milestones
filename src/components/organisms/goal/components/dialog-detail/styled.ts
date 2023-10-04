@@ -43,12 +43,13 @@ export const CategoryWrapper = styled.div`
 `
 
 export const Close = styled.div`
+  color: #000000;
   cursor: pointer;
 `
 
 export const Header = styled.div`
   align-items: center;
-  background-color: rgb(55, 133, 174);
+  background-color: rgb(111, 190, 236);
   color: rgb(232, 235, 237);
   display: flex;
   flex-direction: row;
@@ -109,6 +110,8 @@ export const Miscellaneous = styled.div`
 `
 
 export const Status = styled.div`
+  color: #000000;
+  font-weight: 600;
   text-transform: uppercase;
 `
 
