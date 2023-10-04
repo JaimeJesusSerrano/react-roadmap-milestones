@@ -9,7 +9,7 @@ import GoalDialogDetail from './components/dialog-detail'
 import * as S from './styled'
 
 interface ParamTypes {
-  goal?: IGoal
+  goal: IGoal
 }
 
 const Goal = ({ goal }: ParamTypes): JSX.Element => {
@@ -21,18 +21,18 @@ const Goal = ({ goal }: ParamTypes): JSX.Element => {
         globalDialogDispatch(GlobalDialogActions.setOpen(true, <GoalDialogDetail goal={goal} />))
       }
     >
-      <S.Status>{goal?.status}</S.Status>
-      <S.Title>{goal?.name}</S.Title>
+      <S.Status>{goal.status}</S.Status>
+      <S.Title>{goal.name}</S.Title>
       <S.ImageWrapper>
-        {goal?.images?.[0] ? (
-          <img alt="Goal" loading="lazy" src={goal?.images?.[0]} />
+        {goal.images?.[0] ? (
+          <img alt="Goal" loading="lazy" src={goal.images?.[0]} />
         ) : (
           <S.ImageNotFoundWrapper>
             <ImageNotFoundSvg height="100%" title="Image not found" width="100%" />
           </S.ImageNotFoundWrapper>
         )}
       </S.ImageWrapper>
-      <S.Description>{goal?.description}</S.Description>
+      <S.Description>{goal.shortDescription || goal.description}</S.Description>
     </S.Wrapper>
   )
 }
