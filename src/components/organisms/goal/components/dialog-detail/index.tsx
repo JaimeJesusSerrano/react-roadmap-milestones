@@ -37,7 +37,7 @@ const GoalDialogDetail = ({ goal }: ParamTypes): JSX.Element => {
           </S.ImageWrapper>
           <S.BodyDescriptionWrapper>
             <S.BodyDescriptionDate>
-              Updated {goal.updateDate?.toLocaleString() || ''}
+              Updated {goal.updateDate?.toLocaleDateString() || ''}
             </S.BodyDescriptionDate>
             <S.BodyDescription>{goal.description}</S.BodyDescription>
           </S.BodyDescriptionWrapper>
