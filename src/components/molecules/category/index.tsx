@@ -8,8 +8,8 @@ import Goal from '../../organisms/goal'
 import * as S from './styled'
 
 interface ParamTypes {
-  goals?: IGoal[]
-  name?: string
+  goals: IGoal[]
+  name: string
 }
 
 const Category = ({ goals, name = '' }: ParamTypes): JSX.Element => {
@@ -20,7 +20,9 @@ const Category = ({ goals, name = '' }: ParamTypes): JSX.Element => {
       <S.Header onClick={() => setIsExpanded(!isExpanded)}>
         <S.LeftHeader>
           <S.LeftHeaderTitle>{name}</S.LeftHeaderTitle>
-          <S.LeftHeaderSubtitle>{goals?.length} Entries</S.LeftHeaderSubtitle>
+          <S.LeftHeaderSubtitle>
+            {goals.length === 1 ? `1 Entry` : `${goals.length} Entries`}
+          </S.LeftHeaderSubtitle>
         </S.LeftHeader>
 
         <S.RightHeader>

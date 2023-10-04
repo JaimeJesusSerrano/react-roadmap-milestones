@@ -48,7 +48,11 @@ const Render = ({
       {isExpanded && (
         <S.MilestonesWrapper>
           {Object.values(goalsByCategories).map(goals => (
-            <Category goals={goals} key={goals[0].category?.name} name={goals[0].category?.name} />
+            <Category
+              goals={goals}
+              key={goals[0].category?.name || ''}
+              name={goals[0].category?.name || ''}
+            />
           ))}
           {goalsWithoutCategory.map(goal => (
             <Goal key={goal.name} goal={goal} />
