@@ -40,6 +40,10 @@ export const CategoryTitle = styled.span`
 
 export const CategoryWrapper = styled.div`
   padding: 12px 24px;
+
+  @media ${props => props.theme.devices.laptopMax} {
+    border-top: 2px solid #164664;
+  }
 `
 
 export const Close = styled.div`
@@ -101,10 +105,13 @@ export const Miscellaneous = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  margin-bottom: 8px;
   max-width: 300px;
   width: 300px;
 
   @media ${props => props.theme.devices.laptopMax} {
+    border-left: unset;
+    max-width: 100%;
     width: 100%;
   }
 `
