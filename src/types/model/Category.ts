@@ -1,5 +1,5 @@
 export interface Category {
-  color: string
+  color?: string
   name: string
 }
 
