@@ -24,6 +24,7 @@ interface HeaderTitleParamTypes {
 export const HeaderTitle = styled.div`
   color: white;
   font-size: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '1.5rem' : '1.25rem')};
+  font-weight: 600;
   overflow: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'hidden')};
   text-align: center;
   text-overflow: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'ellipsis')};
@@ -50,9 +51,9 @@ export const MilestonesWrapper = styled.div`
 export const Status = styled.div`
   border: 1px solid ${props => props.theme.palette.category.border};
   border-radius: 8px;
-  color: rgb(186, 193, 197);
+  color: rgb(173, 225, 255);
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 20px;
   letter-spacing: 1px;
   padding: 4px 8px 4px 8px;

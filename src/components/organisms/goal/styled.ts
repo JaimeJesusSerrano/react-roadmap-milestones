@@ -34,7 +34,7 @@ export const Status = styled.div`
   border-radius: 8px 8px 0 0;
   color: #000000;
   display: flex;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   height: 24px;
   padding-left: 32px;
