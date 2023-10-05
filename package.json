@@ -1,6 +1,6 @@
 {
   "name": "@jaimejesusserrano/react-roadmap-milestones",
-  "version": "0.6.7",
+  "version": "0.6.8",
   "private": false,
   "author": "Jaime Jesús Serrano <jaimejesusserrano@gmail.com>",
   "repository": {
@@ -33,7 +33,7 @@
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
     "@mui/material": "5.14.12",
-    "styled-components": "5.3.6"
+    "styled-components": "5.3.11"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.4",
@@ -83,7 +83,10 @@
     "roadmap",
     "ReactRoadmap",
     "ReactRoadmapMilestone",
-    "ReactRoadmapMilestones"
+    "ReactRoadmapMilestones",
+    "react-roadmap",
+    "react-roadmap-milestone",
+    "react-roadmap-milestones"
   ],
   "license": "MIT"
 }
