@@ -41,6 +41,11 @@ export const Status = styled.div`
   text-transform: uppercase;
 `
 
+export const TagsWrapper = styled.div`
+  border-top: 2px solid #164664;
+  padding: 8px 16px 16px 16px;
+`
+
 export const Title = styled.div`
   align-items: center;
   color: rgb(232, 235, 237);

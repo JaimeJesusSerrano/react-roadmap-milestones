@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 
 import type IGoal from '../../../types/model/Goal'
 import ImageNotFoundSvg from '../../../assets/svg/image-not-found'
+import Tags from '../../molecules/tags'
 import { context as globalDialogContext } from '../../../store/global-dialog'
 import * as GlobalDialogActions from '../../../store/global-dialog/actions'
 
@@ -33,6 +34,13 @@ const Goal = ({ goal }: ParamTypes): JSX.Element => {
         )}
       </S.ImageWrapper>
       <S.Description>{goal.shortDescription || goal.description}</S.Description>
+      {goal.tags?.length ? (
+        <S.TagsWrapper>
+          <Tags tags={goal.tags} />
+        </S.TagsWrapper>
+      ) : (
+        <></>
+      )}
     </S.Wrapper>
   )
 }

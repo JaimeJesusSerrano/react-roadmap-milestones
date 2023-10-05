@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 import type IGoal from '../../../../../types/model/Goal'
 import ImageNotFoundSvg from '../../../../../assets/svg/image-not-found'
 import CloseSvg from '../../../../../assets/svg/close'
+import Tags from '../../../../molecules/tags'
 import { context as globalDialogContext } from '../../../../../store/global-dialog'
 import * as GlobalDialogActions from '../../../../../store/global-dialog/actions'
 
@@ -47,6 +48,14 @@ const GoalDialogDetail = ({ goal }: ParamTypes): JSX.Element => {
             <S.CategoryTitle>Category: </S.CategoryTitle>
             <S.Category>{goal.category?.name || ''}</S.Category>
           </S.CategoryWrapper>
+          {goal.tags?.length ? (
+            <S.TagsWrapper>
+              <S.TagsTittle>Tags: </S.TagsTittle>
+              <Tags tags={goal.tags} />
+            </S.TagsWrapper>
+          ) : (
+            <></>
+          )}
         </S.Miscellaneous>
       </S.Body>
     </S.Wrapper>

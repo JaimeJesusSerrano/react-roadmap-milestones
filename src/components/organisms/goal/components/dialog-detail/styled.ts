@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Body = styled.div`
+  border-top: 2px solid #164664;
   display: flex;
 
   @media ${props => props.theme.devices.laptopMax} {
@@ -38,7 +39,6 @@ export const CategoryTitle = styled.span`
 `
 
 export const CategoryWrapper = styled.div`
-  border-bottom: 1px solid #334752;
   padding: 12px 24px;
 `
 
@@ -70,7 +70,7 @@ export const ImageNotFoundWrapper = styled.div`
 
 export const ImageWrapper = styled.div`
   align-items: center;
-  border-bottom: 1px solid #334752;
+  border-bottom: 2px solid #164664;
   display: flex;
   justify-content: center;
   width: 500px;
@@ -97,7 +97,7 @@ export const ImageAndDescriptionWrapper = styled.div`
 `
 
 export const Miscellaneous = styled.div`
-  border-left: 1px solid #334752;
+  border-left: 2px solid #164664;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -115,8 +115,17 @@ export const Status = styled.div`
   text-transform: uppercase;
 `
 
+export const TagsTittle = styled.div`
+  color: rgb(186, 193, 197);
+  margin-bottom: 8px;
+`
+
+export const TagsWrapper = styled.div`
+  border-top: 2px solid #164664;
+  padding: 12px 24px;
+`
+
 export const Title = styled.div`
-  border-bottom: 1px solid #334752;
   color: #ffffff;
   font-size: 1.4rem;
   font-weight: 400;
