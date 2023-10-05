@@ -62,10 +62,18 @@ export const Status = styled.div`
   width: fit-content;
 `
 
+export const StatusDate = styled.div`
+  color: rgb(173, 225, 255);
+  font-size: 0.7rem;
+  margin-top: 8px;
+`
+
 export const StatusWrapper = styled.div`
+  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 0 16px 16px 16px;
+  margin: 0 16px 24px 16px;
 `
 
 interface WrapperParamTypes {
@@ -73,6 +81,7 @@ interface WrapperParamTypes {
 }
 export const Wrapper = styled.div`
   background-color: ${props => props.theme.palette.milestone.background};
+  border-radius: 0px 0px 8px 8px;
   border-top: 3px solid rgb(173, 225, 255);
   height: min-content;
   overflow: auto;

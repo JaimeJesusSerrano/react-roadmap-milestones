@@ -42,6 +42,11 @@ const Render = ({
         </S.HeaderTitleWrapper>
         <S.StatusWrapper>
           <S.Status title={milestone.status}>{milestone.status}</S.Status>
+          {milestone.finishDate ? (
+            <S.StatusDate>{milestone.finishDate.toLocaleDateString()}</S.StatusDate>
+          ) : (
+            <></>
+          )}
         </S.StatusWrapper>
       </S.Header>
 
