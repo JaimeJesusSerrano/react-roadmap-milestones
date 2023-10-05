@@ -72,6 +72,7 @@ interface WrapperParamTypes {
 }
 export const Wrapper = styled.div`
   background-color: ${props => props.theme.palette.milestone.background};
+  border-top: 3px solid rgb(173, 225, 255);
   height: min-content;
   overflow: auto;
   width: ${(props: WrapperParamTypes) => (props.isExpanded ? '320px' : '120px')};
