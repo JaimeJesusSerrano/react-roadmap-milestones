@@ -21,10 +21,11 @@ export const LeftHeader = styled.div`
 
 export const LeftHeaderSubtitle = styled.div`
   color: rgb(186, 193, 197);
-  font-size: 0.8rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 600;
   line-height: 20px;
   letter-spacing: 1px;
+  margin-top: 4px;
 `
 
 export const LeftHeaderTitle = styled.div`

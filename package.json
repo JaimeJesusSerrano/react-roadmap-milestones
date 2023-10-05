@@ -1,6 +1,6 @@
 {
   "name": "@jaimejesusserrano/react-roadmap-milestones",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "private": false,
   "author": "Jaime Jesús Serrano <jaimejesusserrano@gmail.com>",
   "repository": {
@@ -32,7 +32,7 @@
   "dependencies": {
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
-    "@mui/material": "5.11.4",
+    "@mui/material": "5.14.12",
     "styled-components": "5.3.6"
   },
   "devDependencies": {
@@ -41,12 +41,12 @@
     "@testing-library/user-event": "13.5.0",
     "@types/jest": "27.4.1",
     "@types/node": "18.11.18",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
-    "@types/styled-components": "5.1.27",
-    "@typescript-eslint/eslint-plugin": "6.7.2",
-    "@typescript-eslint/parser": "6.7.2",
-    "eslint": "8.49.0",
+    "@types/react": "18.2.25",
+    "@types/react-dom": "18.2.10",
+    "@types/styled-components": "5.1.28",
+    "@typescript-eslint/eslint-plugin": "6.7.4",
+    "@typescript-eslint/parser": "6.7.4",
+    "eslint": "8.50.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "17.1.0",
     "eslint-config-prettier": "8.10.0",
@@ -80,7 +80,10 @@
     "packages",
     "pkg",
     "react",
-    "roadmap"
+    "roadmap",
+    "ReactRoadmap",
+    "ReactRoadmapMilestone",
+    "ReactRoadmapMilestones"
   ],
   "license": "MIT"
 }

@@ -4,14 +4,13 @@ import Tag from './Tag'
 export interface Goal {
   category?: Category
   description: string
-  estimatedFinishDate?: Date
   finishDate?: Date
-  images: string[]
+  images?: string[]
   name: string
-  shortDescription: string
+  shortDescription?: string
   startDate?: Date
   status: string
-  tags: Tag[]
+  tags?: Tag[]
   updateDate: Date
 }
 

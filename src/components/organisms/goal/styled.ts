@@ -30,15 +30,20 @@ export const ImageWrapper = styled.div`
 
 export const Status = styled.div`
   align-items: center;
-  background: rgb(55, 133, 174);
+  background-color: rgb(111, 190, 236);
   border-radius: 8px 8px 0 0;
-  color: rgb(232, 235, 237);
+  color: #000000;
   display: flex;
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 600;
   height: 24px;
   padding-left: 32px;
   text-transform: uppercase;
+`
+
+export const TagsWrapper = styled.div`
+  border-top: 2px solid #164664;
+  padding: 8px 16px 16px 16px;
 `
 
 export const Title = styled.div`

@@ -30,7 +30,7 @@ const ShowPrevious = (): JSX.Element => {
       }
     >
       <S.ShowHidePreviousText>
-        {globalSettings.state.translation.previousButton.showPrevious}{' '}
+        {globalSettings.state.translation.previousButton.showPrevious}
       </S.ShowHidePreviousText>
       <PlusSvg title={globalSettings.state.translation.previousButton.showPrevious} />
     </VerticalButton>

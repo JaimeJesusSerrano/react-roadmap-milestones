@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 
+import type IGoal from '../../../types/model/Goal'
+import type IMilestone from '../../../types/model/Milestone'
+import type IGoalsByCategory from '../../../types/model/GoalsByCategory'
 import PlusSvg from '../../../assets/svg/plus'
 import SubtractSvg from '../../../assets/svg/subtract'
 import Category from '../category'
 import Goal from '../../organisms/goal'
-import GoalType from '../../../types/Goal'
-import MilestoneType from '../../../types/Milestone'
-import GoalsByCategoryType from '../../../types/GoalsByCategory'
 
 import * as S from './styled'
 
 interface ParamTypes {
   isExpanded: boolean
-  goalsByCategories: GoalsByCategoryType
-  goalsWithoutCategory: GoalType[]
-  milestone: MilestoneType
+  goalsByCategories: IGoalsByCategory
+  goalsWithoutCategory: IGoal[]
+  milestone: IMilestone
 }
 
 const Render = ({
@@ -28,10 +28,7 @@ const Render = ({
   return (
     <S.Wrapper isExpanded={isExpanded}>
       <S.Header onClick={() => setIsExpanded(!isExpanded)}>
-        <S.HeaderTitleWrapper>
-          <S.HeaderTitle isExpanded={isExpanded} title={milestone.name}>
-            {milestone.name}
-          </S.HeaderTitle>
+        <S.HeaderTitleWrapper isExpanded={isExpanded}>
           <S.ExpandIconWrapper>
             {isExpanded ? (
               <SubtractSvg title="Collapse milestone" />
@@ -39,16 +36,28 @@ const Render = ({
               <PlusSvg title="Expand milestone" />
             )}
           </S.ExpandIconWrapper>
+          <S.HeaderTitle isExpanded={isExpanded} title={milestone.name}>
+            {milestone.name}
+          </S.HeaderTitle>
         </S.HeaderTitleWrapper>
         <S.StatusWrapper>
           <S.Status title={milestone.status}>{milestone.status}</S.Status>
+          {milestone.finishDate ? (
+            <S.StatusDate>{milestone.finishDate.toLocaleDateString()}</S.StatusDate>
+          ) : (
+            <></>
+          )}
         </S.StatusWrapper>
       </S.Header>
 
       {isExpanded && (
         <S.MilestonesWrapper>
           {Object.values(goalsByCategories).map(goals => (
-            <Category goals={goals} key={goals[0].category?.name} name={goals[0].category?.name} />
+            <Category
+              goals={goals}
+              key={goals[0].category?.name || ''}
+              name={goals[0].category?.name || ''}
+            />
           ))}
           {goalsWithoutCategory.map(goal => (
             <Goal key={goal.name} goal={goal} />

@@ -1,6 +1,8 @@
-import { ActionType as ActionTypeBase, ContextType as ContextTypeBase } from '../../types/Context'
-
-import { Translation } from '../../types/Translation'
+import type {
+  ActionType as IActionTypeBase,
+  ContextType as IContextTypeBase,
+} from '../../types/app/Context'
+import type { Translation as ITranslation } from '../../types/app/Translation'
 
 const BASE = 'GLOBAL_SETTINGS'
 
@@ -10,9 +12,9 @@ export const SET_TRANSLATION = `${BASE}_SET_TRANSLATION`
 
 export interface StateType {
   showMilestonesFinished: boolean
-  translation: Translation
+  translation: ITranslation
 }
 
-export type ActionType = ActionTypeBase<any>
+export type ActionType = IActionTypeBase<any>
 
-export type ContextType = ContextTypeBase<any, StateType>
+export type ContextType = IContextTypeBase<any, StateType>

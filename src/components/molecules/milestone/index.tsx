@@ -1,24 +1,28 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useMemo } from 'react'
 
-import GoalType from '../../../types/Goal'
-import MilestoneType from '../../../types/Milestone'
-import GoalsByCategoryType from '../../../types/GoalsByCategory'
+import type IGoal from '../../../types/model/Goal'
+import type IMilestone from '../../../types/model/Milestone'
+import type IGoalsByCategory from '../../../types/model/GoalsByCategory'
 
 import Render from './render'
 
 interface ParamTypes {
-  data?: MilestoneType
   isExpanded: boolean
+  milestone?: IMilestone
 }
 
-const Milestone = ({ data, isExpanded }: ParamTypes): JSX.Element | null => {
-  const [goalsByCategories, setGoalsByCategories] = useState<GoalsByCategoryType>({})
-  const [goalsWithoutCategory, setGoalsWithoutCategory] = useState<GoalType[]>([])
+const Milestone = ({ isExpanded, milestone }: ParamTypes): JSX.Element | null => {
+  const goalsByCategories: IGoalsByCategory = useMemo(() => {
+    if (!milestone?.goals?.length) return {}
 
-  const groupGoalsByCategory = useCallback(
-    (goals: GoalType[]) =>
-      goals.reduce((previousGoalsByCategories: GoalsByCategoryType, currentGoal: GoalType) => {
-        const currentCategoryName = currentGoal.category?.name || 'undefined'
+    const goalsWithCategory = milestone.goals.filter(goal => goal.category)
+
+    return goalsWithCategory.reduce(
+      (previousGoalsByCategories: IGoalsByCategory, currentGoal: IGoal) => {
+        if (!currentGoal.category) return previousGoalsByCategories || {}
+
+        const currentCategoryName = currentGoal.category.name
+
         // Group initialization
         if (!previousGoalsByCategories[currentCategoryName]) {
           previousGoalsByCategories[currentCategoryName] = []
@@ -28,24 +32,17 @@ const Milestone = ({ data, isExpanded }: ParamTypes): JSX.Element | null => {
         previousGoalsByCategories[currentCategoryName].push(currentGoal)
 
         return previousGoalsByCategories
-      }, {}),
-    [],
-  )
+      },
+      {},
+    )
+  }, [milestone])
 
-  useEffect(() => {
-    if (!data || !data.goals) {
-      setGoalsByCategories({})
-      setGoalsWithoutCategory([])
-      return
-    }
+  const goalsWithoutCategory = useMemo(() => {
+    if (!milestone?.goals?.length) return []
+    return milestone.goals.filter(goal => !goal.category)
+  }, [milestone])
 
-    const newCategories = groupGoalsByCategory(data.goals)
-    setGoalsWithoutCategory(newCategories.undefined || [])
-    delete newCategories.undefined
-    setGoalsByCategories(newCategories)
-  }, [data?.goals])
-
-  if (!data) {
+  if (!milestone) {
     return null
   }
 
@@ -54,7 +51,7 @@ const Milestone = ({ data, isExpanded }: ParamTypes): JSX.Element | null => {
       isExpanded={isExpanded}
       goalsByCategories={goalsByCategories}
       goalsWithoutCategory={goalsWithoutCategory}
-      milestone={data}
+      milestone={milestone}
     />
   )
 }

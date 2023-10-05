@@ -1,5 +1,5 @@
 export interface Tag {
-  color: string
+  color?: string
   name: string
 }
 

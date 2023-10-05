@@ -3,9 +3,8 @@ import styled from 'styled-components'
 export const ExpandIconWrapper = styled.div`
   align-items: center;
   display: flex;
+  justify-content: flex-end;
   height: 100%;
-  position: absolute;
-  right: 0px;
 
   svg {
     color: ${props => props.theme.palette.blue.light};
@@ -24,19 +23,23 @@ interface HeaderTitleParamTypes {
 }
 export const HeaderTitle = styled.div`
   color: white;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: center;
-  margin: 0px 24px 0px 24px;
+  font-size: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '1.5rem' : '1.25rem')};
+  font-weight: 600;
   overflow: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'hidden')};
+  text-align: center;
   text-overflow: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'ellipsis')};
   white-space: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'nowrap')};
 `
 
+interface HeaderTitleWrapperParamTypes {
+  isExpanded: boolean
+}
 export const HeaderTitleWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 16px;
+  margin: ${(props: HeaderTitleWrapperParamTypes) =>
+    props.isExpanded ? '16px' : '16px 8px 16px 8px'};
   position: relative;
   user-select: none;
 `
@@ -48,9 +51,9 @@ export const MilestonesWrapper = styled.div`
 export const Status = styled.div`
   border: 1px solid ${props => props.theme.palette.category.border};
   border-radius: 8px;
-  color: rgb(186, 193, 197);
+  color: rgb(173, 225, 255);
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 20px;
   letter-spacing: 1px;
   padding: 4px 8px 4px 8px;
@@ -59,10 +62,18 @@ export const Status = styled.div`
   width: fit-content;
 `
 
+export const StatusDate = styled.div`
+  color: rgb(173, 225, 255);
+  font-size: 0.7rem;
+  margin-top: 8px;
+`
+
 export const StatusWrapper = styled.div`
+  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 0 16px 16px 16px;
+  margin: 0 16px 24px 16px;
 `
 
 interface WrapperParamTypes {
@@ -70,6 +81,8 @@ interface WrapperParamTypes {
 }
 export const Wrapper = styled.div`
   background-color: ${props => props.theme.palette.milestone.background};
+  border-radius: 0px 0px 8px 8px;
+  border-top: 3px solid rgb(173, 225, 255);
   height: min-content;
   overflow: auto;
   width: ${(props: WrapperParamTypes) => (props.isExpanded ? '320px' : '120px')};
