@@ -15,7 +15,7 @@ const Tags = ({ tags, ...props }: ParamTypes): JSX.Element => {
   return (
     <S.Wrapper {...props}>
       {tags.map(tag => (
-        <Tag>{tag.name}</Tag>
+        <Tag key={tag.name}>{tag.name}</Tag>
       ))}
     </S.Wrapper>
   )
