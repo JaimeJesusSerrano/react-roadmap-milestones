@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 
 import PlusSvg from '../../../../../assets/svg/plus'
 import SubtractSvg from '../../../../../assets/svg/subtract'

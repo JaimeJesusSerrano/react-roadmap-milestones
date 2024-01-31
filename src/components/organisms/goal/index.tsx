@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 
 import type IGoal from '../../../types/model/Goal'
 import ImageNotFoundSvg from '../../../assets/svg/image-not-found'

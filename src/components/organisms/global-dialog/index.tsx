@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 
 import { context as globalDialogContext } from '../../../store/global-dialog'
 import * as GlobalDialogActions from '../../../store/global-dialog/actions'

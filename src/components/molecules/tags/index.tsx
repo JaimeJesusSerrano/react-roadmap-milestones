@@ -1,5 +1,3 @@
-import React from 'react'
-
 import ITag from '../../../types/model/Tag'
 import Tag from '../../atoms/tag'
 

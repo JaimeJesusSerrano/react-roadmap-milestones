@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo } from 'react'
+import { useContext, useEffect, useMemo } from 'react'
 
 import type { Translation as ITranslation } from '../../../types/app/Translation'
 import type IMilestone from '../../../types/model/Milestone'

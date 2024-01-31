@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 import type IGoal from '../../../types/model/Goal'
 import type IMilestone from '../../../types/model/Milestone'

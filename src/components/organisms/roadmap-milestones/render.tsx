@@ -1,5 +1,3 @@
-import React from 'react'
-
 import type IMilestone from '../../../types/model/Milestone'
 import Milestone from '../../molecules/milestone'
 

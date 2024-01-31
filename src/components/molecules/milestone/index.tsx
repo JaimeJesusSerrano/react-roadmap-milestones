@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 
 import type IGoal from '../../../types/model/Goal'
 import type IMilestone from '../../../types/model/Milestone'
