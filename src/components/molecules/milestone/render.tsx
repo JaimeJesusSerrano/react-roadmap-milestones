@@ -21,13 +21,13 @@ const Render = ({
   isExpanded: isDefaultExpanded,
   goalsByCategories,
   goalsWithoutCategory,
-  milestone,
+  milestone
 }: ParamTypes): JSX.Element => {
   const [isExpanded, setIsExpanded] = useState(isDefaultExpanded)
 
   return (
     <S.Wrapper isExpanded={isExpanded}>
-      <S.Header onClick={() => setIsExpanded(!isExpanded)}>
+      <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
         <S.HeaderTitleWrapper isExpanded={isExpanded}>
           <S.ExpandIconWrapper>
             {isExpanded ? (

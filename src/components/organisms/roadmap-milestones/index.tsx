@@ -1,4 +1,4 @@
-import React from 'react'
+import { type FunctionComponent } from 'react'
 
 import { ThemeProvider } from 'styled-components'
 
@@ -20,19 +20,19 @@ interface ParamTypes {
   translation?: ITranslation
 }
 
-const RoadmapMilestones: React.FunctionComponent<ParamTypes> = ({
+const RoadmapMilestones: FunctionComponent<ParamTypes> = ({
   roadmapMilestonesData,
   theme: themeOverride,
-  translation,
+  translation
 }) => {
-  if (!roadmapMilestonesData || !roadmapMilestonesData.milestones) {
+  if (!roadmapMilestonesData?.milestones) {
     return null
   }
 
   const theme: ITheme = {
     breakpoints: themeOverride?.breakpoints || defaultTheme.breakpoints,
     devices: themeOverride?.devices || defaultTheme.devices,
-    palette: themeOverride?.palette || defaultTheme.palette,
+    palette: themeOverride?.palette || defaultTheme.palette
   }
 
   return (

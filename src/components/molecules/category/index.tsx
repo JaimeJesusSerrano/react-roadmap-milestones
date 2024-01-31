@@ -17,11 +17,11 @@ const Category = ({ goals, name = '' }: ParamTypes): JSX.Element => {
 
   return (
     <S.Wrapper>
-      <S.Header onClick={() => setIsExpanded(!isExpanded)}>
+      <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
         <S.LeftHeader>
           <S.LeftHeaderTitle>{name}</S.LeftHeaderTitle>
           <S.LeftHeaderSubtitle>
-            {goals.length === 1 ? `1 Entry` : `${goals.length} Entries`}
+            {goals.length === 1 ? '1 Entry' : `${goals.length} Entries`}
           </S.LeftHeaderSubtitle>
         </S.LeftHeader>
 

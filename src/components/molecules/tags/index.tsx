@@ -1,4 +1,4 @@
-import ITag from '../../../types/model/Tag'
+import type ITag from '../../../types/model/Tag'
 import Tag from '../../atoms/tag'
 
 import * as S from './styled'

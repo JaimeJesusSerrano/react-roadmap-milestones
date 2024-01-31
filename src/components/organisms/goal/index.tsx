@@ -18,8 +18,7 @@ const Goal = ({ goal }: ParamTypes): JSX.Element => {
 
   return (
     <S.Wrapper
-      onClick={() =>
-        globalDialogDispatch(GlobalDialogActions.setOpen(true, <GoalDialogDetail goal={goal} />))
+      onClick={() => { globalDialogDispatch(GlobalDialogActions.setOpen(true, <GoalDialogDetail goal={goal} />)) }
       }
     >
       <S.Status>{goal.status}</S.Status>

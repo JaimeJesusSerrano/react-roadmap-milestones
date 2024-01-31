@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface ParamTypes {
   children?: React.ReactNode
   title?: string

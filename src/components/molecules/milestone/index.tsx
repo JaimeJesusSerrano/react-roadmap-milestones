@@ -33,7 +33,7 @@ const Milestone = ({ isExpanded, milestone }: ParamTypes): JSX.Element | null =>
 
         return previousGoalsByCategories
       },
-      {},
+      {}
     )
   }, [milestone])
 
