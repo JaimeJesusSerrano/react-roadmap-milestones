@@ -10,61 +10,97 @@ import Goal from '../../organisms/goal'
 
 import * as S from './styled'
 
-interface ParamTypes {
-  isExpanded: boolean
-  goalsByCategories: IGoalsByCategory
-  goalsWithoutCategory: IGoal[]
-  milestone: IMilestone
+interface Props {
+  readonly isExpanded: boolean
+  readonly goalsByCategories: IGoalsByCategory
+  readonly goalsWithoutCategory: IGoal[]
+  readonly milestone: IMilestone
 }
 
-const Render = ({
+function Render ({
   isExpanded: isDefaultExpanded,
   goalsByCategories,
   goalsWithoutCategory,
   milestone
-}: ParamTypes): JSX.Element => {
+}: Props): JSX.Element {
   const [isExpanded, setIsExpanded] = useState(isDefaultExpanded)
 
   return (
-    <S.Wrapper isExpanded={isExpanded}>
-      <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
-        <S.HeaderTitleWrapper isExpanded={isExpanded}>
-          <S.ExpandIconWrapper>
-            {isExpanded ? (
-              <SubtractSvg title="Collapse milestone" />
-            ) : (
-              <PlusSvg title="Expand milestone" />
-            )}
-          </S.ExpandIconWrapper>
-          <S.HeaderTitle isExpanded={isExpanded} title={milestone.name}>
-            {milestone.name}
-          </S.HeaderTitle>
-        </S.HeaderTitleWrapper>
-        <S.StatusWrapper>
-          <S.Status title={milestone.status}>{milestone.status}</S.Status>
-          {milestone.finishDate ? (
-            <S.StatusDate>{milestone.finishDate.toLocaleDateString()}</S.StatusDate>
-          ) : (
-            <></>
-          )}
-        </S.StatusWrapper>
-      </S.Header>
+      <S.Wrapper isExpanded={isExpanded}>
+          <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
+              <S.HeaderTitleWrapper isExpanded={isExpanded}>
+                  <S.ExpandIconWrapper>
+                      <ExpandIconWrapper isExpanded />
+                  </S.ExpandIconWrapper>
 
-      {isExpanded && (
-        <S.MilestonesWrapper>
+                  <S.HeaderTitle
+                      isExpanded={isExpanded}
+                      title={milestone.name}
+                  >
+                      {milestone.name}
+                  </S.HeaderTitle>
+              </S.HeaderTitleWrapper>
+
+              <S.StatusWrapper>
+                  <S.Status title={milestone.status}>
+                      {milestone.status}
+                  </S.Status>
+
+                  {milestone.finishDate
+                    ? (
+                        <S.StatusDate>
+                            {milestone.finishDate.toLocaleDateString()}
+                        </S.StatusDate>
+                      )
+                    : (
+                        null
+                      )}
+              </S.StatusWrapper>
+          </S.Header>
+
+          {isExpanded
+            ? (
+                <MilestonesWrapper
+                    goalsByCategories={goalsByCategories}
+                    goalsWithoutCategory={goalsWithoutCategory}
+                />
+              )
+            : null}
+      </S.Wrapper>
+  )
+}
+
+function ExpandIconWrapper ({ isExpanded }: { readonly isExpanded: boolean }): JSX.Element {
+  if (isExpanded) return <SubtractSvg title="Collapse milestone" />
+  return <PlusSvg title="Expand milestone" />
+}
+
+interface MilestonesWrapperProps {
+  readonly goalsByCategories: IGoalsByCategory
+  readonly goalsWithoutCategory: IGoal[]
+}
+
+function MilestonesWrapper ({
+  goalsByCategories,
+  goalsWithoutCategory
+}: MilestonesWrapperProps): JSX.Element {
+  return (
+      <S.MilestonesWrapper>
           {Object.values(goalsByCategories).map(goals => (
-            <Category
-              goals={goals}
-              key={goals[0].category?.name || ''}
-              name={goals[0].category?.name || ''}
-            />
+              <Category
+                  goals={goals}
+                  key={goals[0].category?.name ?? ''}
+                  name={goals[0].category?.name ?? ''}
+              />
           ))}
+
           {goalsWithoutCategory.map(goal => (
-            <Goal key={goal.name} goal={goal} />
+              <Goal
+                  goal={goal}
+                  key={goal.name}
+              />
           ))}
-        </S.MilestonesWrapper>
-      )}
-    </S.Wrapper>
+      </S.MilestonesWrapper>
   )
 }
 

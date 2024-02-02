@@ -7,12 +7,12 @@ import * as GlobalSettingsActions from '../../../store/global-settings/actions'
 
 import Render from './render'
 
-interface ParamTypes {
-  milestones: IMilestone[]
-  translation: ITranslation
+interface Props {
+  readonly milestones: IMilestone[]
+  readonly translation: ITranslation
 }
 
-const Logic = ({ milestones, translation }: ParamTypes): JSX.Element | null => {
+function Logic ({ milestones, translation }: Props): JSX.Element | null {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 
@@ -41,7 +41,10 @@ const Logic = ({ milestones, translation }: ParamTypes): JSX.Element | null => {
   }
 
   return (
-    <Render areThereMilestonesFinished={areThereMilestonesFinished} milestones={milestonesToShow} />
+      <Render
+          areThereMilestonesFinished={areThereMilestonesFinished}
+          milestones={milestonesToShow}
+      />
   )
 }
 

@@ -7,37 +7,52 @@ import Goal from '../../organisms/goal'
 
 import * as S from './styled'
 
-interface ParamTypes {
-  goals: IGoal[]
-  name: string
+interface Props {
+  readonly goals: IGoal[]
+  readonly name: string
 }
 
-const Category = ({ goals, name = '' }: ParamTypes): JSX.Element => {
+function Category ({ goals, name = '' }: Props): JSX.Element {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
-    <S.Wrapper>
-      <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
-        <S.LeftHeader>
-          <S.LeftHeaderTitle>{name}</S.LeftHeaderTitle>
-          <S.LeftHeaderSubtitle>
-            {goals.length === 1 ? '1 Entry' : `${goals.length} Entries`}
-          </S.LeftHeaderSubtitle>
-        </S.LeftHeader>
+      <S.Wrapper>
+          <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
+              <S.LeftHeader>
+                  <S.LeftHeaderTitle>
+                      {name}
+                  </S.LeftHeaderTitle>
 
-        <S.RightHeader>
-          {isExpanded ? (
-            <ChevronUpSvg title="Collapse category" />
-          ) : (
-            <ChevronDownSvg title="Expand category" />
+                  <S.LeftHeaderSubtitle>
+                      {goals.length === 1 ? '1 Entry' : `${goals.length} Entries`}
+                  </S.LeftHeaderSubtitle>
+              </S.LeftHeader>
+
+              <S.RightHeader>
+                  <RightHeader isExpanded={isExpanded} />
+              </S.RightHeader>
+          </S.Header>
+
+          {isExpanded ? <Goals goals={goals} /> : null}
+      </S.Wrapper>
+  )
+}
+
+function RightHeader ({ isExpanded }: { readonly isExpanded: boolean }): JSX.Element {
+  if (isExpanded) return <ChevronUpSvg title="Collapse category" />
+  return <ChevronDownSvg title="Expand category" />
+}
+
+function Goals ({ goals }: { readonly goals: IGoal[] }): JSX.Element {
+  return (
+      <S.GoalsWrapper>
+          {goals?.map(goal => (
+              <Goal
+                  goal={goal}
+                  key={goal.name}
+              />)
           )}
-        </S.RightHeader>
-      </S.Header>
-
-      {isExpanded && goals?.length && (
-        <S.GoalsWrapper>{goals?.map(goal => <Goal key={goal.name} goal={goal} />)}</S.GoalsWrapper>
-      )}
-    </S.Wrapper>
+      </S.GoalsWrapper>
   )
 }
 

@@ -1,19 +1,31 @@
-interface ParamTypes {
-  children?: React.ReactNode
-  title?: string
+interface Props {
+  readonly children?: React.ReactNode
+  readonly title?: string
 }
 
-/* eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any */
-const SvgBase = ({ children, title, ...props }: ParamTypes): JSX.Element => (
-  <svg
-    version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1991/xlink"
-    {...props}
-  >
-    {title && <title>{title}</title>}
-    {children}
-  </svg>
-)
+function SvgBase ({ children, title = '', ...props }: Props): JSX.Element {
+  return (
+      <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1991/xlink"
+          {...props}
+      >
+          <Title title={title} />
+
+          {children}
+      </svg>
+  )
+}
+
+function Title ({ title }: { readonly title: string }): JSX.Element | null {
+  if (!title) return null
+
+  return (
+      <title>
+          {title}
+      </title>
+  )
+}
 
 export default SvgBase

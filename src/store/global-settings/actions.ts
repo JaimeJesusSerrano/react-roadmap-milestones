@@ -1,18 +1,18 @@
 import * as Types from './types'
 
 export const setAreShowingPreviousMilestones = (
-  showMilestonesFinished: Types.StateType['showMilestonesFinished'],
+  showMilestonesFinished: Types.StateType['showMilestonesFinished']
 ): Types.ActionType => ({
   type: Types.SET_ARE_SHOWING_PREVIOUS_MILESTONES,
-  value: { showMilestonesFinished },
+  value: { showMilestonesFinished }
 })
 
 export const setState = (newState: Types.ActionType['value']): Types.ActionType => ({
   type: Types.SET_STATE,
-  value: newState,
+  value: newState
 })
 
 export const setTranslation = (translation: Types.StateType['translation']): Types.ActionType => ({
   type: Types.SET_TRANSLATION,
-  value: { translation },
+  value: { translation }
 })

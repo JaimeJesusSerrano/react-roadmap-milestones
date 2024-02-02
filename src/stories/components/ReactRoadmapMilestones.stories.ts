@@ -1,6 +1,7 @@
-import {Meta, StoryObj} from '@storybook/react'
+import { type Meta, type StoryObj } from '@storybook/react'
+
 import ReactRoadmapMilestones from '../../components/organisms/roadmap-milestones'
-import { RoadmapMilestones as IRoadmapMilestones } from '../../types/model/RoadmapMilestones'
+import { type RoadmapMilestones as IRoadmapMilestones } from '../../types/model/RoadmapMilestones'
 
 const roadmapMilestonesData: IRoadmapMilestones = {
   milestones: [
@@ -13,12 +14,12 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           description: 'Goal description',
           shortDescription: 'Short goal description',
           status: 'pending',
-          updateDate: new Date(),
+          updateDate: new Date()
         }
-      ],
+      ]
     }
   ],
-  name: 'Example',
+  name: 'Example'
 }
 
 const meta = {

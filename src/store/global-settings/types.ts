@@ -1,6 +1,6 @@
 import type {
   ActionType as IActionTypeBase,
-  ContextType as IContextTypeBase,
+  ContextType as IContextTypeBase
 } from '../../types/app/Context'
 import type { Translation as ITranslation } from '../../types/app/Translation'
 

@@ -1,5 +1,3 @@
-import { type FunctionComponent } from 'react'
-
 import { ThemeProvider } from 'styled-components'
 
 import type IRoadmapMilestones from '../../../types/model/RoadmapMilestones'
@@ -14,40 +12,42 @@ import GlobalSettingsProvider from '../../../store/global-settings/Provider'
 
 import Logic from './logic'
 
-interface ParamTypes {
-  roadmapMilestonesData?: IRoadmapMilestones
-  theme?: IThemeOverride
-  translation?: ITranslation
+interface Params {
+  readonly roadmapMilestonesData?: IRoadmapMilestones
+  readonly theme?: IThemeOverride
+  readonly translation?: ITranslation
 }
 
-const RoadmapMilestones: FunctionComponent<ParamTypes> = ({
+function RoadmapMilestones ({
   roadmapMilestonesData,
   theme: themeOverride,
   translation
-}) => {
+}: Params): JSX.Element | null {
   if (!roadmapMilestonesData?.milestones) {
     return null
   }
 
   const theme: ITheme = {
-    breakpoints: themeOverride?.breakpoints || defaultTheme.breakpoints,
-    devices: themeOverride?.devices || defaultTheme.devices,
-    palette: themeOverride?.palette || defaultTheme.palette
+    breakpoints: themeOverride?.breakpoints ?? defaultTheme.breakpoints,
+    devices: themeOverride?.devices ?? defaultTheme.devices,
+    palette: themeOverride?.palette ?? defaultTheme.palette
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <GlobalSettingsProvider>
-        <GlobalDialogProvider>
-          <GlobalDialog />
-          <Logic
-            milestones={roadmapMilestonesData.milestones}
-            translation={translation || defaultTranslation}
-          />
-        </GlobalDialogProvider>
-      </GlobalSettingsProvider>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+          <GlobalStyle />
+
+          <GlobalSettingsProvider>
+              <GlobalDialogProvider>
+                  <GlobalDialog />
+
+                  <Logic
+                      milestones={roadmapMilestonesData.milestones}
+                      translation={translation ?? defaultTranslation}
+                  />
+              </GlobalDialogProvider>
+          </GlobalSettingsProvider>
+      </ThemeProvider>
   )
 }
 

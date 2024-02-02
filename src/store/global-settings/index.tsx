@@ -2,16 +2,16 @@ import { createContext } from 'react'
 
 import defaultTranslation from '../../config/defaultTranslation'
 
-import { ContextType, StateType } from './types'
+import { type ContextType, type StateType } from './types'
 
 const initialState: StateType = {
   showMilestonesFinished: false,
-  translation: defaultTranslation,
+  translation: defaultTranslation
 }
 
 const context = createContext<ContextType>({
   dispatch: () => {},
-  state: initialState,
+  state: initialState
 })
 
 export { context, initialState }

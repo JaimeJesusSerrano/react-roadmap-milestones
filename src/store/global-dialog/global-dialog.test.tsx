@@ -3,26 +3,25 @@ import { useContext } from 'react'
 import { render, screen } from '@testing-library/react'
 
 import { context, initialState } from './index'
-import { ContextType } from './types'
+import { type ContextType } from './types'
 
-const ComponentToTest = () => {
+function ComponentToTest (): JSX.Element {
   const globalDialog = useContext(context)
-  return <>{globalDialog.state.Component}</>
+  return (globalDialog.state.Component)
 }
 
-const renderContext = (currentContext: ContextType) =>
+const renderContext = (currentContext: ContextType): any =>
   render(
-    <context.Provider value={currentContext}>
-      <ComponentToTest />
-    </context.Provider>,
+      <context.Provider value={currentContext}>
+          <ComponentToTest />
+      </context.Provider>
   )
 
 describe('Store > Global Dialog', () => {
   test('initial with dialog closed', () => {
     const newContext: ContextType = {
-      // eslint-disable-next-line
       dispatch: () => {},
-      state: initialState,
+      state: initialState
     }
 
     renderContext(newContext)
@@ -31,12 +30,12 @@ describe('Store > Global Dialog', () => {
 
   test('dialog opened', () => {
     const newContext: ContextType = {
-      // eslint-disable-next-line
       dispatch: () => {},
       state: {
+      // eslint-disable-next-line
         Component: <>Dialog opened</>,
-        isOpen: true,
-      },
+        isOpen: true
+      }
     }
 
     renderContext(newContext)
