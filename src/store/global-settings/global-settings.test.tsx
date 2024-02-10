@@ -1,36 +1,31 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 
 import { render, screen } from '@testing-library/react'
 
 import defaultTranslation from '../../config/defaultTranslation'
 
 import { context, initialState } from './index'
-import { ContextType } from './types'
+import { type ContextType } from './types'
 
-const ComponentToTest = () => {
+function ComponentToTest (): string {
   const globalDialog = useContext(context)
-  return (
-    <>
-      {globalDialog.state.showMilestonesFinished
-        ? 'Show previous milestones'
-        : 'Hide previous milestones'}
-    </>
-  )
+  return globalDialog.state.showMilestonesFinished
+    ? 'Show previous milestones'
+    : 'Hide previous milestones'
 }
 
-const renderContext = (currentContext: ContextType) =>
+const renderContext = (currentContext: ContextType): any =>
   render(
-    <context.Provider value={currentContext}>
-      <ComponentToTest />
-    </context.Provider>,
+      <context.Provider value={currentContext}>
+          <ComponentToTest />
+      </context.Provider>
   )
 
 describe('Store > Global settings', () => {
   test('initial state', () => {
     const newContext: ContextType = {
-      // eslint-disable-next-line
       dispatch: () => {},
-      state: initialState,
+      state: initialState
     }
 
     renderContext(newContext)
@@ -39,12 +34,11 @@ describe('Store > Global settings', () => {
 
   test('state updated', () => {
     const newContext: ContextType = {
-      // eslint-disable-next-line
       dispatch: () => {},
       state: {
         showMilestonesFinished: true,
-        translation: defaultTranslation,
-      },
+        translation: defaultTranslation
+      }
     }
 
     renderContext(newContext)

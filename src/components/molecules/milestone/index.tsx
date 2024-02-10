@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 
 import type IGoal from '../../../types/model/Goal'
 import type IMilestone from '../../../types/model/Milestone'
@@ -6,12 +6,12 @@ import type IGoalsByCategory from '../../../types/model/GoalsByCategory'
 
 import Render from './render'
 
-interface ParamTypes {
-  isExpanded: boolean
-  milestone?: IMilestone
+interface Props {
+  readonly isExpanded: boolean
+  readonly milestone?: IMilestone
 }
 
-const Milestone = ({ isExpanded, milestone }: ParamTypes): JSX.Element | null => {
+function Milestone ({ isExpanded, milestone }: Props): JSX.Element | null {
   const goalsByCategories: IGoalsByCategory = useMemo(() => {
     if (!milestone?.goals?.length) return {}
 
@@ -33,7 +33,7 @@ const Milestone = ({ isExpanded, milestone }: ParamTypes): JSX.Element | null =>
 
         return previousGoalsByCategories
       },
-      {},
+      {}
     )
   }, [milestone])
 
@@ -47,12 +47,12 @@ const Milestone = ({ isExpanded, milestone }: ParamTypes): JSX.Element | null =>
   }
 
   return (
-    <Render
-      isExpanded={isExpanded}
-      goalsByCategories={goalsByCategories}
-      goalsWithoutCategory={goalsWithoutCategory}
-      milestone={milestone}
-    />
+      <Render
+          goalsByCategories={goalsByCategories}
+          goalsWithoutCategory={goalsWithoutCategory}
+          isExpanded={isExpanded}
+          milestone={milestone}
+      />
   )
 }
 

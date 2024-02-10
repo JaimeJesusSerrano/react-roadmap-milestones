@@ -1,23 +1,23 @@
-import React from 'react'
-
-import ITag from '../../../types/model/Tag'
+import type ITag from '../../../types/model/Tag'
 import Tag from '../../atoms/tag'
 
 import * as S from './styled'
 
-interface ParamTypes {
-  tags: ITag[]
+interface Props {
+  readonly tags: ITag[]
 }
 
-const Tags = ({ tags, ...props }: ParamTypes): JSX.Element => {
-  if (!tags?.length) return <></>
+function Tags ({ tags, ...props }: Props): JSX.Element | null {
+  if (!tags?.length) return null
 
   return (
-    <S.Wrapper {...props}>
-      {tags.map(tag => (
-        <Tag key={tag.name}>{tag.name}</Tag>
-      ))}
-    </S.Wrapper>
+      <S.Wrapper {...props}>
+          {tags.map(tag => (
+              <Tag key={tag.name}>
+                  {tag.name}
+              </Tag>
+          ))}
+      </S.Wrapper>
   )
 }
 

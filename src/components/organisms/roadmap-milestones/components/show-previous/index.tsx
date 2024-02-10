@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 
 import PlusSvg from '../../../../../assets/svg/plus'
 import SubtractSvg from '../../../../../assets/svg/subtract'
@@ -8,32 +8,34 @@ import * as GlobalSettingsActions from '../../../../../store/global-settings/act
 
 import * as S from './styled'
 
-const ShowPrevious = (): JSX.Element => {
+function ShowPrevious (): JSX.Element {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 
-  return globalSettings.state.showMilestonesFinished ? (
-    <VerticalButton
-      onClick={() =>
-        dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(false))
-      }
-    >
-      <S.ShowHidePreviousText>
-        {globalSettings.state.translation.previousButton.hidePrevious}
-      </S.ShowHidePreviousText>
-      <SubtractSvg title={globalSettings.state.translation.previousButton.hidePrevious} />
-    </VerticalButton>
-  ) : (
-    <VerticalButton
-      onClick={() =>
-        dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(true))
-      }
-    >
-      <S.ShowHidePreviousText>
-        {globalSettings.state.translation.previousButton.showPrevious}
-      </S.ShowHidePreviousText>
-      <PlusSvg title={globalSettings.state.translation.previousButton.showPrevious} />
-    </VerticalButton>
+  if (globalSettings.state.showMilestonesFinished) {
+    return (
+        <VerticalButton
+            onClick={() => { dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(false)) }}
+        >
+            <S.ShowHidePreviousText>
+                {globalSettings.state.translation.previousButton.hidePrevious}
+            </S.ShowHidePreviousText>
+
+            <SubtractSvg title={globalSettings.state.translation.previousButton.hidePrevious} />
+        </VerticalButton>
+    )
+  }
+
+  return (
+      <VerticalButton
+          onClick={() => { dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(true)) }}
+      >
+          <S.ShowHidePreviousText>
+              {globalSettings.state.translation.previousButton.showPrevious}
+          </S.ShowHidePreviousText>
+
+          <PlusSvg title={globalSettings.state.translation.previousButton.showPrevious} />
+      </VerticalButton>
   )
 }
 

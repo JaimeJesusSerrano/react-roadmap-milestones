@@ -1,6 +1,6 @@
 import type {
   ActionType as IActionTypeBase,
-  ContextType as IContextTypeBase,
+  ContextType as IContextTypeBase
 } from '../../types/app/Context'
 
 const BASE = 'GLOBAL_DIALOG'

@@ -5,10 +5,6 @@ export const MilestoneWrapper = styled.div`
   margin-right: 8px;
   min-width: min-content;
   overflow-y: auto;
-
-  :last-child {
-    margin-right: 0;
-  }
 `
 
 export const Wrapper = styled.div`
