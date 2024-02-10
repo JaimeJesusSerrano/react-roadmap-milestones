@@ -26,15 +26,15 @@ function Render ({
   const [isExpanded, setIsExpanded] = useState(isDefaultExpanded)
 
   return (
-      <S.Wrapper isExpanded={isExpanded}>
+      <S.Wrapper $isExpanded={isExpanded}>
           <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
-              <S.HeaderTitleWrapper isExpanded={isExpanded}>
+              <S.HeaderTitleWrapper $isExpanded={isExpanded}>
                   <S.ExpandIconWrapper>
-                      <ExpandIconWrapper isExpanded />
+                      <ExpandIconWrapper isExpanded={isExpanded} />
                   </S.ExpandIconWrapper>
 
                   <S.HeaderTitle
-                      isExpanded={isExpanded}
+                      $isExpanded={isExpanded}
                       title={milestone.name}
                   >
                       {milestone.name}

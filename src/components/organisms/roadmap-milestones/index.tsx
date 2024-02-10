@@ -35,7 +35,7 @@ function RoadmapMilestones ({
 
   return (
       <ThemeProvider theme={theme}>
-          <GlobalStyle />
+          <GlobalStyle theme={theme} />
 
           <GlobalSettingsProvider>
               <GlobalDialogProvider>

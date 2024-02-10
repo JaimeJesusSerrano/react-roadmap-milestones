@@ -18,28 +18,21 @@ export const Header = styled.div`
   min-height: 96px;
 `
 
-interface HeaderTitleParamTypes {
-  isExpanded: boolean
-}
-export const HeaderTitle = styled.div`
+export const HeaderTitle = styled.div<{ $isExpanded: boolean }>`
   color: white;
-  font-size: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '1.5rem' : '1.25rem')};
+  font-size: ${(props) => (props.$isExpanded ? '1.5rem' : '1.25rem')};
   font-weight: 600;
-  overflow: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'hidden')};
+  overflow: ${(props) => (props.$isExpanded ? '' : 'hidden')};
   text-align: center;
-  text-overflow: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'ellipsis')};
-  white-space: ${(props: HeaderTitleParamTypes) => (props.isExpanded ? '' : 'nowrap')};
+  text-overflow: ${(props) => (props.$isExpanded ? '' : 'ellipsis')};
+  white-space: ${(props) => (props.$isExpanded ? '' : 'nowrap')};
 `
 
-interface HeaderTitleWrapperParamTypes {
-  isExpanded: boolean
-}
-export const HeaderTitleWrapper = styled.div`
+export const HeaderTitleWrapper = styled.div<{ $isExpanded: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: ${(props: HeaderTitleWrapperParamTypes) =>
-    props.isExpanded ? '16px' : '16px 8px 16px 8px'};
+  margin: ${(props) => props.$isExpanded ? '16px' : '16px 8px 16px 8px'};
   position: relative;
   user-select: none;
 `
@@ -76,14 +69,11 @@ export const StatusWrapper = styled.div`
   margin: 0 16px 24px 16px;
 `
 
-interface WrapperParamTypes {
-  isExpanded: boolean
-}
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ $isExpanded: boolean }>`
   background-color: ${props => props.theme.palette.milestone.background};
   border-radius: 0px 0px 8px 8px;
   border-top: 3px solid rgb(173, 225, 255);
   height: min-content;
   overflow: auto;
-  width: ${(props: WrapperParamTypes) => (props.isExpanded ? '320px' : '120px')};
+  width: ${(props) => (props.$isExpanded ? '320px' : '120px')};
 `

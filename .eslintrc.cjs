@@ -25,9 +25,8 @@ module.exports = {
     }
   },
   rules: {
-    // 'multiline-ternary': 'off',
+    'multiline-ternary': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    // 'react/jsx-uses-react': 'off',
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'react/jsx-max-depth': 'off',
     'react/jsx-no-bind': 'off',
