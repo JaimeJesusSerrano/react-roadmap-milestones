@@ -41,7 +41,8 @@ function GoalDialogDetail ({ goal }: Props): JSX.Element {
 
                   <S.BodyDescriptionWrapper>
                       <S.BodyDescriptionDate>
-                          Updated
+                          {'Updated '}
+
                           {goal.updateDate?.toLocaleDateString() || ''}
                       </S.BodyDescriptionDate>
 
@@ -54,7 +55,7 @@ function GoalDialogDetail ({ goal }: Props): JSX.Element {
               <S.Miscellaneous>
                   <S.CategoryWrapper>
                       <S.CategoryTitle>
-                          Category:
+                          {'Category: '}
                       </S.CategoryTitle>
 
                       <S.Category>
