@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-import defaultTranslation from '../../config/defaultTranslation'
+import defaultTranslation from 'config/defaultTranslation'
 
 import { type ContextType, type StateType } from './types'
 

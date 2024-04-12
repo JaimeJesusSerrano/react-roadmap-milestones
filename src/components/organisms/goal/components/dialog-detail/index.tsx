@@ -1,14 +1,14 @@
 import { useContext } from 'react'
 
-import type IGoal from '../../../../../types/model/Goal'
-import ImageNotFoundSvg from '../../../../../assets/svg/image-not-found'
-import CloseSvg from '../../../../../assets/svg/close'
-import Tags from '../../../../molecules/tags'
-import { context as globalDialogContext } from '../../../../../store/global-dialog'
-import * as GlobalDialogActions from '../../../../../store/global-dialog/actions'
+import ImageNotFoundSvg from 'assets/svg/image-not-found'
+import CloseSvg from 'assets/svg/close'
+import Tags from 'components/molecules/tags'
+import { context as globalDialogContext } from 'store/global-dialog'
+import * as GlobalDialogActions from 'store/global-dialog/actions'
+import type IGoal from 'types/model/Goal'
+import type ITag from 'types/model/Tag'
 
 import * as S from './styled'
-import type ITag from '../../../../../types/model/Tag'
 
 interface Props {
   readonly goal: IGoal
@@ -41,7 +41,8 @@ function GoalDialogDetail ({ goal }: Props): JSX.Element {
 
                   <S.BodyDescriptionWrapper>
                       <S.BodyDescriptionDate>
-                          Updated
+                          {'Updated '}
+
                           {goal.updateDate?.toLocaleDateString() || ''}
                       </S.BodyDescriptionDate>
 
@@ -54,7 +55,7 @@ function GoalDialogDetail ({ goal }: Props): JSX.Element {
               <S.Miscellaneous>
                   <S.CategoryWrapper>
                       <S.CategoryTitle>
-                          Category:
+                          {'Category: '}
                       </S.CategoryTitle>
 
                       <S.Category>

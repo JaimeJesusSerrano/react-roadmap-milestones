@@ -5,10 +5,18 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"], // Specifies the libraries available for the code.
     "module": "ES2022", // Defines the module system to use for code generation.
     "skipLibCheck": true, // Skips type checking of declaration files.
+    "baseUrl": ".",
+    "paths": {
+      "assets/*": ["src/assets/*"],
+      "components/*": ["src/components/*"],
+      "config/*": ["src/config/*"],
+      "store/*": ["src/store/*"],
+      "types/*": ["src/types/*"],
+    },
 
     /* Blunder mode */
     "moduleResolution": "Bundler", // Specifies how modules are resolved when building
-    "allowImportingTsExtensions": true, // Allows importing TypeScript files with extensions.
+    "allowImportingTsExtensions": false, // Allows importing TypeScript files with extensions.
     "resolveJsonModule": true, // Enables importing JSON modules.
     "isolatedModules": true, // Ensures each file is treated as separate module.
     "noEmit": true, // Prevents TypeScript from emitting output files.

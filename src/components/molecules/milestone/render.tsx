@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
-import type IGoal from '../../../types/model/Goal'
-import type IMilestone from '../../../types/model/Milestone'
-import type IGoalsByCategory from '../../../types/model/GoalsByCategory'
-import PlusSvg from '../../../assets/svg/plus'
-import SubtractSvg from '../../../assets/svg/subtract'
-import Category from '../category'
-import Goal from '../../organisms/goal'
+import SubtractSvg from 'assets/svg/subtract'
+import PlusSvg from 'assets/svg/plus'
+import Category from 'components/molecules/category'
+import Goal from 'components/organisms/goal'
+import type IGoal from 'types/model/Goal'
+import type IGoalsByCategory from 'types/model/GoalsByCategory'
+import type IMilestone from 'types/model/Milestone'
 
 import * as S from './styled'
 

@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 
-import type IGoal from '../../../types/model/Goal'
-import type IMilestone from '../../../types/model/Milestone'
-import type IGoalsByCategory from '../../../types/model/GoalsByCategory'
+import type IGoal from 'types/model/Goal'
+import type IMilestone from 'types/model/Milestone'
+import type IGoalsByCategory from 'types/model/GoalsByCategory'
 
 import Render from './render'
 

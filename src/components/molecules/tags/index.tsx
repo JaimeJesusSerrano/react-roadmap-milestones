@@ -1,5 +1,5 @@
-import type ITag from '../../../types/model/Tag'
-import Tag from '../../atoms/tag'
+import Tag from 'components/atoms/tag'
+import type ITag from 'types/model/Tag'
 
 import * as S from './styled'
 
