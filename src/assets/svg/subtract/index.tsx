@@ -1,4 +1,4 @@
-import SvgBase from '../SvgBase'
+import SvgBase from 'assets/svg/SvgBase'
 
 function Svg (props: any): JSX.Element {
   return (

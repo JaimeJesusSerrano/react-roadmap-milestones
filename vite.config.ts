@@ -28,5 +28,14 @@ export default defineConfig({
       insertTypesEntry: true,
       rollupTypes: true
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      assets: '/src/assets',
+      components: '/src/components',
+      config: '/src/config',
+      store: '/src/store',
+      types: '/src/types'
+    }
+  }
 })

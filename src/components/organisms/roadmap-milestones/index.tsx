@@ -1,14 +1,14 @@
 import { ThemeProvider } from 'styled-components'
 
-import type IRoadmapMilestones from '../../../types/model/RoadmapMilestones'
-import type { Theme as ITheme, ThemeOverride as IThemeOverride } from '../../../types/app/Theme'
-import type { Translation as ITranslation } from '../../../types/app/Translation'
-import GlobalDialog from '../global-dialog'
-import defaultTheme from '../../../config/defaultTheme'
-import defaultTranslation from '../../../config/defaultTranslation'
-import GlobalStyle from '../../../config/globalStyle'
-import GlobalDialogProvider from '../../../store/global-dialog/Provider'
-import GlobalSettingsProvider from '../../../store/global-settings/Provider'
+import GlobalDialog from 'components/organisms/global-dialog'
+import defaultTheme from 'config/defaultTheme'
+import defaultTranslation from 'config/defaultTranslation'
+import GlobalStyle from 'config/globalStyle'
+import GlobalDialogProvider from 'store/global-dialog/Provider'
+import GlobalSettingsProvider from 'store/global-settings/Provider'
+import type IRoadmapMilestones from 'types/model/RoadmapMilestones'
+import type { Theme as ITheme, ThemeOverride as IThemeOverride } from 'types/app/Theme'
+import type { Translation as ITranslation } from 'types/app/Translation'
 
 import Logic from './logic'
 

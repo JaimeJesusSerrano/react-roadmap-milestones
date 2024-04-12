@@ -1,11 +1,11 @@
 import { useContext } from 'react'
 
-import type IGoal from '../../../types/model/Goal'
-import ImageNotFoundSvg from '../../../assets/svg/image-not-found'
-import Tags from '../../molecules/tags'
-import { context as globalDialogContext } from '../../../store/global-dialog'
-import * as GlobalDialogActions from '../../../store/global-dialog/actions'
-import type ITag from '../../../types/model/Tag'
+import ImageNotFoundSvg from 'assets/svg/image-not-found'
+import Tags from 'components/molecules/tags'
+import { context as globalDialogContext } from 'store/global-dialog'
+import * as GlobalDialogActions from 'store/global-dialog/actions'
+import type IGoal from 'types/model/Goal'
+import type ITag from 'types/model/Tag'
 
 import GoalDialogDetail from './components/dialog-detail'
 import * as S from './styled'

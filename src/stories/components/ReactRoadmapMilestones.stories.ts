@@ -1,7 +1,7 @@
 import { type Meta, type StoryObj } from '@storybook/react'
 
-import ReactRoadmapMilestones from '../../components/organisms/roadmap-milestones'
-import { type RoadmapMilestones as IRoadmapMilestones } from '../../types/model/RoadmapMilestones'
+import ReactRoadmapMilestones from 'components/organisms/roadmap-milestones'
+import { type RoadmapMilestones as IRoadmapMilestones } from 'types/model/RoadmapMilestones'
 
 const roadmapMilestonesData: IRoadmapMilestones = {
   milestones: [

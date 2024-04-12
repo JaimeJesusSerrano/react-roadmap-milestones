@@ -1,5 +1,5 @@
-import type IMilestone from '../../../types/model/Milestone'
-import Milestone from '../../molecules/milestone'
+import Milestone from 'components/molecules/milestone'
+import type IMilestone from 'types/model/Milestone'
 
 import ShowPrevious from './components/show-previous'
 import * as S from './styled'
