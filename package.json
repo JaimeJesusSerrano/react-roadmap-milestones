@@ -66,10 +66,10 @@
     "vite-tsconfig-paths": "4.3.2"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "description": "The React Roadmap Milestones component is a board with a lot of features, functionalities or whatever where a user can see all of them divided by categories and milestones",
   "bugs": {
