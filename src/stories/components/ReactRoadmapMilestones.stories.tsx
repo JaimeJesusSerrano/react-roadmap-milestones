@@ -537,13 +537,6 @@ const roadmapMilestonesData: IRoadmapMilestones = {
 const meta = {
   title: 'Components/ReactRoadmapMilestones',
   component: ReactRoadmapMilestones,
-  // decorators: [
-  //   (Story) => (
-  //       <div style={{ height: '100%', width: '100%' }}>
-  //           <Story />
-  //       </div>
-  //   )
-  // ],
   parameters: {
     layout: 'fullscreen'
   },
