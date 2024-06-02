@@ -47,8 +47,18 @@ export const CategoryWrapper = styled.div`
 `
 
 export const Close = styled.div`
+  align-items: center;
+  border-radius: 50%;
   color: #000000;
   cursor: pointer;
+  display: flex;
+  height: 22px;
+  justify-content: center;
+  width: 22px;
+
+  &:hover {
+    background-color: #3785ae;
+  }
 `
 
 export const Header = styled.div`
@@ -57,12 +67,14 @@ export const Header = styled.div`
   color: rgb(232, 235, 237);
   display: flex;
   flex-direction: row;
+  height: 34px;
   justify-content: space-between;
-  padding: 8px 16px;
+  padding: 0 16px;
 `
 
 export const ImageNotFoundWrapper = styled.div`
   background-color: #78848c;
+  box-sizing: border-box;
   height: 100%;
   padding: 8px;
   width: 100%;
