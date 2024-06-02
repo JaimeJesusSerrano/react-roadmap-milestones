@@ -1,6 +1,6 @@
 import { type ReactNode, useContext } from 'react'
 
-import { Plus as PlusSvg} from 'assets/svg/plus'
+import { Plus as PlusSvg } from 'assets/svg/plus'
 import { Subtract as SubtractSvg } from 'assets/svg/subtract'
 import { VerticalButton } from 'components/atoms/vertical-button'
 import { context as globalSettingsContext } from 'store/global-settings'

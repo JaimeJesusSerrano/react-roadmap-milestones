@@ -25,7 +25,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
+      files: [ '**/*.js', '**/*.jsx','**/*.ts', '**/*.tsx' ],
       extends: 'love',
       rules: {
         'multiline-ternary': 'off',

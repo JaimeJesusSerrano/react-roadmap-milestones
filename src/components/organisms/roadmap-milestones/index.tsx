@@ -7,7 +7,7 @@ import defaultTranslation from 'config/defaultTranslation'
 import GlobalStyle from 'config/globalStyle'
 import GlobalDialogProvider from 'store/global-dialog/Provider'
 import GlobalSettingsProvider from 'store/global-settings/Provider'
-import { RoadmapMilestones as IRoadmapMilestones }  from 'types/model/RoadmapMilestones'
+import { type RoadmapMilestones as IRoadmapMilestones } from 'types/model/RoadmapMilestones'
 import { type Theme as ITheme, type ThemeOverride as IThemeOverride } from 'types/app/Theme'
 import { type Translation as ITranslation } from 'types/app/Translation'
 
