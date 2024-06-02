@@ -117,7 +117,7 @@ export const Miscellaneous = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  padding-bottom: 8px;
   max-width: 300px;
   width: 300px;
 
