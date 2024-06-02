@@ -1,4 +1,4 @@
-import type { Palette } from 'types/app/Theme'
+import { type Palette } from 'types/app/Theme'
 
 const palette: Palette = {
   category: {

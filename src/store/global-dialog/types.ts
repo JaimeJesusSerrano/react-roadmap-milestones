@@ -1,8 +1,8 @@
 import { type ReactNode } from 'react'
 
-import type {
-  ActionType as IActionTypeBase,
-  ContextType as IContextTypeBase
+import {
+  type ActionType as IActionTypeBase,
+  type ContextType as IContextTypeBase
 } from 'types/app/Context'
 
 const BASE = 'GLOBAL_DIALOG'

@@ -16,8 +16,7 @@ Several examples than can help us to understand it:
 
 ## Usage
 ```javascript
-  import type { RoadmapMilestones } from '@jaimejesusserrano/react-roadmap-milestones'
-  import { ReactRoadmapMilestones } from '@jaimejesusserrano/react-roadmap-milestones'
+  import { ReactRoadmapMilestones, type RoadmapMilestones } from '@jaimejesusserrano/react-roadmap-milestones'
 
   const roadmapMilestonesData: RoadmapMilestones = {
     milestones: [

@@ -1,8 +1,6 @@
-import type Milestone from './Milestone'
+import { type Milestone } from './Milestone'
 
 export interface RoadmapMilestones {
   milestones: Milestone[]
   name: string
 }
-
-export default RoadmapMilestones

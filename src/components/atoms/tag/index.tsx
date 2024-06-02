@@ -6,7 +6,7 @@ interface Props {
   readonly children?: ReactNode
 }
 
-function Tag ({ children, ...props }: Props): ReactNode {
+export function Tag ({ children, ...props }: Props): ReactNode {
   return (
       <S.Wrapper {...props}>
           <S.Body>
@@ -15,5 +15,3 @@ function Tag ({ children, ...props }: Props): ReactNode {
       </S.Wrapper>
   )
 }
-
-export default Tag

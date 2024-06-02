@@ -1,4 +1,4 @@
-import type { Devices, Theme } from 'types/app/Theme'
+import { type Devices, type Theme } from 'types/app/Theme'
 
 import breakpoints from './defaultBreakpoints'
 import palette from './defaultPalette'

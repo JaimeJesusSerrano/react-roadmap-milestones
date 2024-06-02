@@ -7,7 +7,7 @@ interface Props {
   readonly onClick?: () => void
 }
 
-function VerticalButton ({ children, ...props }: Props): ReactNode {
+export function VerticalButton ({ children, ...props }: Props): ReactNode {
   return (
       <S.Wrapper {...props}>
           <S.Body>
@@ -16,5 +16,3 @@ function VerticalButton ({ children, ...props }: Props): ReactNode {
       </S.Wrapper>
   )
 }
-
-export default VerticalButton

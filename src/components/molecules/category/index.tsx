@@ -1,10 +1,9 @@
 import { type ReactNode, useState } from 'react'
 
-import ChevronDownSvg from 'assets/svg/chevron-down'
-import ChevronUpSvg from 'assets/svg/chevron-up'
-import Goal from 'components/organisms/goal'
-import type IGoal from 'types/model/Goal'
+import { type Goal as IGoal } from 'types/model/Goal'
 
+import { Goals } from './Goals'
+import { RightHeader } from './RightHeader'
 import * as S from './styled'
 
 interface Props {
@@ -12,7 +11,7 @@ interface Props {
   readonly name: string
 }
 
-function Category ({ goals, name = '' }: Props): ReactNode {
+export function Category ({ goals, name = '' }: Props): ReactNode {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
@@ -37,23 +36,3 @@ function Category ({ goals, name = '' }: Props): ReactNode {
       </S.Wrapper>
   )
 }
-
-function RightHeader ({ isExpanded }: { readonly isExpanded: boolean }): ReactNode {
-  if (isExpanded) return <ChevronUpSvg title="Collapse category" />
-  return <ChevronDownSvg title="Expand category" />
-}
-
-function Goals ({ goals }: { readonly goals: IGoal[] }): ReactNode {
-  return (
-      <S.GoalsWrapper>
-          {goals?.map(goal => (
-              <Goal
-                  goal={goal}
-                  key={goal.name}
-              />)
-          )}
-      </S.GoalsWrapper>
-  )
-}
-
-export default Category

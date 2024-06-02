@@ -1,11 +1,13 @@
 import { type ReactNode } from 'react'
 
+import { Title } from './Title'
+
 interface Props {
   readonly children?: ReactNode
   readonly title?: string
 }
 
-function SvgBase ({ children, title = '', ...props }: Props): ReactNode {
+export function SvgBase ({ children, title = '', ...props }: Props): ReactNode {
   return (
       <svg
           version="1.1"
@@ -19,15 +21,3 @@ function SvgBase ({ children, title = '', ...props }: Props): ReactNode {
       </svg>
   )
 }
-
-function Title ({ title }: { readonly title: string }): ReactNode {
-  if (!title) return null
-
-  return (
-      <title>
-          {title}
-      </title>
-  )
-}
-
-export default SvgBase

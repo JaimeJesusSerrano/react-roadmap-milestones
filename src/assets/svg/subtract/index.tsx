@@ -1,8 +1,8 @@
 import { type ReactNode } from 'react'
 
-import SvgBase from 'assets/svg/SvgBase'
+import { SvgBase } from 'assets/svg/SvgBase'
 
-function Svg (props: any): ReactNode {
+export function Subtract (props: any): ReactNode {
   return (
       <SvgBase
           height="2"
@@ -17,5 +17,3 @@ function Svg (props: any): ReactNode {
       </SvgBase>
   )
 }
-
-export default Svg

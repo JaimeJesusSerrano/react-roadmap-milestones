@@ -1,8 +1,8 @@
 import { type ReactNode } from 'react'
 
-import SvgBase from 'assets/svg/SvgBase'
+import { SvgBase } from 'assets/svg/SvgBase'
 
-function Svg (props: any): ReactNode {
+export function ImageNotFound (props: any): ReactNode {
   return (
       <SvgBase
           fill="none"
@@ -21,5 +21,3 @@ function Svg (props: any): ReactNode {
       </SvgBase>
   )
 }
-
-export default Svg
