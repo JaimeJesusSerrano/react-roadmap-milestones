@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo } from 'react'
+import { type ReactNode, useContext, useEffect, useMemo } from 'react'
 
 import { context as globalSettingsContext } from 'store/global-settings'
 import * as GlobalSettingsActions from 'store/global-settings/actions'
@@ -12,7 +12,7 @@ interface Props {
   readonly translation: ITranslation
 }
 
-function Logic ({ milestones, translation }: Props): JSX.Element | null {
+function Logic ({ milestones, translation }: Props): ReactNode {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 

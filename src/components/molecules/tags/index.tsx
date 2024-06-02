@@ -1,3 +1,5 @@
+import { type ReactNode } from 'react'
+
 import Tag from 'components/atoms/tag'
 import type ITag from 'types/model/Tag'
 
@@ -7,7 +9,7 @@ interface Props {
   readonly tags: ITag[]
 }
 
-function Tags ({ tags, ...props }: Props): JSX.Element | null {
+function Tags ({ tags, ...props }: Props): ReactNode {
   if (!tags?.length) return null
 
   return (

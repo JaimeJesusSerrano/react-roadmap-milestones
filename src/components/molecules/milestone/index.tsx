@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { type ReactNode, useMemo } from 'react'
 
 import type IGoal from 'types/model/Goal'
 import type IMilestone from 'types/model/Milestone'
@@ -11,7 +11,7 @@ interface Props {
   readonly milestone?: IMilestone
 }
 
-function Milestone ({ isExpanded, milestone }: Props): JSX.Element | null {
+function Milestone ({ isExpanded, milestone }: Props): ReactNode {
   const goalsByCategories: IGoalsByCategory = useMemo(() => {
     if (!milestone?.goals?.length) return {}
 

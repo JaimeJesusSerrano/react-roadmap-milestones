@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { type ReactNode, useContext } from 'react'
 
 import ImageNotFoundSvg from 'assets/svg/image-not-found'
 import CloseSvg from 'assets/svg/close'
@@ -14,7 +14,7 @@ interface Props {
   readonly goal: IGoal
 }
 
-function GoalDialogDetail ({ goal }: Props): JSX.Element {
+function GoalDialogDetail ({ goal }: Props): ReactNode {
   const { dispatch: globalDialogDispatch } = useContext(globalDialogContext)
 
   return (
@@ -70,7 +70,7 @@ function GoalDialogDetail ({ goal }: Props): JSX.Element {
   )
 }
 
-function ImageWrapper ({ imageSrc }: { readonly imageSrc: string }): JSX.Element {
+function ImageWrapper ({ imageSrc }: { readonly imageSrc: string }): ReactNode {
   if (!imageSrc) {
     return (
         <S.ImageNotFoundWrapper>
@@ -92,7 +92,7 @@ function ImageWrapper ({ imageSrc }: { readonly imageSrc: string }): JSX.Element
   )
 }
 
-function TagsWrapper ({ tags }: { readonly tags: ITag[] }): JSX.Element {
+function TagsWrapper ({ tags }: { readonly tags: ITag[] }): ReactNode {
   return (
       <S.TagsWrapper>
           <S.TagsTittle>

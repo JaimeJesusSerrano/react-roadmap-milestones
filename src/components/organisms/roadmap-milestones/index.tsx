@@ -1,3 +1,4 @@
+import { type ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import GlobalDialog from 'components/organisms/global-dialog'
@@ -22,7 +23,7 @@ function RoadmapMilestones ({
   roadmapMilestonesData,
   theme: themeOverride,
   translation
-}: Params): JSX.Element | null {
+}: Params): ReactNode {
   if (!roadmapMilestonesData?.milestones) {
     return null
   }

@@ -1,11 +1,11 @@
-import { useContext } from 'react'
+import { type ReactNode, useContext } from 'react'
 
 import { context as globalDialogContext } from 'store/global-dialog'
 import * as GlobalDialogActions from 'store/global-dialog/actions'
 
 import * as S from './styled'
 
-function GlobalDialog (): JSX.Element {
+function GlobalDialog (): ReactNode {
   const { dispatch: globalDialogDispatch, state: globalDialogState } =
     useContext(globalDialogContext)
 

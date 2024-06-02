@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { type ReactNode, useState } from 'react'
 
 import SubtractSvg from 'assets/svg/subtract'
 import PlusSvg from 'assets/svg/plus'
@@ -22,7 +22,7 @@ function Render ({
   goalsByCategories,
   goalsWithoutCategory,
   milestone
-}: Props): JSX.Element {
+}: Props): ReactNode {
   const [isExpanded, setIsExpanded] = useState(isDefaultExpanded)
 
   return (
@@ -70,7 +70,7 @@ function Render ({
   )
 }
 
-function ExpandIconWrapper ({ isExpanded }: { readonly isExpanded: boolean }): JSX.Element {
+function ExpandIconWrapper ({ isExpanded }: { readonly isExpanded: boolean }): ReactNode {
   if (isExpanded) return <SubtractSvg title="Collapse milestone" />
   return <PlusSvg title="Expand milestone" />
 }
@@ -83,7 +83,7 @@ interface MilestonesWrapperProps {
 function MilestonesWrapper ({
   goalsByCategories,
   goalsWithoutCategory
-}: MilestonesWrapperProps): JSX.Element {
+}: MilestonesWrapperProps): ReactNode {
   return (
       <S.MilestonesWrapper>
           {Object.values(goalsByCategories).map(goals => (

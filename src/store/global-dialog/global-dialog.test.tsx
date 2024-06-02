@@ -1,11 +1,11 @@
-import { useContext } from 'react'
+import { type ReactNode, useContext } from 'react'
 
 import { render, screen } from '@testing-library/react'
 
 import { context, initialState } from './index'
 import { type ContextType } from './types'
 
-function ComponentToTest (): JSX.Element {
+function ComponentToTest (): ReactNode {
   const globalDialog = useContext(context)
   return (globalDialog.state.Component)
 }

@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { type ReactNode, useContext } from 'react'
 
 import ImageNotFoundSvg from 'assets/svg/image-not-found'
 import Tags from 'components/molecules/tags'
@@ -14,7 +14,7 @@ interface Props {
   readonly goal: IGoal
 }
 
-function Goal ({ goal }: Props): JSX.Element {
+function Goal ({ goal }: Props): ReactNode {
   const { dispatch: globalDialogDispatch } = useContext(globalDialogContext)
 
   return (
@@ -42,7 +42,7 @@ function Goal ({ goal }: Props): JSX.Element {
   )
 }
 
-function ImageWrapper ({ imageSrc }: { readonly imageSrc: string }): JSX.Element {
+function ImageWrapper ({ imageSrc }: { readonly imageSrc: string }): ReactNode {
   if (!imageSrc) {
     return (
         <S.ImageNotFoundWrapper>
@@ -64,7 +64,7 @@ function ImageWrapper ({ imageSrc }: { readonly imageSrc: string }): JSX.Element
   )
 }
 
-function TagsWrapper ({ tags }: { readonly tags: ITag[] }): JSX.Element {
+function TagsWrapper ({ tags }: { readonly tags: ITag[] }): ReactNode {
   return (
       <S.TagsWrapper>
           <Tags tags={tags} />

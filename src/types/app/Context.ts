@@ -1,9 +1,11 @@
+import { Dispatch } from "react"
+
 export interface ActionType<ActionTypeValue> {
   type: string
   value: ActionTypeValue
 }
 
 export interface ContextType<ActionTypeValue, StateType> {
-  dispatch: React.Dispatch<ActionType<ActionTypeValue>>
+  dispatch: Dispatch<ActionType<ActionTypeValue>>
   state: StateType
 }

@@ -1,10 +1,12 @@
+import { type ReactNode } from 'react'
+
 import * as S from './styled'
 
 interface Props {
-  readonly children?: React.ReactNode
+  readonly children?: ReactNode
 }
 
-function Tag ({ children, ...props }: Props): JSX.Element {
+function Tag ({ children, ...props }: Props): ReactNode {
   return (
       <S.Wrapper {...props}>
           <S.Body>

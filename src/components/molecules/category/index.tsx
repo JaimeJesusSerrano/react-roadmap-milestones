@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { type ReactNode, useState } from 'react'
 
 import ChevronDownSvg from 'assets/svg/chevron-down'
 import ChevronUpSvg from 'assets/svg/chevron-up'
@@ -12,7 +12,7 @@ interface Props {
   readonly name: string
 }
 
-function Category ({ goals, name = '' }: Props): JSX.Element {
+function Category ({ goals, name = '' }: Props): ReactNode {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
@@ -38,12 +38,12 @@ function Category ({ goals, name = '' }: Props): JSX.Element {
   )
 }
 
-function RightHeader ({ isExpanded }: { readonly isExpanded: boolean }): JSX.Element {
+function RightHeader ({ isExpanded }: { readonly isExpanded: boolean }): ReactNode {
   if (isExpanded) return <ChevronUpSvg title="Collapse category" />
   return <ChevronDownSvg title="Expand category" />
 }
 
-function Goals ({ goals }: { readonly goals: IGoal[] }): JSX.Element {
+function Goals ({ goals }: { readonly goals: IGoal[] }): ReactNode {
   return (
       <S.GoalsWrapper>
           {goals?.map(goal => (

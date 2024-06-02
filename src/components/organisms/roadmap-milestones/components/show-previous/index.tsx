@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { type ReactNode, useContext } from 'react'
 
 import PlusSvg from 'assets/svg/plus'
 import SubtractSvg from 'assets/svg/subtract'
@@ -8,7 +8,7 @@ import * as GlobalSettingsActions from 'store/global-settings/actions'
 
 import * as S from './styled'
 
-function ShowPrevious (): JSX.Element {
+function ShowPrevious (): ReactNode {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 

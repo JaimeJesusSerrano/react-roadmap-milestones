@@ -1,3 +1,5 @@
+import { type ReactNode } from 'react'
+
 import Milestone from 'components/molecules/milestone'
 import type IMilestone from 'types/model/Milestone'
 
@@ -9,7 +11,7 @@ interface Props {
   readonly milestones: IMilestone[]
 }
 
-function Render ({ areThereMilestonesFinished, milestones }: Props): JSX.Element {
+function Render ({ areThereMilestonesFinished, milestones }: Props): ReactNode {
   return (
       <S.Wrapper>
           {areThereMilestonesFinished

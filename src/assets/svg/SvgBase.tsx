@@ -1,9 +1,11 @@
+import { type ReactNode } from 'react'
+
 interface Props {
-  readonly children?: React.ReactNode
+  readonly children?: ReactNode
   readonly title?: string
 }
 
-function SvgBase ({ children, title = '', ...props }: Props): JSX.Element {
+function SvgBase ({ children, title = '', ...props }: Props): ReactNode {
   return (
       <svg
           version="1.1"
@@ -18,7 +20,7 @@ function SvgBase ({ children, title = '', ...props }: Props): JSX.Element {
   )
 }
 
-function Title ({ title }: { readonly title: string }): JSX.Element | null {
+function Title ({ title }: { readonly title: string }): ReactNode {
   if (!title) return null
 
   return (
