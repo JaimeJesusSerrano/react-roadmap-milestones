@@ -7,7 +7,7 @@ interface Props {
   readonly children: ReactNode
 }
 
-function Provider ({ children }: Props): ReactNode {
+export function Provider ({ children }: Props): ReactNode {
   const [state, dispatch] = useReducer(
     (currentState: Types.StateType, action: Types.ActionType) => {
       switch (action.type) {
@@ -32,5 +32,3 @@ function Provider ({ children }: Props): ReactNode {
       </context.Provider>
   )
 }
-
-export default Provider

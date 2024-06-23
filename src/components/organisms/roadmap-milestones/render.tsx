@@ -1,9 +1,9 @@
 import { type ReactNode } from 'react'
 
-import Milestone from 'components/molecules/milestone'
+import { Milestone } from 'components/molecules/milestone'
 import { type Milestone as IMilestone } from 'types/model/Milestone'
 
-import ShowPrevious from './components/show-previous'
+import { ShowPrevious } from './components/show-previous'
 import * as S from './styled'
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
   readonly milestones: IMilestone[]
 }
 
-function Render ({ areThereMilestonesFinished, milestones }: Props): ReactNode {
+export function Render ({ areThereMilestonesFinished, milestones }: Props): ReactNode {
   return (
       <S.Wrapper>
           {areThereMilestonesFinished
@@ -35,5 +35,3 @@ function Render ({ areThereMilestonesFinished, milestones }: Props): ReactNode {
       </S.Wrapper>
   )
 }
-
-export default Render

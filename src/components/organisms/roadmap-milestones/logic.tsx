@@ -5,14 +5,14 @@ import * as GlobalSettingsActions from 'store/global-settings/actions'
 import { type Translation as ITranslation } from 'types/app/Translation'
 import { type Milestone as IMilestone } from 'types/model/Milestone'
 
-import Render from './render'
+import { Render } from './render'
 
 interface Props {
   readonly milestones: IMilestone[]
   readonly translation: ITranslation
 }
 
-function Logic ({ milestones, translation }: Props): ReactNode {
+export function Logic ({ milestones, translation }: Props): ReactNode {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 
@@ -47,5 +47,3 @@ function Logic ({ milestones, translation }: Props): ReactNode {
       />
   )
 }
-
-export default Logic

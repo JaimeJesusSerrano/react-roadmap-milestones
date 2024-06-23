@@ -14,7 +14,7 @@ interface Props {
   readonly goal: IGoal
 }
 
-function GoalDialogDetail ({ goal }: Props): ReactNode {
+export function GoalDialogDetail ({ goal }: Props): ReactNode {
   const { dispatch: globalDialogDispatch } = useContext(globalDialogContext)
 
   return (
@@ -103,5 +103,3 @@ function TagsWrapper ({ tags }: { readonly tags: ITag[] }): ReactNode {
       </S.TagsWrapper>
   )
 }
-
-export default GoalDialogDetail

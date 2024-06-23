@@ -11,7 +11,7 @@ interface Props {
   readonly milestone?: IMilestone
 }
 
-function Milestone ({ isExpanded, milestone }: Props): ReactNode {
+export function Milestone ({ isExpanded, milestone }: Props): ReactNode {
   const goalsByCategories: IGoalsByCategory = useMemo(() => {
     if (!milestone?.goals?.length) return {}
 
@@ -55,5 +55,3 @@ function Milestone ({ isExpanded, milestone }: Props): ReactNode {
       />
   )
 }
-
-export default Milestone

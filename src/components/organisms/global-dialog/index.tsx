@@ -5,7 +5,7 @@ import * as GlobalDialogActions from 'store/global-dialog/actions'
 
 import * as S from './styled'
 
-function GlobalDialog (): ReactNode {
+export function GlobalDialog (): ReactNode {
   const { dispatch: globalDialogDispatch, state: globalDialogState } =
     useContext(globalDialogContext)
 
@@ -19,5 +19,3 @@ function GlobalDialog (): ReactNode {
       </S.Dialog>
   )
 }
-
-export default GlobalDialog

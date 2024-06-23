@@ -1,17 +1,17 @@
 import { type ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 
-import GlobalDialog from 'components/organisms/global-dialog'
-import defaultTheme from 'config/defaultTheme'
-import defaultTranslation from 'config/defaultTranslation'
-import GlobalStyle from 'config/globalStyle'
-import GlobalDialogProvider from 'store/global-dialog/Provider'
-import GlobalSettingsProvider from 'store/global-settings/Provider'
+import { GlobalDialog } from 'components/organisms/global-dialog'
+import { defaultTheme } from 'config/defaultTheme'
+import { defaultTranslation } from 'config/defaultTranslation'
+import { GlobalStyle } from 'config/globalStyle'
+import { Provider as GlobalDialogProvider } from 'store/global-dialog/Provider'
+import { Provider as GlobalSettingsProvider } from 'store/global-settings/Provider'
 import { type RoadmapMilestones as IRoadmapMilestones } from 'types/model/RoadmapMilestones'
 import { type Theme as ITheme, type ThemeOverride as IThemeOverride } from 'types/app/Theme'
 import { type Translation as ITranslation } from 'types/app/Translation'
 
-import Logic from './logic'
+import { Logic } from './logic'
 
 interface Params {
   readonly roadmapMilestonesData?: IRoadmapMilestones
@@ -19,7 +19,7 @@ interface Params {
   readonly translation?: ITranslation
 }
 
-function RoadmapMilestones ({
+export function RoadmapMilestones ({
   roadmapMilestonesData,
   theme: themeOverride,
   translation
@@ -51,6 +51,3 @@ function RoadmapMilestones ({
       </ThemeProvider>
   )
 }
-
-export { RoadmapMilestones }
-export default RoadmapMilestones

@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/react'
 
-import ReactRoadmapMilestones from 'components/organisms/roadmap-milestones'
+import { RoadmapMilestones } from 'components/organisms/roadmap-milestones'
 import { type RoadmapMilestones as IRoadmapMilestones } from 'types/model/RoadmapMilestones'
 
 const roadmapMilestonesData: IRoadmapMilestones = {
@@ -535,8 +535,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
 }
 
 const meta = {
-  title: 'Components/ReactRoadmapMilestones',
-  component: ReactRoadmapMilestones,
+  title: 'Components/RoadmapMilestones',
+  component: RoadmapMilestones,
   parameters: {
     layout: 'fullscreen'
   },
@@ -544,7 +544,7 @@ const meta = {
   args: {
     roadmapMilestonesData
   }
-} satisfies Meta<typeof ReactRoadmapMilestones>
+} satisfies Meta<typeof RoadmapMilestones>
 
 export default meta
 type Story = StoryObj<typeof meta>

@@ -7,7 +7,7 @@ import * as GlobalDialogActions from 'store/global-dialog/actions'
 import { type Goal as IGoal } from 'types/model/Goal'
 import { type Tag as ITag } from 'types/model/Tag'
 
-import GoalDialogDetail from './components/dialog-detail'
+import { GoalDialogDetail } from './components/dialog-detail'
 import * as S from './styled'
 
 interface Props {
