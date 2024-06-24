@@ -30,6 +30,6 @@
     "declaration": true, // Generates declaration files for TypeScript.
     "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names.
   },
-  "include": ["**/*", ".eslintrc.cjs"],
+  "include": ["**/*", ".eslintrc.cjs", ".storybook/*"],
   "exclude": ["dist", "node_modules", "src/**/__docs__", "src/**/__test__"],
 }

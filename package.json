@@ -30,7 +30,6 @@
       "react-app/jest"
     ]
   },
-  "dependencies": {},
   "devDependencies": {
     "@mui/material": "5.15.20",
     "@storybook/addon-essentials": "8.1.10",
