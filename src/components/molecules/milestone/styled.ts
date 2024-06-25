@@ -44,7 +44,7 @@ export const MilestonesWrapper = styled.div`
 export const Status = styled.div`
   border: 1px solid ${props => props.theme.palette.category.border};
   border-radius: 8px;
-  color: rgb(173, 225, 255);
+  color: #ade1ff;
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 20px;
@@ -56,7 +56,7 @@ export const Status = styled.div`
 `
 
 export const StatusDate = styled.div`
-  color: rgb(173, 225, 255);
+  color: #ade1ff;
   font-size: 0.7rem;
   margin-top: 8px;
 `
@@ -72,7 +72,7 @@ export const StatusWrapper = styled.div`
 export const Wrapper = styled.div<{ $isExpanded: boolean }>`
   background-color: ${props => props.theme.palette.milestone.background};
   border-radius: 0px 0px 8px 8px;
-  border-top: 3px solid rgb(173, 225, 255);
+  border-top: 3px solid #ade1ff;
   height: min-content;
   overflow: auto;
   width: ${(props) => (props.$isExpanded ? '320px' : '120px')};

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Description = styled.div`
-  color: rgb(232, 235, 237);
+  color: #e8ebed;
   font-size: 0.9rem;
   font-weight: 400;
   padding: 16px;
@@ -31,7 +31,7 @@ export const ImageWrapper = styled.div`
 
 export const Status = styled.div`
   align-items: center;
-  background-color: rgb(111, 190, 236);
+  background-color: #6fbeec;
   border-radius: 8px 8px 0 0;
   color: #000000;
   display: flex;
@@ -49,7 +49,7 @@ export const TagsWrapper = styled.div`
 
 export const Title = styled.div`
   align-items: center;
-  color: rgb(232, 235, 237);
+  color: #e8ebed;
   display: flex;
   font-weight: 400;
   min-height: 40px;
@@ -57,7 +57,7 @@ export const Title = styled.div`
 `
 
 export const Wrapper = styled.div`
-  background: rgb(16, 50, 70);
+  background: #103246;
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: 8px;

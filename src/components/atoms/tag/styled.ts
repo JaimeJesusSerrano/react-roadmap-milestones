@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Body = styled.div`
-  color: rgb(232, 235, 237);
+  color: #e8ebed;
 `
 
 export const Wrapper = styled.div`

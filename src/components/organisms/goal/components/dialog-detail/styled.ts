@@ -19,7 +19,7 @@ export const BodyDescription = styled.div`
 `
 
 export const BodyDescriptionDate = styled.div`
-  color: rgb(186, 193, 197);
+  color: #bac1c5;
   font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -35,7 +35,7 @@ export const Category = styled.span`
 `
 
 export const CategoryTitle = styled.span`
-  color: rgb(186, 193, 197);
+  color: #bac1c5;
 `
 
 export const CategoryWrapper = styled.div`
@@ -63,8 +63,8 @@ export const Close = styled.div`
 
 export const Header = styled.div`
   align-items: center;
-  background-color: rgb(111, 190, 236);
-  color: rgb(232, 235, 237);
+  background-color: #6fbeec;
+  color: #e8ebed;
   display: flex;
   flex-direction: row;
   height: 34px;
@@ -135,7 +135,7 @@ export const Status = styled.div`
 `
 
 export const TagsTittle = styled.div`
-  color: rgb(186, 193, 197);
+  color: #bac1c5;
   margin-bottom: 8px;
 `
 

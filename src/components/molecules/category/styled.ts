@@ -20,7 +20,7 @@ export const LeftHeader = styled.div`
 `
 
 export const LeftHeaderSubtitle = styled.div`
-  color: rgb(186, 193, 197);
+  color: #bac1c5;
   font-size: 0.7rem;
   font-weight: 600;
   line-height: 20px;
