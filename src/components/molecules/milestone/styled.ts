@@ -7,7 +7,7 @@ export const ExpandIconWrapper = styled.div`
   height: 100%;
 
   svg {
-    color: ${props => props.theme.palette.blue.light};
+    color: ${props => props.theme.palette.milestone.expandIcon.default};
   }
 `
 
@@ -42,9 +42,9 @@ export const MilestonesWrapper = styled.div`
 `
 
 export const Status = styled.div`
-  border: 1px solid ${props => props.theme.palette.category.border};
+  border: 1px solid ${props => props.theme.palette.milestone.status.border.default};
   border-radius: 8px;
-  color: #ade1ff;
+  color: ${props => props.theme.palette.milestone.status.font.default};
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 20px;
@@ -56,7 +56,7 @@ export const Status = styled.div`
 `
 
 export const StatusDate = styled.div`
-  color: #ade1ff;
+  color: ${props => props.theme.palette.milestone.finishDate.font.default};
   font-size: 0.7rem;
   margin-top: 8px;
 `
@@ -70,7 +70,7 @@ export const StatusWrapper = styled.div`
 `
 
 export const Wrapper = styled.div<{ $isExpanded: boolean }>`
-  background-color: ${props => props.theme.palette.milestone.background};
+  background-color: ${props => props.theme.palette.milestone.background.default};
   border-radius: 0px 0px 8px 8px;
   border-top: 3px solid #ade1ff;
   height: min-content;

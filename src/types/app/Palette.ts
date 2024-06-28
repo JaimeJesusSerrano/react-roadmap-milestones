@@ -1,27 +1,51 @@
+export type ColorValueHex = `#${string}`
+
 export interface Palette {
-  blue: BluePalette
-  category: CategoryPalette
-  milestone: MilestonePalette
-  scrollBar: ScrollBarPalette
-}
-
-interface BluePalette {
-  light: string
-  main: string
-  dark: string
-}
-
-interface CategoryPalette {
-  background: string
-  border: string
-  chevron: string
-}
-
-interface MilestonePalette {
-  background: string
-}
-
-interface ScrollBarPalette {
-  default: string
-  hover: string
+  background: {
+    default: ColorValueHex
+  }
+  category: {
+    background: {
+      default: ColorValueHex
+    }
+    border: {
+      default: ColorValueHex
+    }
+    expandIcon: {
+      default: ColorValueHex
+    }
+  }
+  milestone: {
+    background: {
+      default: ColorValueHex
+    }
+    expandIcon: {
+      default: ColorValueHex
+    }
+    finishDate: {
+      font: {
+        default: ColorValueHex
+      }
+    }
+    status: {
+      border: {
+        default: ColorValueHex
+      }
+      font: {
+        default: ColorValueHex
+      }
+    }
+  }
+  oldMilestones: {
+    background: {
+      default: ColorValueHex
+    }
+    border: {
+      default: ColorValueHex
+    }
+  }
+  scrollBar: {
+    default: ColorValueHex
+    hover: ColorValueHex
+  }
 }

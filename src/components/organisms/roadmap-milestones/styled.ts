@@ -8,7 +8,7 @@ export const MilestoneWrapper = styled.div`
 `
 
 export const Wrapper = styled.div`
-  background-color: #0d2635;
+  background-color: ${props => props.theme.palette.background.default};
   display: flex;
   height: 100%;
   overflow-y: hidden;

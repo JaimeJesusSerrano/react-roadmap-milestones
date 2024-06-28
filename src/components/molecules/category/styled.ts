@@ -37,14 +37,14 @@ export const LeftHeaderTitle = styled.div`
 `
 
 export const RightHeader = styled.div`
-  color: ${props => props.theme.palette.category.chevron};
+  color: ${props => props.theme.palette.category.expandIcon.default};
   display: flex;
   flex-direction: row;
 `
 
 export const Wrapper = styled.div`
-  background-color: ${props => props.theme.palette.category.background};
-  border: 1px solid ${props => props.theme.palette.category.border};
+  background-color: ${props => props.theme.palette.category.background.default};
+  border: 1px solid ${props => props.theme.palette.category.border.default};
   border-radius: 8px;
   display: flex;
   flex-direction: column;
