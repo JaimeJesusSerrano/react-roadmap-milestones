@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import checker from 'vite-plugin-checker'
 import dts from 'vite-plugin-dts'
+import tsconfigPaths from 'vite-tsconfig-paths'
 import react from '@vitejs/plugin-react-swc'
 
 import { peerDependencies } from './package.json'
@@ -21,6 +22,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    tsconfigPaths(),
     checker({
       typescript: true
     }),
@@ -28,14 +30,5 @@ export default defineConfig({
       insertTypesEntry: true,
       rollupTypes: true
     })
-  ],
-  resolve: {
-    alias: {
-      assets: '/src/assets',
-      components: '/src/components',
-      config: '/src/config',
-      store: '/src/store',
-      types: '/src/types'
-    }
-  }
+  ]
 })
