@@ -6,8 +6,7 @@ import * as GlobalDialogActions from 'store/global-dialog/actions'
 import * as S from './styled'
 
 export function GlobalDialog (): ReactNode {
-  const { dispatch: globalDialogDispatch, state: globalDialogState } =
-    useContext(globalDialogContext)
+  const { dispatch: globalDialogDispatch, state: globalDialogState } = useContext(globalDialogContext)
 
   return (
       <S.Dialog

@@ -15,6 +15,8 @@ export interface StateType {
   translation: ITranslation
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ActionType = IActionTypeBase<any>
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ContextType = IContextTypeBase<any, StateType>

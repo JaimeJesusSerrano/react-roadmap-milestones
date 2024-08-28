@@ -10,6 +10,7 @@ function ComponentToTest (): ReactNode {
   return (globalDialog.state.Component)
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const renderContext = (currentContext: ContextType): any =>
   render(
       <context.Provider value={currentContext}>
@@ -20,6 +21,7 @@ const renderContext = (currentContext: ContextType): any =>
 describe('Store > Global Dialog', () => {
   test('initial with dialog closed', () => {
     const newContext: ContextType = {
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       dispatch: () => {},
       state: initialState
     }
@@ -30,6 +32,7 @@ describe('Store > Global Dialog', () => {
 
   test('dialog opened', () => {
     const newContext: ContextType = {
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       dispatch: () => {},
       state: {
       // eslint-disable-next-line
