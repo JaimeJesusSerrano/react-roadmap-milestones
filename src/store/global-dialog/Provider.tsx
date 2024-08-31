@@ -25,8 +25,8 @@ export function Provider ({ children }: Props): ReactNode {
   const value = useMemo(() => ({ dispatch, state }), [dispatch, state])
 
   return (
-      <context.Provider value={value}>
-          {children}
-      </context.Provider>
+    <context.Provider value={value}>
+      {children}
+    </context.Provider>
   )
 }

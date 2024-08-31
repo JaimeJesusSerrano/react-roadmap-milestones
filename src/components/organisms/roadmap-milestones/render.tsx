@@ -13,25 +13,25 @@ interface Props {
 
 export function Render ({ areThereMilestonesFinished, milestones }: Props): ReactNode {
   return (
-      <S.Wrapper>
-          {areThereMilestonesFinished
-            ? (
-                <div style={{ marginRight: 12 }}>
-                    <ShowPrevious />
-                </div>
-              )
-            : (
-                null
-              )}
+    <S.Wrapper>
+      {areThereMilestonesFinished
+        ? (
+          <div style={{ marginRight: 12 }}>
+            <ShowPrevious />
+          </div>
+        )
+        : (
+          null
+        )}
 
-          {milestones.map(milestone => (
-              <S.MilestoneWrapper key={milestone.name}>
-                  <Milestone
-                      isExpanded={!milestone.finishDate}
-                      milestone={milestone}
-                  />
-              </S.MilestoneWrapper>
-          ))}
-      </S.Wrapper>
+      {milestones.map(milestone => (
+        <S.MilestoneWrapper key={milestone.name}>
+          <Milestone
+            isExpanded={!milestone.finishDate}
+            milestone={milestone}
+          />
+        </S.MilestoneWrapper>
+      ))}
+    </S.Wrapper>
   )
 }

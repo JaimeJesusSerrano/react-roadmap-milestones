@@ -18,88 +18,88 @@ export function GoalDialogDetail ({ goal }: Props): ReactNode {
   const { dispatch: globalDialogDispatch } = useContext(globalDialogContext)
 
   return (
-      <S.Wrapper>
-          <S.Header>
-              <S.Status>
-                  {goal.status}
-              </S.Status>
+    <S.Wrapper>
+      <S.Header>
+        <S.Status>
+          {goal.status}
+        </S.Status>
 
-              <S.Close onClick={() => { globalDialogDispatch(GlobalDialogActions.setOpen(false)) }}>
-                  <CloseSvg title="Close" />
-              </S.Close>
-          </S.Header>
+        <S.Close onClick={() => { globalDialogDispatch(GlobalDialogActions.setOpen(false)) }}>
+          <CloseSvg title="Close" />
+        </S.Close>
+      </S.Header>
 
-          <S.Title>
-              {goal.name}
-          </S.Title>
+      <S.Title>
+        {goal.name}
+      </S.Title>
 
-          <S.Body>
-              <S.ImageAndDescriptionWrapper>
-                  <S.ImageWrapper>
-                      <ImageWrapper imageSrc={goal.images?.[0] ?? ''} />
-                  </S.ImageWrapper>
+      <S.Body>
+        <S.ImageAndDescriptionWrapper>
+          <S.ImageWrapper>
+            <ImageWrapper imageSrc={goal.images?.[0] ?? ''} />
+          </S.ImageWrapper>
 
-                  <S.BodyDescriptionWrapper>
-                      <S.BodyDescriptionDate>
-                          {'Updated '}
+          <S.BodyDescriptionWrapper>
+            <S.BodyDescriptionDate>
+              {'Updated '}
 
-                          {goal.updateDate?.toLocaleDateString() || ''}
-                      </S.BodyDescriptionDate>
+              {goal.updateDate?.toLocaleDateString() || ''}
+            </S.BodyDescriptionDate>
 
-                      <S.BodyDescription>
-                          {goal.description}
-                      </S.BodyDescription>
-                  </S.BodyDescriptionWrapper>
-              </S.ImageAndDescriptionWrapper>
+            <S.BodyDescription>
+              {goal.description}
+            </S.BodyDescription>
+          </S.BodyDescriptionWrapper>
+        </S.ImageAndDescriptionWrapper>
 
-              <S.Miscellaneous>
-                  <S.CategoryWrapper>
-                      <S.CategoryTitle>
-                          {'Category: '}
-                      </S.CategoryTitle>
+        <S.Miscellaneous>
+          <S.CategoryWrapper>
+            <S.CategoryTitle>
+              {'Category: '}
+            </S.CategoryTitle>
 
-                      <S.Category>
-                          {goal.category?.name ?? ''}
-                      </S.Category>
-                  </S.CategoryWrapper>
+            <S.Category>
+              {goal.category?.name ?? ''}
+            </S.Category>
+          </S.CategoryWrapper>
 
-                  {goal.tags?.length ? <TagsWrapper tags={goal.tags} /> : null }
-              </S.Miscellaneous>
-          </S.Body>
-      </S.Wrapper>
+          {goal.tags?.length ? <TagsWrapper tags={goal.tags} /> : null }
+        </S.Miscellaneous>
+      </S.Body>
+    </S.Wrapper>
   )
 }
 
 function ImageWrapper ({ imageSrc }: { readonly imageSrc: string }): ReactNode {
   if (!imageSrc) {
     return (
-        <S.ImageNotFoundWrapper>
-            <ImageNotFoundSvg
-                height="100%"
-                title="Image not found"
-                width="100%"
-            />
-        </S.ImageNotFoundWrapper>
+      <S.ImageNotFoundWrapper>
+        <ImageNotFoundSvg
+          height="100%"
+          title="Image not found"
+          width="100%"
+        />
+      </S.ImageNotFoundWrapper>
     )
   }
 
   return (
-      <img
-          alt="Goal"
-          loading="lazy"
-          src={imageSrc}
-      />
+    <img
+      alt="Goal"
+      loading="lazy"
+      src={imageSrc}
+    />
   )
 }
 
 function TagsWrapper ({ tags }: { readonly tags: ITag[] }): ReactNode {
   return (
-      <S.TagsWrapper>
-          <S.TagsTittle>
-              Tags:
-          </S.TagsTittle>
+    <S.TagsWrapper>
+      <S.TagsTittle>
+        Tags:
+      </S.TagsTittle>
 
-          <Tags tags={tags} />
-      </S.TagsWrapper>
+      <Tags tags={tags} />
+    </S.TagsWrapper>
   )
 }

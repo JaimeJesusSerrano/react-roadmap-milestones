@@ -5,18 +5,18 @@ import { SvgBase } from 'assets/svg/SvgBase'
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function ChevronUp (props: any): ReactNode {
   return (
-      <SvgBase
-          fill="none"
-          height="20px"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          width="20px"
-          {...props}
-      >
-          <polyline points="18 15 12 9 6 15" />
-      </SvgBase>
+    <SvgBase
+      fill="none"
+      height="20px"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="20px"
+      {...props}
+    >
+      <polyline points="18 15 12 9 6 15" />
+    </SvgBase>
   )
 }

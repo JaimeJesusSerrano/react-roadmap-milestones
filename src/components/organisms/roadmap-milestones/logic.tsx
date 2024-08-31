@@ -41,9 +41,9 @@ export function Logic ({ milestones, translation }: Props): ReactNode {
   }
 
   return (
-      <Render
-          areThereMilestonesFinished={areThereMilestonesFinished}
-          milestones={milestonesToShow}
-      />
+    <Render
+      areThereMilestonesFinished={areThereMilestonesFinished}
+      milestones={milestonesToShow}
+    />
   )
 }

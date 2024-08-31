@@ -7,13 +7,13 @@ import * as S from './styled'
 
 export function Goals ({ goals }: { readonly goals: IGoal[] }): ReactNode {
   return (
-      <S.GoalsWrapper>
-          {goals?.map(goal => (
-              <Goal
-                  goal={goal}
-                  key={goal.name}
-              />)
-          )}
-      </S.GoalsWrapper>
+    <S.GoalsWrapper>
+      {goals?.map(goal => (
+        <Goal
+          goal={goal}
+          key={goal.name}
+        />)
+      )}
+    </S.GoalsWrapper>
   )
 }

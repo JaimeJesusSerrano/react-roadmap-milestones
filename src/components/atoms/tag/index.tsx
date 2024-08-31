@@ -8,10 +8,10 @@ interface Props {
 
 export function Tag ({ children, ...props }: Props): ReactNode {
   return (
-      <S.Wrapper {...props}>
-          <S.Body>
-              {children}
-          </S.Body>
-      </S.Wrapper>
+    <S.Wrapper {...props}>
+      <S.Body>
+        {children}
+      </S.Body>
+    </S.Wrapper>
   )
 }

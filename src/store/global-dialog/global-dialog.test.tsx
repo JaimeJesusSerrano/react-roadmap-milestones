@@ -13,9 +13,9 @@ function ComponentToTest (): ReactNode {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const renderContext = (currentContext: ContextType): any =>
   render(
-      <context.Provider value={currentContext}>
-          <ComponentToTest />
-      </context.Provider>
+    <context.Provider value={currentContext}>
+      <ComponentToTest />
+    </context.Provider>
   )
 
 describe('Store > Global Dialog', () => {

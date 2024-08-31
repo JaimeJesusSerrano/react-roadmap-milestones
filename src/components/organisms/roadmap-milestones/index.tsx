@@ -35,19 +35,19 @@ export function RoadmapMilestones ({
   }
 
   return (
-      <ThemeProvider theme={theme}>
-          <GlobalStyle theme={theme} />
+    <ThemeProvider theme={theme}>
+      <GlobalStyle theme={theme} />
 
-          <GlobalSettingsProvider>
-              <GlobalDialogProvider>
-                  <GlobalDialog />
+      <GlobalSettingsProvider>
+        <GlobalDialogProvider>
+          <GlobalDialog />
 
-                  <Logic
-                      milestones={roadmapMilestonesData.milestones}
-                      translation={translation ?? defaultTranslation}
-                  />
-              </GlobalDialogProvider>
-          </GlobalSettingsProvider>
-      </ThemeProvider>
+          <Logic
+            milestones={roadmapMilestonesData.milestones}
+            translation={translation ?? defaultTranslation}
+          />
+        </GlobalDialogProvider>
+      </GlobalSettingsProvider>
+    </ThemeProvider>
   )
 }

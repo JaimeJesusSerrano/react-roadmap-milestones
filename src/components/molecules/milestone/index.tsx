@@ -47,11 +47,11 @@ export function Milestone ({ isExpanded, milestone }: Props): ReactNode {
   }
 
   return (
-      <Render
-          goalsByCategories={goalsByCategories}
-          goalsWithoutCategory={goalsWithoutCategory}
-          isExpanded={isExpanded}
-          milestone={milestone}
-      />
+    <Render
+      goalsByCategories={goalsByCategories}
+      goalsWithoutCategory={goalsWithoutCategory}
+      isExpanded={isExpanded}
+      milestone={milestone}
+    />
   )
 }

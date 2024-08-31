@@ -10,21 +10,6 @@ import js from '@eslint/js'
 import pluginStylistic from '@stylistic/eslint-plugin'
 
 export default [
-  {
-    ignores: [
-      '**/dist',
-      '!.storybook',
-      '**/.vscode/',
-      '**/node_modules',
-      '**/package.json',
-      '**/package-lock.json'
-    ],
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
   js.configs.recommended,
   pluginReact.configs.flat.recommended,
   pluginPromise.configs['flat/recommended'],
@@ -40,7 +25,6 @@ export default [
       },
       parser: typescriptEslint.parser,
       parserOptions: {
-        project: './tsconfig.json',
         ecmaFeatures: {
           jsx: true,
         },
@@ -53,15 +37,31 @@ export default [
       '@stylistic': pluginStylistic,
     },
     rules: {
+      'react/jsx-sort-props': 'error',
       'react/react-in-jsx-scope': 'off',
       '@stylistic/indent': ['error', 2],
       '@stylistic/jsx-quotes': ['error', 'prefer-double'],
       '@stylistic/quotes': ['error', 'single'],
       '@stylistic/semi': ['error', 'never'],
     },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
   },
   {
     files: ['**/*.test.{js,jsx,ts,tsx}'],
     ...pluginTestingLibrary.configs['flat/react'],
+  },
+  {
+    ignores: [
+      '**/dist',
+      '!.storybook',
+      '**/.vscode/',
+      '**/node_modules',
+      '**/package.json',
+      '**/package-lock.json'
+    ],
   },
 ]

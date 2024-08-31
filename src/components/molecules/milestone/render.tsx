@@ -24,46 +24,46 @@ export function Render ({
   const [isExpanded, setIsExpanded] = useState(isDefaultExpanded)
 
   return (
-      <S.Wrapper $isExpanded={isExpanded}>
-          <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
-              <S.HeaderTitleWrapper $isExpanded={isExpanded}>
-                  <S.ExpandIconWrapper>
-                      <ExpandIconWrapper isExpanded={isExpanded} />
-                  </S.ExpandIconWrapper>
+    <S.Wrapper $isExpanded={isExpanded}>
+      <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
+        <S.HeaderTitleWrapper $isExpanded={isExpanded}>
+          <S.ExpandIconWrapper>
+            <ExpandIconWrapper isExpanded={isExpanded} />
+          </S.ExpandIconWrapper>
 
-                  <S.HeaderTitle
-                      $isExpanded={isExpanded}
-                      title={milestone.name}
-                  >
-                      {milestone.name}
-                  </S.HeaderTitle>
-              </S.HeaderTitleWrapper>
+          <S.HeaderTitle
+            $isExpanded={isExpanded}
+            title={milestone.name}
+          >
+            {milestone.name}
+          </S.HeaderTitle>
+        </S.HeaderTitleWrapper>
 
-              <S.StatusWrapper>
-                  <S.Status title={milestone.status}>
-                      {milestone.status}
-                  </S.Status>
+        <S.StatusWrapper>
+          <S.Status title={milestone.status}>
+            {milestone.status}
+          </S.Status>
 
-                  {milestone.finishDate
-                    ? (
-                        <S.StatusDate>
-                            {milestone.finishDate.toLocaleDateString()}
-                        </S.StatusDate>
-                      )
-                    : (
-                        null
-                      )}
-              </S.StatusWrapper>
-          </S.Header>
-
-          {isExpanded
+          {milestone.finishDate
             ? (
-                <MilestonesWrapper
-                    goalsByCategories={goalsByCategories}
-                    goalsWithoutCategory={goalsWithoutCategory}
-                />
-              )
-            : null}
-      </S.Wrapper>
+              <S.StatusDate>
+                {milestone.finishDate.toLocaleDateString()}
+              </S.StatusDate>
+            )
+            : (
+              null
+            )}
+        </S.StatusWrapper>
+      </S.Header>
+
+      {isExpanded
+        ? (
+          <MilestonesWrapper
+            goalsByCategories={goalsByCategories}
+            goalsWithoutCategory={goalsWithoutCategory}
+          />
+        )
+        : null}
+    </S.Wrapper>
   )
 }
