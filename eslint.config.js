@@ -1,18 +1,13 @@
-import configLove from 'eslint-config-love'
-import react from 'eslint-plugin-react'
-// import globals from "globals";
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
+import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
+import pluginReact from 'eslint-plugin-react'
+import pluginReactHooks from 'eslint-plugin-react-hooks'
+import pluginImport from 'eslint-plugin-import'
+import pluginPromise from 'eslint-plugin-promise'
+import pluginTestingLibrary from 'eslint-plugin-testing-library'
+import globals from 'globals'
+import typescriptEslint from 'typescript-eslint'
 import js from '@eslint/js'
-import { FlatCompat } from '@eslint/eslintrc'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all
-})
+import pluginStylistic from '@stylistic/eslint-plugin'
 
 export default [
   {
@@ -22,70 +17,51 @@ export default [
       '**/.vscode/',
       '**/node_modules',
       '**/package.json',
-      '**/package-lock.json',
-      'eslint.config.js'
-    ]
-  },
-  ...compat.extends("plugin:react/all"),
-  {
-    plugins: {
-      react
-    },
-
-    languageOptions: {
-      // globals: {
-      //     ...globals.browser,
-      //     ...globals.node,
-      // },
-
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-
+      '**/package-lock.json'
+    ],
     settings: {
       react: {
-        version: 'detect'
-      }
-    }
-  },
-  {
-    ...configLove,
-    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx']
-  },
-  {
-      files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-      rules: {
-        "@typescript-eslint/no-explicit-any": "warn",
-        "@typescript-eslint/no-import-type-side-effects": "off",
-        "@typescript-eslint/strict-boolean-expressions": "off",
-        "multiline-ternary": "off",
-
-        "react/jsx-filename-extension": [2, {
-            extensions: [".js", ".jsx", ".ts", ".tsx"],
-        }],
-        "react/jsx-max-depth": "off",
-        "react/jsx-no-bind": "off",
-        "react/jsx-no-literals": "off",
-        "react/jsx-props-no-spreading": "off",
-        "react/jsx-wrap-multilines": [2, {
-            declaration: "parens-new-line",
-            assignment: "parens",
-            return: "parens-new-line",
-            arrow: "parens",
-            condition: "parens-new-line",
-            logical: "ignore",
-            prop: "ignore",
-        }],
-
-        "react/no-multi-comp": "off",
-        "react/react-in-jsx-scope": "off",
-        "react/require-default-props": "off",
+        version: 'detect',
       },
-  }
+    },
+  },
+  js.configs.recommended,
+  pluginReact.configs.flat.recommended,
+  pluginPromise.configs['flat/recommended'],
+  pluginJsxA11y.flatConfigs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.jest,
+      },
+      parser: typescriptEslint.parser,
+      parserOptions: {
+        project: './tsconfig.json',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    plugins: {
+      pluginReactHooks,
+      pluginImport,
+      '@typescript-eslint': typescriptEslint.plugin,
+      '@stylistic': pluginStylistic,
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/jsx-quotes': ['error', 'prefer-double'],
+      '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/semi': ['error', 'never'],
+    },
+  },
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}'],
+    ...pluginTestingLibrary.configs['flat/react'],
+  },
 ]
