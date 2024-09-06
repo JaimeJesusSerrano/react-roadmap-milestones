@@ -7,7 +7,7 @@ interface Props {
   readonly isExpanded: boolean
 }
 
-export function ExpandIconWrapper ({ isExpanded }: Props): ReactNode {
+export function ExpandIconWrapper({ isExpanded }: Props): ReactNode {
   if (isExpanded) return <SubtractSvg title="Collapse milestone" />
   return <PlusSvg title="Expand milestone" />
 }

@@ -16,6 +16,7 @@ export default [
   pluginReact.configs.flat.recommended,
   pluginPromise.configs['flat/recommended'],
   pluginJsxA11y.flatConfigs.recommended,
+  pluginStylistic.configs['recommended-flat'],
   {
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
     languageOptions: {
@@ -35,21 +36,16 @@ export default [
     plugins: {
       pluginReactHooks,
       '@typescript-eslint': pluginTypescript,
-      '@stylistic': pluginStylistic,
     },
     rules: {
       'import-x/no-unresolved': 'off',
       'react/jsx-sort-props': 'error',
       'react/react-in-jsx-scope': 'off',
-      '@stylistic/indent': ['error', 2],
-      '@stylistic/jsx-quotes': ['error', 'prefer-double'],
-      '@stylistic/quotes': ['error', 'single'],
-      '@stylistic/semi': ['error', 'never'],
     },
     settings: {
       react: {
         version: 'detect',
-      }
+      },
     },
   },
   {
@@ -63,7 +59,7 @@ export default [
       '**/.vscode/',
       '**/node_modules',
       '**/package.json',
-      '**/package-lock.json'
+      '**/package-lock.json',
     ],
   },
 ]

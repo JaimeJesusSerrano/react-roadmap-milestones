@@ -11,7 +11,7 @@ interface Props {
   readonly name: string
 }
 
-export function Category ({ goals, name = '' }: Props): ReactNode {
+export function Category({ goals, name = '' }: Props): ReactNode {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (

@@ -7,7 +7,7 @@ interface Props {
   readonly title?: string
 }
 
-export function SvgBase ({ children, title = '', ...props }: Props): ReactNode {
+export function SvgBase({ children, title = '', ...props }: Props): ReactNode {
   return (
     <svg
       version="1.1"

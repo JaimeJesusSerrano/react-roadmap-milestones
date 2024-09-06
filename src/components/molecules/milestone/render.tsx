@@ -15,11 +15,11 @@ interface Props {
   readonly milestone: IMilestone
 }
 
-export function Render ({
+export function Render({
   isExpanded: isDefaultExpanded,
   goalsByCategories,
   goalsWithoutCategory,
-  milestone
+  milestone,
 }: Props): ReactNode {
   const [isExpanded, setIsExpanded] = useState(isDefaultExpanded)
 
@@ -46,23 +46,23 @@ export function Render ({
 
           {milestone.finishDate
             ? (
-              <S.StatusDate>
-                {milestone.finishDate.toLocaleDateString()}
-              </S.StatusDate>
-            )
+                <S.StatusDate>
+                  {milestone.finishDate.toLocaleDateString()}
+                </S.StatusDate>
+              )
             : (
-              null
-            )}
+                null
+              )}
         </S.StatusWrapper>
       </S.Header>
 
       {isExpanded
         ? (
-          <MilestonesWrapper
-            goalsByCategories={goalsByCategories}
-            goalsWithoutCategory={goalsWithoutCategory}
-          />
-        )
+            <MilestonesWrapper
+              goalsByCategories={goalsByCategories}
+              goalsWithoutCategory={goalsWithoutCategory}
+            />
+          )
         : null}
     </S.Wrapper>
   )

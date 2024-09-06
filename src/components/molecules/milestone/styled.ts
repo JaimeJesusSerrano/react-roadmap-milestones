@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const ExpandIconWrapper = styled.div`
   align-items: center;
@@ -20,19 +20,19 @@ export const Header = styled.div`
 
 export const HeaderTitle = styled.div<{ $isExpanded: boolean }>`
   color: white;
-  font-size: ${(props) => (props.$isExpanded ? '1.5rem' : '1.25rem')};
+  font-size: ${props => (props.$isExpanded ? '1.5rem' : '1.25rem')};
   font-weight: 600;
-  overflow: ${(props) => (props.$isExpanded ? '' : 'hidden')};
+  overflow: ${props => (props.$isExpanded ? '' : 'hidden')};
   text-align: center;
-  text-overflow: ${(props) => (props.$isExpanded ? '' : 'ellipsis')};
-  white-space: ${(props) => (props.$isExpanded ? '' : 'nowrap')};
+  text-overflow: ${props => (props.$isExpanded ? '' : 'ellipsis')};
+  white-space: ${props => (props.$isExpanded ? '' : 'nowrap')};
 `
 
 export const HeaderTitleWrapper = styled.div<{ $isExpanded: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: ${(props) => props.$isExpanded ? '16px' : '16px 8px 16px 8px'};
+  margin: ${props => props.$isExpanded ? '16px' : '16px 8px 16px 8px'};
   position: relative;
   user-select: none;
 `
@@ -75,5 +75,5 @@ export const Wrapper = styled.div<{ $isExpanded: boolean }>`
   border-top: 3px solid #ade1ff;
   height: min-content;
   overflow: auto;
-  width: ${(props) => (props.$isExpanded ? '320px' : '120px')};
+  width: ${props => (props.$isExpanded ? '320px' : '120px')};
 `

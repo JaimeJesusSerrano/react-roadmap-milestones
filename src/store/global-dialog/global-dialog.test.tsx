@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react'
 import { context, initialState } from './index'
 import { type ContextType } from './types'
 
-function ComponentToTest (): ReactNode {
+function ComponentToTest(): ReactNode {
   const globalDialog = useContext(context)
   return (globalDialog.state.Component)
 }
@@ -15,7 +15,7 @@ const renderContext = (currentContext: ContextType): any =>
   render(
     <context.Provider value={currentContext}>
       <ComponentToTest />
-    </context.Provider>
+    </context.Provider>,
   )
 
 describe('Store > Global Dialog', () => {
@@ -23,7 +23,7 @@ describe('Store > Global Dialog', () => {
     const newContext: ContextType = {
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       dispatch: () => {},
-      state: initialState
+      state: initialState,
     }
 
     renderContext(newContext)
@@ -37,8 +37,8 @@ describe('Store > Global Dialog', () => {
       state: {
       // eslint-disable-next-line
         Component: <>Dialog opened</>,
-        isOpen: true
-      }
+        isOpen: true,
+      },
     }
 
     renderContext(newContext)

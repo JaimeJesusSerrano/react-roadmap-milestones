@@ -19,10 +19,10 @@ interface Params {
   readonly translation?: ITranslation
 }
 
-export function RoadmapMilestones ({
+export function RoadmapMilestones({
   roadmapMilestonesData,
   theme: themeOverride,
-  translation
+  translation,
 }: Params): ReactNode {
   if (!roadmapMilestonesData?.milestones) {
     return null
@@ -31,7 +31,7 @@ export function RoadmapMilestones ({
   const theme: ITheme = {
     breakpoints: themeOverride?.breakpoints ?? defaultTheme.breakpoints,
     devices: themeOverride?.devices ?? defaultTheme.devices,
-    palette: themeOverride?.palette ?? defaultTheme.palette
+    palette: themeOverride?.palette ?? defaultTheme.palette,
   }
 
   return (

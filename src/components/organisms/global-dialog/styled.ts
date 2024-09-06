@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 import MaterialDialog from '@mui/material/Dialog'
 
 export const Dialog = styled(MaterialDialog)`

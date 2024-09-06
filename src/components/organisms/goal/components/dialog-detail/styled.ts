@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const Body = styled.div`
   border-top: 2px solid #164664;

@@ -9,7 +9,7 @@ interface Props {
   readonly tags: ITag[]
 }
 
-export function Tags ({ tags, ...props }: Props): ReactNode {
+export function Tags({ tags, ...props }: Props): ReactNode {
   if (!tags?.length) return null
 
   return (

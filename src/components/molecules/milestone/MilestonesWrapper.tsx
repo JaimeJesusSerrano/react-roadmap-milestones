@@ -12,9 +12,9 @@ interface Props {
   readonly goalsWithoutCategory: IGoal[]
 }
 
-export function MilestonesWrapper ({
+export function MilestonesWrapper({
   goalsByCategories,
-  goalsWithoutCategory
+  goalsWithoutCategory,
 }: Props): ReactNode {
   return (
     <S.MilestonesWrapper>

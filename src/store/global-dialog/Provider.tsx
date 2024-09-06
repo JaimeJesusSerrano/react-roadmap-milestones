@@ -7,7 +7,7 @@ interface Props {
   readonly children: ReactNode
 }
 
-export function Provider ({ children }: Props): ReactNode {
+export function Provider({ children }: Props): ReactNode {
   const [state, dispatch] = useReducer(
     (currentState: Types.StateType, action: Types.ActionType) => {
       switch (action.type) {
@@ -19,7 +19,7 @@ export function Provider ({ children }: Props): ReactNode {
           throw new Error()
       }
     },
-    initialState
+    initialState,
   )
 
   const value = useMemo(() => ({ dispatch, state }), [dispatch, state])

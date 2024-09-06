@@ -8,7 +8,7 @@ import * as GlobalSettingsActions from 'store/global-settings/actions'
 
 import * as S from './styled'
 
-export function ShowPrevious (): ReactNode {
+export function ShowPrevious(): ReactNode {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 

@@ -7,7 +7,7 @@ interface Props {
   readonly onClick?: () => void
 }
 
-export function VerticalButton ({ children, ...props }: Props): ReactNode {
+export function VerticalButton({ children, ...props }: Props): ReactNode {
   return (
     <S.Wrapper {...props}>
       <S.Body>

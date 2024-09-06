@@ -4,7 +4,7 @@ interface Props {
   readonly title: string
 }
 
-export function Title ({ title }: Props): ReactNode {
+export function Title({ title }: Props): ReactNode {
   if (!title) return null
 
   return (

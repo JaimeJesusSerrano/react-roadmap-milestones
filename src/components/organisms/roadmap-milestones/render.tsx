@@ -11,18 +11,18 @@ interface Props {
   readonly milestones: IMilestone[]
 }
 
-export function Render ({ areThereMilestonesFinished, milestones }: Props): ReactNode {
+export function Render({ areThereMilestonesFinished, milestones }: Props): ReactNode {
   return (
     <S.Wrapper>
       {areThereMilestonesFinished
         ? (
-          <div style={{ marginRight: 12 }}>
-            <ShowPrevious />
-          </div>
-        )
+            <div style={{ marginRight: 12 }}>
+              <ShowPrevious />
+            </div>
+          )
         : (
-          null
-        )}
+            null
+          )}
 
       {milestones.map(milestone => (
         <S.MilestoneWrapper key={milestone.name}>

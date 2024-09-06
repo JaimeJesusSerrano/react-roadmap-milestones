@@ -3,7 +3,7 @@ import { type ReactNode } from 'react'
 import { SvgBase } from 'assets/svg/SvgBase'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function Close (props: any): ReactNode {
+export function Close(props: any): ReactNode {
   return (
     <SvgBase
       height="12"

@@ -7,7 +7,7 @@ import { defaultTranslation } from 'config/defaultTranslation'
 import { context, initialState } from './index'
 import { type ContextType } from './types'
 
-function ComponentToTest (): string {
+function ComponentToTest(): string {
   const globalDialog = useContext(context)
   return globalDialog.state.showMilestonesFinished
     ? 'Show previous milestones'
@@ -19,7 +19,7 @@ const renderContext = (currentContext: ContextType): any =>
   render(
     <context.Provider value={currentContext}>
       <ComponentToTest />
-    </context.Provider>
+    </context.Provider>,
   )
 
 describe('Store > Global settings', () => {
@@ -27,11 +27,11 @@ describe('Store > Global settings', () => {
     const newContext: ContextType = {
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       dispatch: () => {},
-      state: initialState
+      state: initialState,
     }
 
     renderContext(newContext)
-    expect(screen.queryByText('Hide previous milestones')).toBeInTheDocument()
+    expect(screen.getByText('Hide previous milestones')).toBeInTheDocument()
   })
 
   test('state updated', () => {
@@ -40,8 +40,8 @@ describe('Store > Global settings', () => {
       dispatch: () => {},
       state: {
         showMilestonesFinished: true,
-        translation: defaultTranslation
-      }
+        translation: defaultTranslation,
+      },
     }
 
     renderContext(newContext)

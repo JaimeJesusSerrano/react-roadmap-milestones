@@ -14,7 +14,7 @@ interface Props {
   readonly goal: IGoal
 }
 
-export function Goal ({ goal }: Props): ReactNode {
+export function Goal({ goal }: Props): ReactNode {
   const { dispatch: globalDialogDispatch } = useContext(globalDialogContext)
 
   return (
@@ -42,7 +42,7 @@ export function Goal ({ goal }: Props): ReactNode {
   )
 }
 
-function ImageWrapper ({ imageSrc }: { readonly imageSrc: string }): ReactNode {
+function ImageWrapper({ imageSrc }: { readonly imageSrc: string }): ReactNode {
   if (!imageSrc) {
     return (
       <S.ImageNotFoundWrapper>
@@ -64,7 +64,7 @@ function ImageWrapper ({ imageSrc }: { readonly imageSrc: string }): ReactNode {
   )
 }
 
-function TagsWrapper ({ tags }: { readonly tags: ITag[] }): ReactNode {
+function TagsWrapper({ tags }: { readonly tags: ITag[] }): ReactNode {
   return (
     <S.TagsWrapper>
       <Tags tags={tags} />

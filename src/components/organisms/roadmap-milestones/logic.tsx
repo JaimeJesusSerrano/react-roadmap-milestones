@@ -12,7 +12,7 @@ interface Props {
   readonly translation: ITranslation
 }
 
-export function Logic ({ milestones, translation }: Props): ReactNode {
+export function Logic({ milestones, translation }: Props): ReactNode {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 
