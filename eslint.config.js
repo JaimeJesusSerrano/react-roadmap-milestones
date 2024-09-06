@@ -1,21 +1,23 @@
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
 import pluginReact from 'eslint-plugin-react'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
-import pluginImport from 'eslint-plugin-import'
+import pluginImportX from 'eslint-plugin-import-x'
 import pluginPromise from 'eslint-plugin-promise'
 import pluginTestingLibrary from 'eslint-plugin-testing-library'
 import globals from 'globals'
-import typescriptEslint from 'typescript-eslint'
 import js from '@eslint/js'
 import pluginStylistic from '@stylistic/eslint-plugin'
+import tsParser from '@typescript-eslint/parser'
+import pluginTypescript from '@typescript-eslint/eslint-plugin'
 
 export default [
   js.configs.recommended,
+  pluginImportX.flatConfigs.recommended,
   pluginReact.configs.flat.recommended,
   pluginPromise.configs['flat/recommended'],
   pluginJsxA11y.flatConfigs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -23,7 +25,7 @@ export default [
         ...globals.browser,
         ...globals.jest,
       },
-      parser: typescriptEslint.parser,
+      parser: tsParser,
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -32,11 +34,11 @@ export default [
     },
     plugins: {
       pluginReactHooks,
-      pluginImport,
-      '@typescript-eslint': typescriptEslint.plugin,
+      '@typescript-eslint': pluginTypescript,
       '@stylistic': pluginStylistic,
     },
     rules: {
+      'import-x/no-unresolved': 'off',
       'react/jsx-sort-props': 'error',
       'react/react-in-jsx-scope': 'off',
       '@stylistic/indent': ['error', 2],
@@ -47,7 +49,7 @@ export default [
     settings: {
       react: {
         version: 'detect',
-      },
+      }
     },
   },
   {
