@@ -2,6 +2,7 @@ import { type Meta, type StoryObj } from '@storybook/react'
 
 import { RoadmapMilestones } from 'components/organisms/roadmap-milestones'
 import { type RoadmapMilestones as IRoadmapMilestones } from 'types/model/RoadmapMilestones'
+import { type Theme as ITheme } from 'types/app/Theme'
 
 const roadmapMilestonesData: IRoadmapMilestones = {
   name: 'Roadmap Milestone',
@@ -534,6 +535,41 @@ const roadmapMilestonesData: IRoadmapMilestones = {
   ],
 }
 
+const theme: ITheme = {
+  breakpoints: {
+    mobile: 0,
+    laptop: 900,
+  },
+  devices: {
+    mobileMin: '(min-width: 0px)',
+    laptopMax: '(max-width: 900px)',
+    laptopMin: '(min-width: 900px)' },
+  palette: {
+    background: {
+      default: '#0d2635',
+    },
+    category: {
+      background: { default: '#1a5a7f' },
+      border: { default: '#3785ae' },
+      expandIcon: { default: '#ade1ff' } },
+    milestone: {
+      background: { default: '#164664' },
+      expandIcon: { default: '#ade1ff' },
+      finishDate: {
+        font: { default: '#ade1ff' },
+      },
+      status: {
+        border: { default: '#3785ae' },
+        font: { default: '#ade1ff' },
+      },
+    },
+    oldMilestones: {
+      background: { default: '#164664' },
+      border: { default: '#296d94' } },
+    scrollBar: { default: '#bac1c5', hover: '#949a9d' },
+  },
+}
+
 const meta = {
   title: 'Components/RoadmapMilestones',
   component: RoadmapMilestones,
@@ -543,6 +579,7 @@ const meta = {
   tags: ['autodocs'],
   args: {
     roadmapMilestonesData,
+    theme,
   },
 } satisfies Meta<typeof RoadmapMilestones>
 
