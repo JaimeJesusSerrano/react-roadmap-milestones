@@ -15,10 +15,12 @@ Several examples than can help us to understand it:
 - Definitely **The evolution of any project or idea to be showed by milestones**.
 
 ## Usage
-```javascript
-  import { ReactRoadmapMilestones, type RoadmapMilestones } from '@jaimejesusserrano/react-roadmap-milestones'
 
-  const roadmapMilestonesData: RoadmapMilestones = {
+### Basic example
+```javascript
+  import { ReactRoadmapMilestones, type IReactRoadmapMilestones } from '@jaimejesusserrano/react-roadmap-milestones'
+
+  const roadmapMilestonesData: IReactRoadmapMilestones = {
     milestones: [
       {
         name: '0.1',
@@ -44,8 +46,43 @@ Several examples than can help us to understand it:
   )
 ```
 
+### Override CSS
+React Roadmap Milestones provides its own CSS styles but you can override them. You can modify the theme that include the color palette, breakpoints and devices or you can modify the entire CSS styles, as you prefer.
+
+```javascript
+  import { ReactRoadmapMilestones, type IReactRoadmapMilestones, type ITheme } from '@jaimejesusserrano/react-roadmap-milestones'
+
+  const roadmapMilestonesData: IReactRoadmapMilestones = {
+    milestones: [
+      {
+        name: '0.1',
+        status: 'pending',
+        goals: [
+          {
+            name: 'Goal 1',
+            description: 'Goal description',
+            shortDescription: 'Short goal description',
+            status: 'pending',
+            updateDate: new Date(),
+          }
+        ],
+      }
+    ],
+    name: 'Example',
+  }
+
+  const className = 'my-custom-className'
+  const theme: ITheme = {}
+
+  return (
+    <div style={{height: 600, width: 1000}}>
+      <ReactRoadmapMilestones className={className} theme={theme} roadmapMilestonesData={roadmapMilestonesData} />
+    </div>
+  )
+```
+
 ## Future ideas to be developed (suggestions are accepted)
-- Overwrite styles, to allow config your own CSS.
+- ~~Overwrite styles, to allow config your own CSS.~~
 
 ## Available Scripts
 
