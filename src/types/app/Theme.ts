@@ -6,7 +6,7 @@ export interface Theme {
   palette: Palette
 }
 
-export type ThemeOverride = Partial<Theme>
+export type PartialTheme = Partial<Theme>
 
 export interface Breakpoints {
   mobile: number
