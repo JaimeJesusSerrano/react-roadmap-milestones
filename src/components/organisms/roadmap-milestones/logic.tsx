@@ -8,11 +8,12 @@ import { type Milestone as IMilestone } from 'types/model/Milestone'
 import { Render } from './render'
 
 interface Props {
+  readonly className?: string
   readonly milestones: IMilestone[]
   readonly translation: ITranslation
 }
 
-export function Logic({ milestones, translation }: Props): ReactNode {
+export function Logic({ className, milestones, translation }: Props): ReactNode {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 
@@ -43,6 +44,7 @@ export function Logic({ milestones, translation }: Props): ReactNode {
   return (
     <Render
       areThereMilestonesFinished={areThereMilestonesFinished}
+      className={className}
       milestones={milestonesToShow}
     />
   )

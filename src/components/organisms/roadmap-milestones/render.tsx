@@ -8,12 +8,13 @@ import * as S from './styled'
 
 interface Props {
   readonly areThereMilestonesFinished: boolean
+  readonly className?: string
   readonly milestones: IMilestone[]
 }
 
-export function Render({ areThereMilestonesFinished, milestones }: Props): ReactNode {
+export function Render({ areThereMilestonesFinished, className, milestones }: Props): ReactNode {
   return (
-    <S.Wrapper>
+    <S.Wrapper className={className ?? ''}>
       {areThereMilestonesFinished
         ? (
             <div style={{ marginRight: 12 }}>

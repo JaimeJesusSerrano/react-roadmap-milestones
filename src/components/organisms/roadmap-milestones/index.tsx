@@ -8,20 +8,22 @@ import { GlobalStyle } from 'config/globalStyle'
 import { Provider as GlobalDialogProvider } from 'store/global-dialog/Provider'
 import { Provider as GlobalSettingsProvider } from 'store/global-settings/Provider'
 import { type RoadmapMilestones as IRoadmapMilestones } from 'types/model/RoadmapMilestones'
-import { type Theme as ITheme, type ThemeOverride as IThemeOverride } from 'types/app/Theme'
+import { type Theme as ITheme, type PartialTheme as IPartialTheme } from 'types/app/Theme'
 import { type Translation as ITranslation } from 'types/app/Translation'
 
 import { Logic } from './logic'
 
 interface Params {
+  readonly className?: string
   readonly roadmapMilestonesData?: IRoadmapMilestones
-  readonly theme?: IThemeOverride
+  readonly theme?: IPartialTheme
   readonly translation?: ITranslation
 }
 
 export function RoadmapMilestones({
+  className,
   roadmapMilestonesData,
-  theme: themeOverride,
+  theme: partialTheme,
   translation,
 }: Params): ReactNode {
   if (!roadmapMilestonesData?.milestones) {
@@ -29,9 +31,9 @@ export function RoadmapMilestones({
   }
 
   const theme: ITheme = {
-    breakpoints: themeOverride?.breakpoints ?? defaultTheme.breakpoints,
-    devices: themeOverride?.devices ?? defaultTheme.devices,
-    palette: themeOverride?.palette ?? defaultTheme.palette,
+    breakpoints: partialTheme?.breakpoints ?? defaultTheme.breakpoints,
+    devices: partialTheme?.devices ?? defaultTheme.devices,
+    palette: partialTheme?.palette ?? defaultTheme.palette,
   }
 
   return (
@@ -40,9 +42,10 @@ export function RoadmapMilestones({
 
       <GlobalSettingsProvider>
         <GlobalDialogProvider>
-          <GlobalDialog />
+          <GlobalDialog className={className} />
 
           <Logic
+            className={className}
             milestones={roadmapMilestonesData.milestones}
             translation={translation ?? defaultTranslation}
           />

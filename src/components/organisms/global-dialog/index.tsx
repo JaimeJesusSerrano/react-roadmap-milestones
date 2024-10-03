@@ -5,7 +5,11 @@ import * as GlobalDialogActions from 'store/global-dialog/actions'
 
 import * as S from './styled'
 
-export function GlobalDialog(): ReactNode {
+interface Props {
+  className?: string
+}
+
+export function GlobalDialog({ className }: Props): ReactNode {
   const { dispatch: globalDialogDispatch, state: globalDialogState } = useContext(globalDialogContext)
 
   return (
@@ -14,7 +18,15 @@ export function GlobalDialog(): ReactNode {
       onClose={() => { globalDialogDispatch(GlobalDialogActions.setOpen(false)) }}
       open={globalDialogState.isOpen}
     >
-      {globalDialogState.Component ? globalDialogState.Component : null}
+      {globalDialogState.Component
+        ? (
+            <div
+              className={className ?? ''}
+            >
+              {globalDialogState.Component}
+            </div>
+          )
+        : null}
     </S.Dialog>
   )
 }
