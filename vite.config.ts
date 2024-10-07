@@ -29,6 +29,7 @@ export default defineConfig({
     dts({ // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
       insertTypesEntry: true,
       rollupTypes: true,
+      tsconfigPath: './tsconfig.json',
     }),
   ],
 })
