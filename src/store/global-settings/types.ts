@@ -1,8 +1,8 @@
-import type {
-  ActionType as IActionTypeBase,
-  ContextType as IContextTypeBase
+import {
+  type ActionType as IActionTypeBase,
+  type ContextType as IContextTypeBase,
 } from 'types/app/Context'
-import type { Translation as ITranslation } from 'types/app/Translation'
+import { type Translation as ITranslation } from 'types/app/Translation'
 
 const BASE = 'GLOBAL_SETTINGS'
 
@@ -15,6 +15,8 @@ export interface StateType {
   translation: ITranslation
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ActionType = IActionTypeBase<any>
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ContextType = IContextTypeBase<any, StateType>

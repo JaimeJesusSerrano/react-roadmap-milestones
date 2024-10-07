@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const Body = styled.div`
   align-items: center;
-  background-color: ${props => props.theme.palette.milestone.background};
-  border: 1px solid rgb(41, 109, 148);
+  background-color: ${props => props.theme.palette.oldMilestones.background.default};
+  border: 1px solid ${props => props.theme.palette.oldMilestones.border.default};
   border-radius: 8px;
   color: white;
   display: flex;

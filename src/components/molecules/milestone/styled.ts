@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const ExpandIconWrapper = styled.div`
   align-items: center;
@@ -7,7 +7,7 @@ export const ExpandIconWrapper = styled.div`
   height: 100%;
 
   svg {
-    color: ${props => props.theme.palette.blue.light};
+    color: ${props => props.theme.palette.milestone.expandIcon.default};
   }
 `
 
@@ -20,19 +20,19 @@ export const Header = styled.div`
 
 export const HeaderTitle = styled.div<{ $isExpanded: boolean }>`
   color: white;
-  font-size: ${(props) => (props.$isExpanded ? '1.5rem' : '1.25rem')};
+  font-size: ${props => (props.$isExpanded ? '1.5rem' : '1.25rem')};
   font-weight: 600;
-  overflow: ${(props) => (props.$isExpanded ? '' : 'hidden')};
+  overflow: ${props => (props.$isExpanded ? '' : 'hidden')};
   text-align: center;
-  text-overflow: ${(props) => (props.$isExpanded ? '' : 'ellipsis')};
-  white-space: ${(props) => (props.$isExpanded ? '' : 'nowrap')};
+  text-overflow: ${props => (props.$isExpanded ? '' : 'ellipsis')};
+  white-space: ${props => (props.$isExpanded ? '' : 'nowrap')};
 `
 
 export const HeaderTitleWrapper = styled.div<{ $isExpanded: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: ${(props) => props.$isExpanded ? '16px' : '16px 8px 16px 8px'};
+  margin: ${props => props.$isExpanded ? '16px' : '16px 8px 16px 8px'};
   position: relative;
   user-select: none;
 `
@@ -42,9 +42,9 @@ export const MilestonesWrapper = styled.div`
 `
 
 export const Status = styled.div`
-  border: 1px solid ${props => props.theme.palette.category.border};
+  border: 1px solid ${props => props.theme.palette.milestone.status.border.default};
   border-radius: 8px;
-  color: rgb(173, 225, 255);
+  color: ${props => props.theme.palette.milestone.status.font.default};
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 20px;
@@ -56,7 +56,7 @@ export const Status = styled.div`
 `
 
 export const StatusDate = styled.div`
-  color: rgb(173, 225, 255);
+  color: ${props => props.theme.palette.milestone.finishDate.font.default};
   font-size: 0.7rem;
   margin-top: 8px;
 `
@@ -70,10 +70,10 @@ export const StatusWrapper = styled.div`
 `
 
 export const Wrapper = styled.div<{ $isExpanded: boolean }>`
-  background-color: ${props => props.theme.palette.milestone.background};
+  background-color: ${props => props.theme.palette.milestone.background.default};
   border-radius: 0px 0px 8px 8px;
-  border-top: 3px solid rgb(173, 225, 255);
+  border-top: 3px solid #ade1ff;
   height: min-content;
   overflow: auto;
-  width: ${(props) => (props.$isExpanded ? '320px' : '120px')};
+  width: ${props => (props.$isExpanded ? '320px' : '120px')};
 `

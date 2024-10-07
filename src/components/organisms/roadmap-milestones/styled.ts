@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const MilestoneWrapper = styled.div`
   display: flex;
@@ -8,7 +8,8 @@ export const MilestoneWrapper = styled.div`
 `
 
 export const Wrapper = styled.div`
-  background-color: rgb(13, 38, 53);
+  background-color: ${props => props.theme.palette.background.default};
+  box-sizing: border-box;
   display: flex;
   height: 100%;
   overflow-y: hidden;

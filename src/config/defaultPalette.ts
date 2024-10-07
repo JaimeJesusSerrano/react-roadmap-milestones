@@ -1,23 +1,53 @@
-import type { Palette } from 'types/app/Theme'
+import { type Palette } from 'types/app/Palette'
 
-const palette: Palette = {
-  category: {
-    background: '#1a5a7f',
-    border: '#3785ae',
-    chevron: '#ade1ff '
+export const darkPalette: Palette = {
+  background: {
+    default: '#0d2635',
   },
-  blue: {
-    light: '#ade1ff',
-    main: '#85d0ff',
-    dark: '#3785ae'
+  category: {
+    background: {
+      default: '#1a5a7f',
+    },
+    border: {
+      default: '#3785ae',
+    },
+    expandIcon: {
+      default: '#ade1ff',
+    },
   },
   milestone: {
-    background: '#164664'
+    background: {
+      default: '#164664',
+    },
+    expandIcon: {
+      default: '#ade1ff',
+    },
+    finishDate: {
+      font: {
+        default: '#ade1ff',
+      },
+    },
+    status: {
+      border: {
+        default: '#3785ae',
+      },
+      font: {
+        default: '#ade1ff',
+      },
+    },
+  },
+  oldMilestones: {
+    background: {
+      default: '#164664',
+    },
+    border: {
+      default: '#296d94',
+    },
   },
   scrollBar: {
     default: '#bac1c5',
-    hover: '#949a9d'
-  }
+    hover: '#949a9d',
+  },
 }
 
-export default palette
+// const LightPalette

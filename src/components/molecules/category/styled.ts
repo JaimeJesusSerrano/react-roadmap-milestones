@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const GoalsWrapper = styled.div`
   padding: 10px;
@@ -20,7 +20,7 @@ export const LeftHeader = styled.div`
 `
 
 export const LeftHeaderSubtitle = styled.div`
-  color: rgb(186, 193, 197);
+  color: #bac1c5;
   font-size: 0.7rem;
   font-weight: 600;
   line-height: 20px;
@@ -37,14 +37,14 @@ export const LeftHeaderTitle = styled.div`
 `
 
 export const RightHeader = styled.div`
-  color: ${props => props.theme.palette.category.chevron};
+  color: ${props => props.theme.palette.category.expandIcon.default};
   display: flex;
   flex-direction: row;
 `
 
 export const Wrapper = styled.div`
-  background-color: ${props => props.theme.palette.category.background};
-  border: 1px solid ${props => props.theme.palette.category.border};
+  background-color: ${props => props.theme.palette.category.background.default};
+  border: 1px solid ${props => props.theme.palette.category.border.default};
   border-radius: 8px;
   display: flex;
   flex-direction: column;

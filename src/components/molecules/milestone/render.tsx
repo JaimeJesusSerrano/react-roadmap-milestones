@@ -1,13 +1,11 @@
-import { useState } from 'react'
+import { type ReactNode, useState } from 'react'
 
-import SubtractSvg from 'assets/svg/subtract'
-import PlusSvg from 'assets/svg/plus'
-import Category from 'components/molecules/category'
-import Goal from 'components/organisms/goal'
-import type IGoal from 'types/model/Goal'
-import type IGoalsByCategory from 'types/model/GoalsByCategory'
-import type IMilestone from 'types/model/Milestone'
+import { type Goal as IGoal } from 'types/model/Goal'
+import { type GoalsByCategory as IGoalsByCategory } from 'types/model/GoalsByCategory'
+import { type Milestone as IMilestone } from 'types/model/Milestone'
 
+import { ExpandIconWrapper } from './ExpandIconWrapper'
+import { MilestonesWrapper } from './MilestonesWrapper'
 import * as S from './styled'
 
 interface Props {
@@ -17,91 +15,55 @@ interface Props {
   readonly milestone: IMilestone
 }
 
-function Render ({
+export function Render({
   isExpanded: isDefaultExpanded,
   goalsByCategories,
   goalsWithoutCategory,
-  milestone
-}: Props): JSX.Element {
+  milestone,
+}: Props): ReactNode {
   const [isExpanded, setIsExpanded] = useState(isDefaultExpanded)
 
   return (
-      <S.Wrapper $isExpanded={isExpanded}>
-          <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
-              <S.HeaderTitleWrapper $isExpanded={isExpanded}>
-                  <S.ExpandIconWrapper>
-                      <ExpandIconWrapper isExpanded={isExpanded} />
-                  </S.ExpandIconWrapper>
+    <S.Wrapper $isExpanded={isExpanded}>
+      <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
+        <S.HeaderTitleWrapper $isExpanded={isExpanded}>
+          <S.ExpandIconWrapper>
+            <ExpandIconWrapper isExpanded={isExpanded} />
+          </S.ExpandIconWrapper>
 
-                  <S.HeaderTitle
-                      $isExpanded={isExpanded}
-                      title={milestone.name}
-                  >
-                      {milestone.name}
-                  </S.HeaderTitle>
-              </S.HeaderTitleWrapper>
+          <S.HeaderTitle
+            $isExpanded={isExpanded}
+            title={milestone.name}
+          >
+            {milestone.name}
+          </S.HeaderTitle>
+        </S.HeaderTitleWrapper>
 
-              <S.StatusWrapper>
-                  <S.Status title={milestone.status}>
-                      {milestone.status}
-                  </S.Status>
+        <S.StatusWrapper>
+          <S.Status title={milestone.status}>
+            {milestone.status}
+          </S.Status>
 
-                  {milestone.finishDate
-                    ? (
-                        <S.StatusDate>
-                            {milestone.finishDate.toLocaleDateString()}
-                        </S.StatusDate>
-                      )
-                    : (
-                        null
-                      )}
-              </S.StatusWrapper>
-          </S.Header>
-
-          {isExpanded
+          {milestone.finishDate
             ? (
-                <MilestonesWrapper
-                    goalsByCategories={goalsByCategories}
-                    goalsWithoutCategory={goalsWithoutCategory}
-                />
+                <S.StatusDate>
+                  {milestone.finishDate.toLocaleDateString()}
+                </S.StatusDate>
               )
-            : null}
-      </S.Wrapper>
+            : (
+                null
+              )}
+        </S.StatusWrapper>
+      </S.Header>
+
+      {isExpanded
+        ? (
+            <MilestonesWrapper
+              goalsByCategories={goalsByCategories}
+              goalsWithoutCategory={goalsWithoutCategory}
+            />
+          )
+        : null}
+    </S.Wrapper>
   )
 }
-
-function ExpandIconWrapper ({ isExpanded }: { readonly isExpanded: boolean }): JSX.Element {
-  if (isExpanded) return <SubtractSvg title="Collapse milestone" />
-  return <PlusSvg title="Expand milestone" />
-}
-
-interface MilestonesWrapperProps {
-  readonly goalsByCategories: IGoalsByCategory
-  readonly goalsWithoutCategory: IGoal[]
-}
-
-function MilestonesWrapper ({
-  goalsByCategories,
-  goalsWithoutCategory
-}: MilestonesWrapperProps): JSX.Element {
-  return (
-      <S.MilestonesWrapper>
-          {Object.values(goalsByCategories).map(goals => (
-              <Category
-                  goals={goals}
-                  key={goals[0].category?.name ?? ''}
-                  name={goals[0].category?.name ?? ''}
-              />
-          ))}
-
-          {goalsWithoutCategory.map(goal => (
-              <Goal
-                  goal={goal}
-                  key={goal.name}
-              />
-          ))}
-      </S.MilestonesWrapper>
-  )
-}
-
-export default Render

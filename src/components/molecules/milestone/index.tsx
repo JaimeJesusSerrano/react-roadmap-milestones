@@ -1,17 +1,17 @@
-import { useMemo } from 'react'
+import { type ReactNode, useMemo } from 'react'
 
-import type IGoal from 'types/model/Goal'
-import type IMilestone from 'types/model/Milestone'
-import type IGoalsByCategory from 'types/model/GoalsByCategory'
+import { type Goal as IGoal } from 'types/model/Goal'
+import { type Milestone as IMilestone } from 'types/model/Milestone'
+import { type GoalsByCategory as IGoalsByCategory } from 'types/model/GoalsByCategory'
 
-import Render from './render'
+import { Render } from './render'
 
 interface Props {
   readonly isExpanded: boolean
   readonly milestone?: IMilestone
 }
 
-function Milestone ({ isExpanded, milestone }: Props): JSX.Element | null {
+export function Milestone({ isExpanded, milestone }: Props): ReactNode {
   const goalsByCategories: IGoalsByCategory = useMemo(() => {
     if (!milestone?.goals?.length) return {}
 
@@ -33,7 +33,7 @@ function Milestone ({ isExpanded, milestone }: Props): JSX.Element | null {
 
         return previousGoalsByCategories
       },
-      {}
+      {},
     )
   }, [milestone])
 
@@ -47,13 +47,11 @@ function Milestone ({ isExpanded, milestone }: Props): JSX.Element | null {
   }
 
   return (
-      <Render
-          goalsByCategories={goalsByCategories}
-          goalsWithoutCategory={goalsWithoutCategory}
-          isExpanded={isExpanded}
-          milestone={milestone}
-      />
+    <Render
+      goalsByCategories={goalsByCategories}
+      goalsWithoutCategory={goalsWithoutCategory}
+      isExpanded={isExpanded}
+      milestone={milestone}
+    />
   )
 }
-
-export default Milestone

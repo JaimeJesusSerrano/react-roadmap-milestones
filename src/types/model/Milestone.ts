@@ -1,4 +1,4 @@
-import type Goal from './Goal'
+import { type Goal } from './Goal'
 
 export interface Milestone {
   finishDate?: Date
@@ -7,5 +7,3 @@ export interface Milestone {
   startDate?: Date
   status: string
 }
-
-export default Milestone

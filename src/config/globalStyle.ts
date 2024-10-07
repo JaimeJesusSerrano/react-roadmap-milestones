@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
-import type { Theme } from 'types/app/Theme'
+import { type Theme } from 'types/app/Theme'
 
-const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
+export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   /* width */
   ::-webkit-scrollbar {
     height: 8px;
@@ -25,5 +25,3 @@ const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     background: ${props => props.theme.palette.scrollBar.hover};
   }
 `
-
-export default GlobalStyle

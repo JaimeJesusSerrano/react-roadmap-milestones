@@ -1,2 +1,2 @@
 export { RoadmapMilestones as ReactRoadmapMilestones } from './components/organisms/roadmap-milestones'
-export type { RoadmapMilestones } from './types'
+export { type RoadmapMilestones as IReactRoadmapMilestones, type PartialTheme as ITheme } from './types'

@@ -1,5 +1,3 @@
-import type Goal from './Goal'
+import { type Goal } from './Goal'
 
 export type GoalsByCategory = Record<string, Goal[]>
-
-export default GoalsByCategory

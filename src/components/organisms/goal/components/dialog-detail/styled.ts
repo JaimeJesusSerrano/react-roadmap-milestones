@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const Body = styled.div`
   border-top: 2px solid #164664;
@@ -19,7 +19,7 @@ export const BodyDescription = styled.div`
 `
 
 export const BodyDescriptionDate = styled.div`
-  color: rgb(186, 193, 197);
+  color: #bac1c5;
   font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -35,7 +35,7 @@ export const Category = styled.span`
 `
 
 export const CategoryTitle = styled.span`
-  color: rgb(186, 193, 197);
+  color: #bac1c5;
 `
 
 export const CategoryWrapper = styled.div`
@@ -47,22 +47,34 @@ export const CategoryWrapper = styled.div`
 `
 
 export const Close = styled.div`
+  align-items: center;
+  border-radius: 50%;
   color: #000000;
   cursor: pointer;
+  display: flex;
+  height: 22px;
+  justify-content: center;
+  width: 22px;
+
+  &:hover {
+    background-color: #3785ae;
+  }
 `
 
 export const Header = styled.div`
   align-items: center;
-  background-color: rgb(111, 190, 236);
-  color: rgb(232, 235, 237);
+  background-color: #6fbeec;
+  color: #e8ebed;
   display: flex;
   flex-direction: row;
+  height: 34px;
   justify-content: space-between;
-  padding: 8px 16px;
+  padding: 0 16px;
 `
 
 export const ImageNotFoundWrapper = styled.div`
   background-color: #78848c;
+  box-sizing: border-box;
   height: 100%;
   padding: 8px;
   width: 100%;
@@ -105,7 +117,7 @@ export const Miscellaneous = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  padding-bottom: 8px;
   max-width: 300px;
   width: 300px;
 
@@ -123,7 +135,7 @@ export const Status = styled.div`
 `
 
 export const TagsTittle = styled.div`
-  color: rgb(186, 193, 197);
+  color: #bac1c5;
   margin-bottom: 8px;
 `
 

@@ -1,13 +1,13 @@
-import React, { useMemo, useReducer } from 'react'
+import { type ReactNode, useMemo, useReducer } from 'react'
 
 import { context, initialState } from './index'
 import * as Types from './types'
 
 interface Props {
-  readonly children: React.ReactNode
+  readonly children: ReactNode
 }
 
-function Provider ({ children }: Props): JSX.Element {
+export function Provider({ children }: Props): ReactNode {
   const [state, dispatch] = useReducer(
     (currentState: Types.StateType, action: Types.ActionType) => {
       switch (action.type) {
@@ -19,16 +19,14 @@ function Provider ({ children }: Props): JSX.Element {
           throw new Error()
       }
     },
-    initialState
+    initialState,
   )
 
   const value = useMemo(() => ({ dispatch, state }), [dispatch, state])
 
   return (
-      <context.Provider value={value}>
-          {children}
-      </context.Provider>
+    <context.Provider value={value}>
+      {children}
+    </context.Provider>
   )
 }
-
-export default Provider
