@@ -2,7 +2,6 @@ import { type ReactNode } from 'react'
 
 import { SvgBase } from 'assets/svg/SvgBase'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function Plus(props: any): ReactNode {
   return (
     <SvgBase

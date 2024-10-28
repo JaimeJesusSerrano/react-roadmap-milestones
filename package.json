@@ -1,6 +1,6 @@
 {
   "name": "@jaimejesusserrano/react-roadmap-milestones",
-  "version": "0.6.13",
+  "version": "0.6.14",
   "private": false,
   "author": "Jaime Jesús Serrano <jaimejesusserrano@gmail.com>",
   "repository": {
@@ -15,7 +15,7 @@
     "/dist"
   ],
   "engines": {
-    "node": ">= 16.0.0"
+    "node": ">= 20.0.0"
   },
   "scripts": {
     "build": "tsc && vite build",
@@ -52,12 +52,12 @@
     "@typescript-eslint/eslint-plugin": "8.12.0",
     "@typescript-eslint/parser": "8.12.0",
     "@vitejs/plugin-react-swc": "3.7.1",
-    "eslint": "8.57.1",
+    "eslint": "9.13.0",
     "eslint-plugin-import-x": "4.3.1",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-promise": "7.1.0",
     "eslint-plugin-react": "7.37.2",
-    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-react-hooks": "5.0.0",
     "eslint-plugin-testing-library": "6.4.0",
     "globals": "15.11.0",
     "storybook": "8.3.6",
@@ -71,8 +71,8 @@
   "peerDependencies": {
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
   },
   "description": "The React Roadmap Milestones component is a board with a lot of features, functionalities or whatever where a user can see all of them divided by categories and milestones",
   "bugs": {

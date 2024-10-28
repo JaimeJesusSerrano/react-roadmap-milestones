@@ -10,7 +10,6 @@ const initialState: StateType = {
 }
 
 const context = createContext<ContextType>({
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   dispatch: () => {},
   state: initialState,
 })

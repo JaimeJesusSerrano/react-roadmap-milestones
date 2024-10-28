@@ -7,7 +7,7 @@ import pluginTestingLibrary from 'eslint-plugin-testing-library'
 import globals from 'globals'
 import js from '@eslint/js'
 import pluginStylistic from '@stylistic/eslint-plugin'
-import tsParser from '@typescript-eslint/parser'
+import parserTypescript from '@typescript-eslint/parser'
 import pluginTypescript from '@typescript-eslint/eslint-plugin'
 
 export default [
@@ -26,7 +26,7 @@ export default [
         ...globals.browser,
         ...globals.jest,
       },
-      parser: tsParser,
+      parser: parserTypescript,
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
