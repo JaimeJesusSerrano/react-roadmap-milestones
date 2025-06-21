@@ -1,5 +1,14 @@
 # React Roadmap Milestones
 
+## Installation
+
+This project uses [pnpm](https://pnpm.io/) as the package manager.
+Please install the dependencies with:
+
+```sh
+pnpm install
+```
+
 ## How use it 
 Add and use this component in your project. Example of use:
 - [Repository example](https://github.com/JaimeJesusSerrano/react-roadmap-milestones-example)
