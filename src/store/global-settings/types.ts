@@ -1,8 +1,8 @@
-import {
-  type ActionType as IActionTypeBase,
-  type ContextType as IContextTypeBase,
+import type {
+  ActionType as IActionTypeBase,
+  ContextType as IContextTypeBase,
 } from 'types/app/Context'
-import { type Translation as ITranslation } from 'types/app/Translation'
+import type { Translation as ITranslation } from 'types/app/Translation'
 
 const BASE = 'GLOBAL_SETTINGS'
 
@@ -15,6 +15,6 @@ export interface StateType {
   translation: ITranslation
 }
 
-export type ActionType = IActionTypeBase<any>
+export type ActionType = IActionTypeBase<unknown>
 
-export type ContextType = IContextTypeBase<any, StateType>
+export type ContextType = IContextTypeBase<unknown, StateType>

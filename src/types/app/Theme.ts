@@ -1,4 +1,4 @@
-import { type Palette } from './Palette'
+import type { Palette } from './Palette'
 
 export interface Theme {
   breakpoints: Breakpoints

@@ -1,8 +1,8 @@
-import { type ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
-import {
-  type ActionType as IActionTypeBase,
-  type ContextType as IContextTypeBase,
+import type {
+  ActionType as IActionTypeBase,
+  ContextType as IContextTypeBase,
 } from 'types/app/Context'
 
 const BASE = 'GLOBAL_DIALOG'
@@ -15,6 +15,6 @@ export interface StateType {
   isOpen: boolean
 }
 
-export type ActionType = IActionTypeBase<any>
+export type ActionType = IActionTypeBase<unknown>
 
-export type ContextType = IContextTypeBase<any, StateType>
+export type ContextType = IContextTypeBase<unknown, StateType>

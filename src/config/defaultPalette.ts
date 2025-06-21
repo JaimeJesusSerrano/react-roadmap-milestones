@@ -1,4 +1,4 @@
-import { type Palette } from 'types/app/Palette'
+import type { Palette } from 'types/app/Palette'
 
 export const darkPalette: Palette = {
   background: {

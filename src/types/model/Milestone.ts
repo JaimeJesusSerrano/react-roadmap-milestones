@@ -1,4 +1,4 @@
-import { type Goal } from './Goal'
+import type { Goal } from './Goal'
 
 export interface Milestone {
   finishDate?: Date

@@ -1,6 +1,9 @@
-import { type Breakpoints } from 'types/app/Theme'
+import type { Breakpoints } from 'types/app/Theme'
+
+const MOBILE_BREAKPOINT = 0
+const LAPTOP_BREAKPOINT = 900
 
 export const breakpoints: Breakpoints = {
-  mobile: 0,
-  laptop: 900,
+  mobile: MOBILE_BREAKPOINT,
+  laptop: LAPTOP_BREAKPOINT,
 }
