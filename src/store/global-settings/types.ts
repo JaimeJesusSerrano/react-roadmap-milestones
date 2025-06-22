@@ -1,8 +1,8 @@
 import type {
   ActionType as IActionTypeBase,
   ContextType as IContextTypeBase,
-} from 'types/app/Context'
-import type { Translation as ITranslation } from 'types/app/Translation'
+} from '@/types/app/Context'
+import type { Translation as ITranslation } from '@/types/app/Translation'
 
 const BASE = 'GLOBAL_SETTINGS'
 

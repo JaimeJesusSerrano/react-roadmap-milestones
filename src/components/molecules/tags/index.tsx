@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react'
 
-import { Tag } from 'components/atoms/tag'
-import { type Tag as ITag } from 'types/model/Tag'
+import { Tag } from '@/components/atoms/tag'
+import { type Tag as ITag } from '@/types/model/Tag'
 
 import * as S from './styled'
 

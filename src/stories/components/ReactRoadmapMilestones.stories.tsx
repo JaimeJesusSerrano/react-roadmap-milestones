@@ -1,8 +1,8 @@
 import { type Meta, type StoryObj } from '@storybook/react'
 
-import { RoadmapMilestones } from 'components/organisms/roadmap-milestones'
-import { type RoadmapMilestones as IRoadmapMilestones } from 'types/model/RoadmapMilestones'
-import { type Theme as ITheme } from 'types/app/Theme'
+import { RoadmapMilestones } from '@/components/organisms/roadmap-milestones'
+import { type RoadmapMilestones as IRoadmapMilestones } from '@/types/model/RoadmapMilestones'
+import { type Theme as ITheme } from '@/types/app/Theme'
 
 const roadmapMilestonesData: IRoadmapMilestones = {
   name: 'Roadmap Milestone',

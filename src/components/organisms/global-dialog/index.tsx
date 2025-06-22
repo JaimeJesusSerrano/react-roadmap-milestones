@@ -1,7 +1,7 @@
 import { type ReactNode, useContext } from 'react'
 
-import { context as globalDialogContext } from 'store/global-dialog'
-import * as GlobalDialogActions from 'store/global-dialog/actions'
+import { context as globalDialogContext } from '@/store/global-dialog'
+import * as GlobalDialogActions from '@/store/global-dialog/actions'
 
 import * as S from './styled'
 

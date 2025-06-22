@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react'
 
-import { Subtract as SubtractSvg } from 'assets/svg/subtract'
-import { Plus as PlusSvg } from 'assets/svg/plus'
+import { Subtract as SubtractSvg } from '@/assets/svg/subtract'
+import { Plus as PlusSvg } from '@/assets/svg/plus'
 
 interface Props {
   readonly isExpanded: boolean

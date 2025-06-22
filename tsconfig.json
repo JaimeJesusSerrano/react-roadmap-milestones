@@ -7,11 +7,11 @@
     "skipLibCheck": true, // Skips type checking of declaration files.
     "baseUrl": ".",
     "paths": {
-      "assets/*": ["src/assets/*"],
-      "components/*": ["src/components/*"],
-      "config/*": ["src/config/*"],
-      "store/*": ["src/store/*"],
-      "types/*": ["src/types/*"],
+      "@/assets/*": ["src/assets/*"],
+      "@/components/*": ["src/components/*"],
+      "@/config/*": ["src/config/*"],
+      "@/store/*": ["src/store/*"],
+      "@/types/*": ["src/types/*"],
     },
 
     /* Blunder mode */

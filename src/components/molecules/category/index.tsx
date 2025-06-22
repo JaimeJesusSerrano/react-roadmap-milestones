@@ -1,6 +1,6 @@
 import { type ReactNode, useState } from 'react'
 
-import { type Goal as IGoal } from 'types/model/Goal'
+import { type Goal as IGoal } from '@/types/model/Goal'
 
 import { Goals } from './Goals'
 import { RightHeader } from './RightHeader'

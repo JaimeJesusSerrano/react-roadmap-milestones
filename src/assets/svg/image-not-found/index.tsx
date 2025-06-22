@@ -1,6 +1,6 @@
 import { type ReactNode } from 'react'
 
-import { SvgBase } from 'assets/svg/SvgBase'
+import { SvgBase } from '@/assets/svg/SvgBase'
 
 export function ImageNotFound(props: any): ReactNode {
   return (

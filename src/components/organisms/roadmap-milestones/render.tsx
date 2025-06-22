@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react'
 
-import { Milestone } from 'components/molecules/milestone'
-import { type Milestone as IMilestone } from 'types/model/Milestone'
+import { Milestone } from '@/components/molecules/milestone'
+import { type Milestone as IMilestone } from '@/types/model/Milestone'
 
 import { ShowPrevious } from './components/show-previous'
 import * as S from './styled'

@@ -22,7 +22,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    tsconfigPaths(),
+    tsconfigPaths({ projects: ['./tsconfig.json'] }),
     checker({
       typescript: true,
     }),

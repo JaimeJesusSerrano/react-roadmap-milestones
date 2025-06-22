@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { Theme as AppTheme } from 'types/app/Theme'
+import type { Theme as AppTheme } from '@/types/app/Theme'
 
 export const Body = styled.div<{ theme?: AppTheme }>`
   border-top: 2px solid #164664;

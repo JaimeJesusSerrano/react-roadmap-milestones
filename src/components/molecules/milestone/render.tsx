@@ -1,8 +1,8 @@
 import { type ReactNode, useState } from 'react'
 
-import { type Goal as IGoal } from 'types/model/Goal'
-import { type GoalsByCategory as IGoalsByCategory } from 'types/model/GoalsByCategory'
-import { type Milestone as IMilestone } from 'types/model/Milestone'
+import { type Goal as IGoal } from '@/types/model/Goal'
+import { type GoalsByCategory as IGoalsByCategory } from '@/types/model/GoalsByCategory'
+import { type Milestone as IMilestone } from '@/types/model/Milestone'
 
 import { ExpandIconWrapper } from './ExpandIconWrapper'
 import { MilestonesWrapper } from './MilestonesWrapper'
