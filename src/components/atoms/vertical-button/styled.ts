@@ -1,6 +1,7 @@
-import { styled } from 'styled-components'
+import styled from '@emotion/styled'
+import type { Theme as AppTheme } from 'types/app/Theme'
 
-export const Body = styled.div`
+export const Body = styled.div<{ theme?: AppTheme }>`
   align-items: center;
   background-color: ${props => props.theme.palette.oldMilestones.background.default};
   border: 1px solid ${props => props.theme.palette.oldMilestones.border.default};

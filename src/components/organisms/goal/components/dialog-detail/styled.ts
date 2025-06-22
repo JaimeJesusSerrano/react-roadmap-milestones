@@ -1,6 +1,7 @@
-import { styled } from 'styled-components'
+import styled from '@emotion/styled'
+import type { Theme as AppTheme } from 'types/app/Theme'
 
-export const Body = styled.div`
+export const Body = styled.div<{ theme?: AppTheme }>`
   border-top: 2px solid #164664;
   display: flex;
 
@@ -38,7 +39,7 @@ export const CategoryTitle = styled.span`
   color: #bac1c5;
 `
 
-export const CategoryWrapper = styled.div`
+export const CategoryWrapper = styled.div<{ theme?: AppTheme }>`
   padding: 12px 24px;
 
   @media ${props => props.theme.devices.laptopMax} {
@@ -84,7 +85,7 @@ export const ImageNotFoundWrapper = styled.div`
   }
 `
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled.div<{ theme?: AppTheme }>`
   align-items: center;
   border-bottom: 2px solid #164664;
   display: flex;
@@ -101,7 +102,7 @@ export const ImageWrapper = styled.div`
   }
 `
 
-export const ImageAndDescriptionWrapper = styled.div`
+export const ImageAndDescriptionWrapper = styled.div<{ theme?: AppTheme }>`
   display: flex;
   flex-direction: column;
   max-width: 500px;
@@ -112,7 +113,7 @@ export const ImageAndDescriptionWrapper = styled.div`
   }
 `
 
-export const Miscellaneous = styled.div`
+export const Miscellaneous = styled.div<{ theme?: AppTheme }>`
   border-left: 2px solid #164664;
   box-sizing: border-box;
   display: flex;
@@ -152,7 +153,7 @@ export const Title = styled.div`
   padding: 16px 24px;
 `
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ theme?: AppTheme }>`
   background-color: #103246;
   display: flex;
   flex-direction: column;

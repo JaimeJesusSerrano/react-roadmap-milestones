@@ -3,9 +3,11 @@ import love from 'eslint-config-love'
 /** @type {any} */
 const config = [
   {
+    ignores: ['dist/**', 'node_modules/**'],
+  },
+  {
     ...love,
     files: ['**/*.js', '**/*.ts'],
-    ignores: ['dist', 'node_modules'],
     // rules: {
     //   // Tus reglas personalizadas aquí
     // },
