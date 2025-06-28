@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+import { type Meta, type StoryObj } from '@storybook/react-vite'
 
 import { RoadmapMilestones } from '@/components/organisms/roadmap-milestones'
 import { type RoadmapMilestones as IRoadmapMilestones } from '@/types/model/RoadmapMilestones'

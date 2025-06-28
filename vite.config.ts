@@ -1,7 +1,7 @@
+import path from 'node:path'
 import { defineConfig } from 'vite'
 import { checker } from 'vite-plugin-checker'
 import dts from 'vite-plugin-dts'
-import tsconfigPaths from 'vite-tsconfig-paths'
 import react from '@vitejs/plugin-react-swc'
 
 import { peerDependencies } from './package.json'
@@ -20,9 +20,17 @@ export default defineConfig({
     sourcemap: false, // Generates source maps for debugging.
     emptyOutDir: true, // Clears the output directory before building.
   },
+  resolve: {
+    alias: {
+      '@/assets': path.resolve(__dirname, '../src/assets'),
+      '@/components': path.resolve(__dirname, '../src/components'),
+      '@/config': path.resolve(__dirname, '../src/config'),
+      '@/store': path.resolve(__dirname, '../src/store'),
+      '@/types': path.resolve(__dirname, '../src/types'),
+    },
+  },
   plugins: [
     react(),
-    tsconfigPaths({ projects: ['./tsconfig.json'] }),
     checker({
       typescript: true,
     }),

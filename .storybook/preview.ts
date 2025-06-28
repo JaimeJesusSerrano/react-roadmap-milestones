@@ -8,6 +8,7 @@ export const preview: Preview = {
         date: /Date$/i,
       },
     },
+    darkMode: true,
   },
 }
 
