@@ -1,6 +1,5 @@
 import { type ReactNode } from 'react'
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
-import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles'
 
 import { GlobalDialog } from '@/components/organisms/global-dialog'
 import { defaultTheme } from '@/config/defaultTheme'
@@ -37,23 +36,19 @@ export function RoadmapMilestones({
     palette: partialTheme?.palette ?? defaultTheme.palette,
   }
 
-  const muiTheme = createTheme({ palette: theme.palette })
-
   return (
-    <MuiThemeProvider theme={muiTheme}>
-      <EmotionThemeProvider theme={theme}>
-        <GlobalStyle theme={theme} />
-        <GlobalSettingsProvider>
-          <GlobalDialogProvider>
-            <GlobalDialog className={className} />
-            <Logic
-              className={className}
-              milestones={roadmapMilestonesData.milestones}
-              translation={translation ?? defaultTranslation}
-            />
-          </GlobalDialogProvider>
-        </GlobalSettingsProvider>
-      </EmotionThemeProvider>
-    </MuiThemeProvider>
+    <EmotionThemeProvider theme={theme}>
+      <GlobalStyle theme={theme} />
+      <GlobalSettingsProvider>
+        <GlobalDialogProvider>
+          <GlobalDialog className={className} />
+          <Logic
+            className={className}
+            milestones={roadmapMilestonesData.milestones}
+            translation={translation ?? defaultTranslation}
+          />
+        </GlobalDialogProvider>
+      </GlobalSettingsProvider>
+    </EmotionThemeProvider>
   )
 }

@@ -3,7 +3,7 @@ import { type ReactNode, useContext } from 'react'
 import { context as globalDialogContext } from '@/store/global-dialog'
 import * as GlobalDialogActions from '@/store/global-dialog/actions'
 
-import * as S from './styled'
+import { Dialog } from './Dialog'
 
 interface Props {
   className?: string
@@ -13,7 +13,7 @@ export function GlobalDialog({ className }: Props): ReactNode {
   const { dispatch: globalDialogDispatch, state: globalDialogState } = useContext(globalDialogContext)
 
   return (
-    <S.Dialog
+    <Dialog
       maxWidth="lg"
       onClose={() => { globalDialogDispatch(GlobalDialogActions.setOpen(false)) }}
       open={globalDialogState.isOpen}
@@ -27,6 +27,6 @@ export function GlobalDialog({ className }: Props): ReactNode {
             </div>
           )
         : null}
-    </S.Dialog>
+    </Dialog>
   )
 }
