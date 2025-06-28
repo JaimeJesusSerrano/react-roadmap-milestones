@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react'
 import { defaultTranslation } from '@/config/defaultTranslation'
 
 import { context, initialState } from './index'
-import { type ContextType } from './types'
+import type { ContextType } from './types'
 
 function ComponentToTest(): string {
   const globalDialog = useContext(context)

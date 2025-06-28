@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 import { ChevronDown as ChevronDownSvg } from '@/assets/svg/chevron-down'
 import { ChevronUp as ChevronUpSvg } from '@/assets/svg/chevron-up'

@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 import { Subtract as SubtractSvg } from '@/assets/svg/subtract'
 import { Plus as PlusSvg } from '@/assets/svg/plus'

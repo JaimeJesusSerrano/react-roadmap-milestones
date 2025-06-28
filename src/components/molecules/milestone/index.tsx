@@ -1,8 +1,8 @@
 import { type ReactNode, useMemo } from 'react'
 
-import { type Goal as IGoal } from '@/types/model/Goal'
-import { type Milestone as IMilestone } from '@/types/model/Milestone'
-import { type GoalsByCategory as IGoalsByCategory } from '@/types/model/GoalsByCategory'
+import type { Goal as IGoal } from '@/types/model/Goal'
+import type { Milestone as IMilestone } from '@/types/model/Milestone'
+import type { GoalsByCategory as IGoalsByCategory } from '@/types/model/GoalsByCategory'
 
 import { Render } from './render'
 
@@ -24,9 +24,7 @@ export function Milestone({ isExpanded, milestone }: Props): ReactNode {
         const currentCategoryName = currentGoal.category.name
 
         // Group initialization
-        if (!previousGoalsByCategories[currentCategoryName]) {
-          previousGoalsByCategories[currentCategoryName] = []
-        }
+        previousGoalsByCategories[currentCategoryName] ||= [];
 
         // Grouping
         previousGoalsByCategories[currentCategoryName].push(currentGoal)

@@ -2,8 +2,8 @@ import { type ReactNode, useContext, useEffect, useMemo } from 'react'
 
 import { context as globalSettingsContext } from '@/store/global-settings'
 import * as GlobalSettingsActions from '@/store/global-settings/actions'
-import { type Translation as ITranslation } from '@/types/app/Translation'
-import { type Milestone as IMilestone } from '@/types/model/Milestone'
+import type { Translation as ITranslation } from '@/types/app/Translation'
+import type { Milestone as IMilestone } from '@/types/model/Milestone'
 
 import { Render } from './render'
 

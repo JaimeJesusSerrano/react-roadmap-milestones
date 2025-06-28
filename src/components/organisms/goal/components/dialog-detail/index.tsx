@@ -5,8 +5,8 @@ import { Close as CloseSvg } from '@/assets/svg/close'
 import { Tags } from '@/components/molecules/tags'
 import { context as globalDialogContext } from '@/store/global-dialog'
 import * as GlobalDialogActions from '@/store/global-dialog/actions'
-import { type Goal as IGoal } from '@/types/model/Goal'
-import { type Tag as ITag } from '@/types/model/Tag'
+import type { Goal as IGoal } from '@/types/model/Goal'
+import type { Tag as ITag } from '@/types/model/Tag'
 
 import * as S from './styled'
 

@@ -1,9 +1,9 @@
-import { type ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 import { Category } from '@/components/molecules/category'
 import { Goal } from '@/components/organisms/goal'
-import { type Goal as IGoal } from '@/types/model/Goal'
-import { type GoalsByCategory as IGoalsByCategory } from '@/types/model/GoalsByCategory'
+import type { Goal as IGoal } from '@/types/model/Goal'
+import type { GoalsByCategory as IGoalsByCategory } from '@/types/model/GoalsByCategory'
 
 import * as S from './styled'
 
