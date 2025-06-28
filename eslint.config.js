@@ -7,7 +7,7 @@ const config = [
   },
   {
     ...love,
-    files: ['**/*.js', '**/*.ts'],
+    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     // rules: {
     //   // Tus reglas personalizadas aquí
     // },
