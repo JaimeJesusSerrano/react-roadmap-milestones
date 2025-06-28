@@ -63,7 +63,7 @@ export const Wrapper = styled.div`
   margin-bottom: 8px;
   margin-top: 8px;
 
-  :first-child {
+  :first-of-type {
     margin-top: 0;
   }
 
