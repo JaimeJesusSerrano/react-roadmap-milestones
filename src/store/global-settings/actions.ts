@@ -7,7 +7,7 @@ export const setAreShowingPreviousMilestones = (
   value: { showMilestonesFinished },
 })
 
-export const setState = (newState: Types.ActionType['value']): Types.ActionType => ({
+export const setState = (newState: Types.StateType): Types.ActionType => ({
   type: Types.SET_STATE,
   value: newState,
 })

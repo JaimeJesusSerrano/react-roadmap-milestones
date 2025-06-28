@@ -1,7 +1,3 @@
-import type {
-  ActionType as IActionTypeBase,
-  ContextType as IContextTypeBase,
-} from '@/types/app/Context'
 import type { Translation as ITranslation } from '@/types/app/Translation'
 
 const BASE = 'GLOBAL_SETTINGS'
@@ -15,6 +11,12 @@ export interface StateType {
   translation: ITranslation
 }
 
-export type ActionType = IActionTypeBase<unknown>
+export type ActionType =
+  | { type: typeof SET_ARE_SHOWING_PREVIOUS_MILESTONES; value: { showMilestonesFinished: boolean } }
+  | { type: typeof SET_TRANSLATION; value: { translation: ITranslation } }
+  | { type: typeof SET_STATE; value: StateType }
 
-export type ContextType = IContextTypeBase<unknown, StateType>
+export interface ContextType {
+  dispatch: React.Dispatch<ActionType>
+  state: StateType
+}

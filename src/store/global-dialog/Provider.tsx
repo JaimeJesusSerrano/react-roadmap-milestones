@@ -12,7 +12,11 @@ export function Provider({ children }: Props): ReactNode {
     (currentState: Types.StateType, action: Types.ActionType) => {
       switch (action.type) {
         case Types.SET_OPEN:
-          return { ...currentState, Component: action.value.Component, isOpen: action.value.isOpen }
+          return {
+            ...currentState,
+            Component: action.value.Component,
+            isOpen: action.value.isOpen
+          }
         case Types.SET_STATE:
           return action.value
         default:
