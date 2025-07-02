@@ -31,6 +31,6 @@
     "declaration": true, // Generates declaration files for TypeScript.
     "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names.
   },
-  "include": ["src", ".storybook", "eslint.config.js", "vite.config.ts"],
+  "include": ["src", ".storybook/*", "eslint.config.js", "vite.config.ts"],
   "exclude": ["dist", "node_modules", "src/**/__docs__", "src/**/__test__"],
 }

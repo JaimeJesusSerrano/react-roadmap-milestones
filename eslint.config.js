@@ -8,9 +8,11 @@ const config = [
   {
     ...love,
     files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
-    // rules: {
-    //   // Tus reglas personalizadas aquí
-    // },
+    rules: {
+      ...love.rules,
+      '@typescript-eslint/no-empty-function': 'off',
+      '@typescript-eslint/no-magic-numbers': 'off',
+    },
   },
 ]
 
