@@ -1,6 +1,8 @@
 import { type ReactNode, useContext } from 'react'
 
 import { render, screen } from '@testing-library/react'
+import type { RenderResult } from '@testing-library/react'
+
 
 import { context, initialState } from './index'
 import type { ContextType } from './types'
@@ -10,7 +12,7 @@ function ComponentToTest(): ReactNode {
   return (globalDialog.state.Component)
 }
 
-const renderContext = (currentContext: ContextType): any =>
+const renderContext = (currentContext: ContextType): RenderResult =>
   render(
     <context.Provider value={currentContext}>
       <ComponentToTest />

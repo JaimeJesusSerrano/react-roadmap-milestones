@@ -19,8 +19,6 @@ export function Provider({ children }: Props): ReactNode {
           }
         case Types.SET_STATE:
           return action.value
-        default:
-          throw new Error()
       }
     },
     initialState,

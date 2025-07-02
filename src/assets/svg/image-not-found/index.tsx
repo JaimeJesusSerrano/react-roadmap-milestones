@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react'
 
 import { SvgBase } from '@/assets/svg/SvgBase'
+import type { Svg } from '@/types/model/Svg'
 
-export function ImageNotFound(props: any): ReactNode {
+export function ImageNotFound(props: Svg): ReactNode {
   return (
     <SvgBase
       fill="none"

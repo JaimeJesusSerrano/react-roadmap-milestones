@@ -5,7 +5,7 @@ interface Props {
 }
 
 export function Title({ title }: Props): ReactNode {
-  if (!title) return null
+  if (title === '') return null
 
   return (
     <title>

@@ -23,8 +23,6 @@ export function Provider({ children }: Props): ReactNode {
             ...currentState,
             translation: action.value.translation
           }
-        default:
-          throw new Error()
       }
     },
     initialState,

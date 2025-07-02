@@ -1,7 +1,9 @@
-import { Global, css } from '@emotion/react';
-import type { Theme } from '@/types/app/Theme';
+import type { ReactNode } from 'react'
+import { Global, css } from '@emotion/react'
 
-export const GlobalStyle = ({ theme }: { theme: Theme }) => (
+import type { Theme } from '@/types/app/Theme'
+
+export const GlobalStyle = ({ theme }: { theme: Theme }): ReactNode => (
   <Global
     styles={css`
       /* width */

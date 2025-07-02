@@ -1,3 +1,4 @@
+/* eslint-disable max-lines -- Disable due it is a story */
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import { RoadmapMilestones } from '@/components/organisms/roadmap-milestones'
@@ -587,6 +588,5 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const V1: Story = {
-  args: {
-  },
+  args: {},
 }

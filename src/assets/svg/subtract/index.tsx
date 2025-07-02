@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react'
 
 import { SvgBase } from '@/assets/svg/SvgBase'
+import type { Svg } from '@/types/model/Svg'
 
-export function Subtract(props: any): ReactNode {
+export function Subtract(props: Svg): ReactNode {
   return (
     <SvgBase
       height="2"

@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 
 import { render, screen } from '@testing-library/react'
+import type { RenderResult } from '@testing-library/react'
 
 import { defaultTranslation } from '@/config/defaultTranslation'
 
@@ -14,7 +15,7 @@ function ComponentToTest(): string {
     : 'Hide previous milestones'
 }
 
-const renderContext = (currentContext: ContextType): any =>
+const renderContext = (currentContext: ContextType): RenderResult =>
   render(
     <context.Provider value={currentContext}>
       <ComponentToTest />
