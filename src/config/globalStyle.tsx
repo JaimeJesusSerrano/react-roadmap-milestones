@@ -29,4 +29,4 @@ export const GlobalStyle = ({ theme }: { theme: Theme }): ReactNode => (
       }
     `}
   />
-);
+)

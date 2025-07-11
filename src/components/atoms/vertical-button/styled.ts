@@ -3,8 +3,8 @@ import type { Theme as AppTheme } from '@/types/app/Theme'
 
 export const Body = styled.div<{ theme?: AppTheme }>`
   align-items: center;
-  background-color: ${props => props.theme.palette.oldMilestones.background.default};
-  border: 1px solid ${props => props.theme.palette.oldMilestones.border.default};
+  background-color: ${(props) => props.theme.palette.oldMilestones.background.default};
+  border: 1px solid ${(props) => props.theme.palette.oldMilestones.border.default};
   border-radius: 8px;
   color: white;
   display: flex;

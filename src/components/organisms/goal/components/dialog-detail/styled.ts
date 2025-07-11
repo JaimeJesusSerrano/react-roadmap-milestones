@@ -5,7 +5,7 @@ export const Body = styled.div<{ theme?: AppTheme }>`
   border-top: 2px solid #164664;
   display: flex;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     flex-direction: column;
   }
 `
@@ -42,7 +42,7 @@ export const CategoryTitle = styled.span`
 export const CategoryWrapper = styled.div<{ theme?: AppTheme }>`
   padding: 12px 24px;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     border-top: 2px solid #164664;
   }
 `
@@ -92,7 +92,7 @@ export const ImageWrapper = styled.div<{ theme?: AppTheme }>`
   justify-content: center;
   width: 500px;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     min-height: 0;
     width: 100%;
   }
@@ -108,7 +108,7 @@ export const ImageAndDescriptionWrapper = styled.div<{ theme?: AppTheme }>`
   max-width: 500px;
   width: 500px;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     width: 100%;
   }
 `
@@ -122,7 +122,7 @@ export const Miscellaneous = styled.div<{ theme?: AppTheme }>`
   max-width: 300px;
   width: 300px;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     border-left: unset;
     max-width: 100%;
     width: 100%;
@@ -160,7 +160,7 @@ export const Wrapper = styled.div<{ theme?: AppTheme }>`
   max-width: 800px;
   width: 800px;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     width: 100%;
   }
 `

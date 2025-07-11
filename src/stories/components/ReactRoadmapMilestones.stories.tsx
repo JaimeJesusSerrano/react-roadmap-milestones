@@ -112,7 +112,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Components',
           },
-          description: 'We will updated Milestone component with new styles and expandable behavior',
+          description:
+            'We will updated Milestone component with new styles and expandable behavior',
           finishDate: new Date('2021-07-17'),
           name: 'Milestone v2',
           startDate: new Date('2021-05-10'),
@@ -197,7 +198,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Components',
           },
-          description: 'Goal v3. Add behavior when click in a goal to open a dialog to expand it information',
+          description:
+            'Goal v3. Add behavior when click in a goal to open a dialog to expand it information',
           finishDate: new Date('2021-10-24'),
           name: 'Goal v3',
           startDate: new Date('2021-09-17'),
@@ -219,7 +221,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Components',
           },
-          description: 'Goal Dialog v1. Create dialog when click in a goal to expand it information',
+          description:
+            'Goal Dialog v1. Create dialog when click in a goal to expand it information',
           finishDate: new Date('2021-10-23'),
           name: 'Goal Dialog v1',
           startDate: new Date('2021-09-17'),
@@ -285,7 +288,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Components',
           },
-          description: 'Milestone v4. Show current milestone status before all categories and goals',
+          description:
+            'Milestone v4. Show current milestone status before all categories and goals',
           finishDate: new Date('2021-11-01'),
           name: 'Milestone v4',
           startDate: new Date('2021-11-01'),
@@ -307,7 +311,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Infrastructure',
           },
-          description: 'To avoid several problems when execute npm install, we will establish a NodeJs version',
+          description:
+            'To avoid several problems when execute npm install, we will establish a NodeJs version',
           finishDate: new Date('2021-11-09'),
           name: 'NodeJs version fixed',
           startDate: new Date('2021-11-09'),
@@ -318,7 +323,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Infrastructure',
           },
-          description: 'Is necessary set the project LICENSE to allow than other users use the component',
+          description:
+            'Is necessary set the project LICENSE to allow than other users use the component',
           finishDate: new Date('2021-11-10'),
           name: 'Create LICENSE file',
           startDate: new Date('2021-11-10'),
@@ -340,7 +346,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Infrastructure',
           },
-          description: 'We add store Global Dialog test to check its correct behavior automatically',
+          description:
+            'We add store Global Dialog test to check its correct behavior automatically',
           finishDate: new Date('2021-11-11'),
           name: 'Add store test',
           startDate: new Date('2021-11-11'),
@@ -405,7 +412,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Infrastructure',
           },
-          description: 'With translation functionality we can show the principal labels in different languages',
+          description:
+            'With translation functionality we can show the principal labels in different languages',
           finishDate: new Date('2022-04-10'),
           name: 'Add translation functionality',
           startDate: new Date('2022-04-09'),
@@ -468,7 +476,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Infrastructure',
           },
-          description: 'Add and apply eslintrc and prettier airbnb rules to ensure the correct code style',
+          description:
+            'Add and apply eslintrc and prettier airbnb rules to ensure the correct code style',
           finishDate: new Date('2023-01-09'),
           name: 'Add eslintrc and prettier',
           startDate: new Date('2023-01-09'),
@@ -494,7 +503,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Components',
           },
-          description: 'Goal v6. Add different colors to differentiate between completed and uncompleted goals',
+          description:
+            'Goal v6. Add different colors to differentiate between completed and uncompleted goals',
           name: 'Goal v6',
           status: 'Pending',
           updateDate: new Date('2023-01-09'),
@@ -525,7 +535,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           description:
             'To ensure the easy use of the component the required types should be a few of them. Also use the import type directive to ensure a mayor documentation',
           name: 'Update types and required values',
-          shortDescription: 'To ensure the easy use of the component the required types should be a few of them',
+          shortDescription:
+            'To ensure the easy use of the component the required types should be a few of them',
           status: 'Pending',
           updateDate: new Date('2023-09-21'),
         },
@@ -544,7 +555,8 @@ const theme: ITheme = {
   devices: {
     mobileMin: '(min-width: 0px)',
     laptopMax: '(max-width: 900px)',
-    laptopMin: '(min-width: 900px)' },
+    laptopMin: '(min-width: 900px)',
+  },
   palette: {
     background: {
       default: '#0d2635',
@@ -552,7 +564,8 @@ const theme: ITheme = {
     category: {
       background: { default: '#1a5a7f' },
       border: { default: '#3785ae' },
-      expandIcon: { default: '#ade1ff' } },
+      expandIcon: { default: '#ade1ff' },
+    },
     milestone: {
       background: { default: '#164664' },
       expandIcon: { default: '#ade1ff' },
@@ -566,7 +579,8 @@ const theme: ITheme = {
     },
     oldMilestones: {
       background: { default: '#164664' },
-      border: { default: '#296d94' } },
+      border: { default: '#296d94' },
+    },
     scrollBar: { default: '#bac1c5', hover: '#949a9d' },
   },
 }

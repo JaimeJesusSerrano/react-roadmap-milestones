@@ -15,7 +15,9 @@ export function ShowPrevious(): ReactNode {
   if (globalSettings.state.showMilestonesFinished) {
     return (
       <VerticalButton
-        onClick={() => { dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(false)) }}
+        onClick={() => {
+          dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(false))
+        }}
       >
         <S.ShowHidePreviousText>
           {globalSettings.state.translation.previousButton.hidePrevious}
@@ -28,7 +30,9 @@ export function ShowPrevious(): ReactNode {
 
   return (
     <VerticalButton
-      onClick={() => { dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(true)) }}
+      onClick={() => {
+        dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(true))
+      }}
     >
       <S.ShowHidePreviousText>
         {globalSettings.state.translation.previousButton.showPrevious}

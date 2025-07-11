@@ -1,11 +1,11 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 export const Description = styled.div`
   color: #e8ebed;
   font-size: 0.9rem;
   font-weight: 400;
   padding: 16px;
-`;
+`
 
 export const ImageNotFoundWrapper = styled.div`
   background-color: #78848c;
@@ -17,7 +17,7 @@ export const ImageNotFoundWrapper = styled.div`
   svg {
     max-height: 130px;
   }
-`;
+`
 
 export const ImageWrapper = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ export const ImageWrapper = styled.div`
   img {
     max-height: 130px;
   }
-`;
+`
 
 export const Status = styled.div`
   align-items: center;
@@ -40,12 +40,12 @@ export const Status = styled.div`
   height: 24px;
   padding-left: 32px;
   text-transform: uppercase;
-`;
+`
 
 export const TagsWrapper = styled.div`
   border-top: 2px solid #164664;
   padding: 8px 16px 16px 16px;
-`;
+`
 
 export const Title = styled.div`
   align-items: center;
@@ -54,7 +54,7 @@ export const Title = styled.div`
   font-weight: 400;
   min-height: 40px;
   padding: 8px 16px 8px 16px;
-`;
+`
 
 export const Wrapper = styled.div`
   background: #103246;
@@ -70,4 +70,4 @@ export const Wrapper = styled.div`
   :last-child {
     margin-bottom: 0;
   }
-`;
+`

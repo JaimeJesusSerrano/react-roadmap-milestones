@@ -1,4 +1,4 @@
-import type { ComponentProps, ReactNode } from "react"
+import type { ComponentProps, ReactNode } from 'react'
 
 export interface Svg extends ComponentProps<'svg'> {
   readonly children?: ReactNode

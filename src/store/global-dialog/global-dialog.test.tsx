@@ -3,13 +3,12 @@ import { type ReactNode, useContext } from 'react'
 import { render, screen } from '@testing-library/react'
 import type { RenderResult } from '@testing-library/react'
 
-
 import { context, initialState } from './index'
 import type { ContextType } from './types'
 
 function ComponentToTest(): ReactNode {
   const globalDialog = useContext(context)
-  return (globalDialog.state.Component)
+  return globalDialog.state.Component
 }
 
 const renderContext = (currentContext: ContextType): RenderResult =>
@@ -22,7 +21,6 @@ const renderContext = (currentContext: ContextType): RenderResult =>
 describe('Store > Global Dialog', () => {
   test('initial with dialog closed', () => {
     const newContext: ContextType = {
-
       dispatch: () => {},
       state: initialState,
     }
@@ -33,10 +31,8 @@ describe('Store > Global Dialog', () => {
 
   test('dialog opened', () => {
     const newContext: ContextType = {
-
       dispatch: () => {},
       state: {
-
         Component: <>Dialog opened</>,
         isOpen: true,
       },
