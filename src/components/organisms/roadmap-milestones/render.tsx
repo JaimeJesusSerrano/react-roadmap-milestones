@@ -27,7 +27,10 @@ export function Render({
 
       {milestones.map((milestone) => (
         <S.MilestoneWrapper key={milestone.name}>
-          <Milestone isExpanded={!milestone.finishDate} milestone={milestone} />
+          <Milestone
+            isExpanded={milestone.finishDate === undefined}
+            milestone={milestone}
+          />
         </S.MilestoneWrapper>
       ))}
     </S.Wrapper>
