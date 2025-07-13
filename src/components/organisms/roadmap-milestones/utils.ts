@@ -4,10 +4,10 @@ import type {
   PartialTheme as IPartialTheme,
 } from '@/types/app/Theme'
 
-export function mergeThemeWithDefault (partialTheme?: IPartialTheme): ITheme {
+export function mergeThemeWithDefault(partialTheme?: IPartialTheme): ITheme {
   return {
-      breakpoints: partialTheme?.breakpoints ?? defaultTheme.breakpoints,
-      devices: partialTheme?.devices ?? defaultTheme.devices,
-      palette: partialTheme?.palette ?? defaultTheme.palette,
-    }
+    breakpoints: partialTheme?.breakpoints ?? defaultTheme.breakpoints,
+    devices: partialTheme?.devices ?? defaultTheme.devices,
+    palette: partialTheme?.palette ?? defaultTheme.palette,
+  }
 }

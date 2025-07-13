@@ -27,7 +27,10 @@ export function Logic({
   const areThereMilestonesFinished = useMemo(() => {
     if (milestones.length === 0) return false
 
-    return milestones.filter((milestone) => milestone.finishDate !== undefined).length > 0
+    return (
+      milestones.filter((milestone) => milestone.finishDate !== undefined)
+        .length > 0
+    )
   }, [milestones])
 
   useEffect(() => {

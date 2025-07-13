@@ -27,9 +27,7 @@ export function RoadmapMilestones({
   translation,
 }: Params): ReactNode {
   if (roadmapMilestonesData?.milestones === undefined) {
-    throw new Error(
-      'RoadmapMilestones: roadmapMilestonesData is required.'
-    )
+    throw new Error('RoadmapMilestones: roadmapMilestonesData is required.')
   }
 
   if (roadmapMilestonesData.milestones.length === 0) {
@@ -37,7 +35,10 @@ export function RoadmapMilestones({
   }
 
   const translationToUse = translation ?? defaultTranslation
-  const themeToUse = useMemo(() => mergeThemeWithDefault(partialTheme), [partialTheme])
+  const themeToUse = useMemo(
+    () => mergeThemeWithDefault(partialTheme),
+    [partialTheme],
+  )
 
   return (
     <EmotionThemeProvider theme={themeToUse}>
