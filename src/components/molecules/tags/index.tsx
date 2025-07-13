@@ -14,10 +14,8 @@ export function Tags({ tags, ...props }: Props): ReactNode {
 
   return (
     <S.Wrapper {...props}>
-      {tags.map(tag => (
-        <Tag key={tag.name}>
-          {tag.name}
-        </Tag>
+      {tags.map((tag) => (
+        <Tag key={tag.name}>{tag.name}</Tag>
       ))}
     </S.Wrapper>
   )

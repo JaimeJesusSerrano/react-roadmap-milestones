@@ -19,23 +19,21 @@ export function Goal({ goal }: Props): ReactNode {
 
   return (
     <S.Wrapper
-      onClick={() => { globalDialogDispatch(GlobalDialogActions.setOpen(true, <GoalDialogDetail goal={goal} />)) }}
+      onClick={() => {
+        globalDialogDispatch(
+          GlobalDialogActions.setOpen(true, <GoalDialogDetail goal={goal} />),
+        )
+      }}
     >
-      <S.Status>
-        {goal.status}
-      </S.Status>
+      <S.Status>{goal.status}</S.Status>
 
-      <S.Title>
-        {goal.name}
-      </S.Title>
+      <S.Title>{goal.name}</S.Title>
 
       <S.ImageWrapper>
         <ImageWrapper imageSrc={goal.images?.[0] ?? ''} />
       </S.ImageWrapper>
 
-      <S.Description>
-        {goal.shortDescription ?? goal.description}
-      </S.Description>
+      <S.Description>{goal.shortDescription ?? goal.description}</S.Description>
 
       {goal.tags?.length ? <TagsWrapper tags={goal.tags} /> : null}
     </S.Wrapper>
@@ -46,22 +44,12 @@ function ImageWrapper({ imageSrc }: { readonly imageSrc: string }): ReactNode {
   if (!imageSrc) {
     return (
       <S.ImageNotFoundWrapper>
-        <ImageNotFoundSvg
-          height="100%"
-          title="Image not found"
-          width="100%"
-        />
+        <ImageNotFoundSvg height="100%" title="Image not found" width="100%" />
       </S.ImageNotFoundWrapper>
     )
   }
 
-  return (
-    <img
-      alt="Goal"
-      loading="lazy"
-      src={imageSrc}
-    />
-  )
+  return <img alt="Goal" loading="lazy" src={imageSrc} />
 }
 
 function TagsWrapper({ tags }: { readonly tags: ITag[] }): ReactNode {

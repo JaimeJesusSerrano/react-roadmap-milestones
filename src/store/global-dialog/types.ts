@@ -11,8 +11,17 @@ export interface StateType {
 }
 
 export type ActionType =
-  | { type: typeof SET_OPEN; value: { Component: ReactNode; isOpen: boolean } }
-  | { type: typeof SET_STATE; value: StateType }
+  | {
+      type: typeof SET_OPEN
+      value: {
+        Component: ReactNode
+        isOpen: boolean
+      }
+    }
+  | {
+      type: typeof SET_STATE
+      value: StateType
+    }
 
 export interface ContextType {
   dispatch: React.Dispatch<ActionType>

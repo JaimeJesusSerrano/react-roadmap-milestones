@@ -8,7 +8,9 @@ export const MilestoneWrapper = styled.div`
   overflow-y: auto;
 `
 
-export const Wrapper = styled.div<{ theme?: AppTheme }>`
+export const Wrapper = styled.div<{
+  theme?: AppTheme
+}>`
   background-color: ${(props) => props.theme.palette.background.default};
   box-sizing: border-box;
   display: flex;

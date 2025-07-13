@@ -16,14 +16,18 @@ export function ShowPrevious(): ReactNode {
     return (
       <VerticalButton
         onClick={() => {
-          dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(false))
+          dispatchGlobalSettings(
+            GlobalSettingsActions.setAreShowingPreviousMilestones(false),
+          )
         }}
       >
         <S.ShowHidePreviousText>
           {globalSettings.state.translation.previousButton.hidePrevious}
         </S.ShowHidePreviousText>
 
-        <SubtractSvg title={globalSettings.state.translation.previousButton.hidePrevious} />
+        <SubtractSvg
+          title={globalSettings.state.translation.previousButton.hidePrevious}
+        />
       </VerticalButton>
     )
   }
@@ -31,14 +35,18 @@ export function ShowPrevious(): ReactNode {
   return (
     <VerticalButton
       onClick={() => {
-        dispatchGlobalSettings(GlobalSettingsActions.setAreShowingPreviousMilestones(true))
+        dispatchGlobalSettings(
+          GlobalSettingsActions.setAreShowingPreviousMilestones(true),
+        )
       }}
     >
       <S.ShowHidePreviousText>
         {globalSettings.state.translation.previousButton.showPrevious}
       </S.ShowHidePreviousText>
 
-      <PlusSvg title={globalSettings.state.translation.previousButton.showPrevious} />
+      <PlusSvg
+        title={globalSettings.state.translation.previousButton.showPrevious}
+      />
     </VerticalButton>
   )
 }

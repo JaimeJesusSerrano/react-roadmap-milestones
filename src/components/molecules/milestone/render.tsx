@@ -25,45 +25,38 @@ export function Render({
 
   return (
     <S.Wrapper $isExpanded={isExpanded}>
-      <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
+      <S.Header
+        onClick={() => {
+          setIsExpanded(!isExpanded)
+        }}
+      >
         <S.HeaderTitleWrapper $isExpanded={isExpanded}>
           <S.ExpandIconWrapper>
             <ExpandIconWrapper isExpanded={isExpanded} />
           </S.ExpandIconWrapper>
 
-          <S.HeaderTitle
-            $isExpanded={isExpanded}
-            title={milestone.name}
-          >
+          <S.HeaderTitle $isExpanded={isExpanded} title={milestone.name}>
             {milestone.name}
           </S.HeaderTitle>
         </S.HeaderTitleWrapper>
 
         <S.StatusWrapper>
-          <S.Status title={milestone.status}>
-            {milestone.status}
-          </S.Status>
+          <S.Status title={milestone.status}>{milestone.status}</S.Status>
 
-          {milestone.finishDate
-            ? (
-                <S.StatusDate>
-                  {milestone.finishDate.toLocaleDateString()}
-                </S.StatusDate>
-              )
-            : (
-                null
-              )}
+          {milestone.finishDate ? (
+            <S.StatusDate>
+              {milestone.finishDate.toLocaleDateString()}
+            </S.StatusDate>
+          ) : null}
         </S.StatusWrapper>
       </S.Header>
 
-      {isExpanded
-        ? (
-            <MilestonesWrapper
-              goalsByCategories={goalsByCategories}
-              goalsWithoutCategory={goalsWithoutCategory}
-            />
-          )
-        : null}
+      {isExpanded ? (
+        <MilestonesWrapper
+          goalsByCategories={goalsByCategories}
+          goalsWithoutCategory={goalsWithoutCategory}
+        />
+      ) : null}
     </S.Wrapper>
   )
 }

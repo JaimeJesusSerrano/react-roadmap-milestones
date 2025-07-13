@@ -10,9 +10,7 @@ interface Props {
 export function VerticalButton({ children, ...props }: Props): ReactNode {
   return (
     <S.Wrapper {...props}>
-      <S.Body>
-        {children}
-      </S.Body>
+      <S.Body>{children}</S.Body>
     </S.Wrapper>
   )
 }

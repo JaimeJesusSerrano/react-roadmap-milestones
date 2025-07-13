@@ -20,18 +20,18 @@ export function GoalDialogDetail({ goal }: Props): ReactNode {
   return (
     <S.Wrapper>
       <S.Header>
-        <S.Status>
-          {goal.status}
-        </S.Status>
+        <S.Status>{goal.status}</S.Status>
 
-        <S.Close onClick={() => { globalDialogDispatch(GlobalDialogActions.setOpen(false)) }}>
+        <S.Close
+          onClick={() => {
+            globalDialogDispatch(GlobalDialogActions.setOpen(false))
+          }}
+        >
           <CloseSvg title="Close" />
         </S.Close>
       </S.Header>
 
-      <S.Title>
-        {goal.name}
-      </S.Title>
+      <S.Title>{goal.name}</S.Title>
 
       <S.Body>
         <S.ImageAndDescriptionWrapper>
@@ -46,24 +46,18 @@ export function GoalDialogDetail({ goal }: Props): ReactNode {
               {goal.updateDate?.toLocaleDateString() || ''}
             </S.BodyDescriptionDate>
 
-            <S.BodyDescription>
-              {goal.description}
-            </S.BodyDescription>
+            <S.BodyDescription>{goal.description}</S.BodyDescription>
           </S.BodyDescriptionWrapper>
         </S.ImageAndDescriptionWrapper>
 
         <S.Miscellaneous>
           <S.CategoryWrapper>
-            <S.CategoryTitle>
-              {'Category: '}
-            </S.CategoryTitle>
+            <S.CategoryTitle>{'Category: '}</S.CategoryTitle>
 
-            <S.Category>
-              {goal.category?.name ?? ''}
-            </S.Category>
+            <S.Category>{goal.category?.name ?? ''}</S.Category>
           </S.CategoryWrapper>
 
-          {goal.tags?.length ? <TagsWrapper tags={goal.tags} /> : null }
+          {goal.tags?.length ? <TagsWrapper tags={goal.tags} /> : null}
         </S.Miscellaneous>
       </S.Body>
     </S.Wrapper>
@@ -74,30 +68,18 @@ function ImageWrapper({ imageSrc }: { readonly imageSrc: string }): ReactNode {
   if (!imageSrc) {
     return (
       <S.ImageNotFoundWrapper>
-        <ImageNotFoundSvg
-          height="100%"
-          title="Image not found"
-          width="100%"
-        />
+        <ImageNotFoundSvg height="100%" title="Image not found" width="100%" />
       </S.ImageNotFoundWrapper>
     )
   }
 
-  return (
-    <img
-      alt="Goal"
-      loading="lazy"
-      src={imageSrc}
-    />
-  )
+  return <img alt="Goal" loading="lazy" src={imageSrc} />
 }
 
 function TagsWrapper({ tags }: { readonly tags: ITag[] }): ReactNode {
   return (
     <S.TagsWrapper>
-      <S.TagsTittle>
-        Tags:
-      </S.TagsTittle>
+      <S.TagsTittle>Tags:</S.TagsTittle>
 
       <Tags tags={tags} />
     </S.TagsWrapper>

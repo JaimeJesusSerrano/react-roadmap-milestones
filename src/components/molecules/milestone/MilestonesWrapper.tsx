@@ -18,7 +18,7 @@ export function MilestonesWrapper({
 }: Props): ReactNode {
   return (
     <S.MilestonesWrapper>
-      {Object.values(goalsByCategories).map(goals => (
+      {Object.values(goalsByCategories).map((goals) => (
         <Category
           goals={goals}
           key={goals[0].category?.name ?? ''}
@@ -26,11 +26,8 @@ export function MilestonesWrapper({
         />
       ))}
 
-      {goalsWithoutCategory.map(goal => (
-        <Goal
-          goal={goal}
-          key={goal.name}
-        />
+      {goalsWithoutCategory.map((goal) => (
+        <Goal goal={goal} key={goal.name} />
       ))}
     </S.MilestonesWrapper>
   )

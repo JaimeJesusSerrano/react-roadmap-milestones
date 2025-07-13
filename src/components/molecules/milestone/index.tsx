@@ -15,7 +15,7 @@ export function Milestone({ isExpanded, milestone }: Props): ReactNode {
   const goalsByCategories: IGoalsByCategory = useMemo(() => {
     if (!milestone?.goals?.length) return {}
 
-    const goalsWithCategory = milestone.goals.filter(goal => goal.category)
+    const goalsWithCategory = milestone.goals.filter((goal) => goal.category)
 
     return goalsWithCategory.reduce(
       (previousGoalsByCategories: IGoalsByCategory, currentGoal: IGoal) => {
@@ -24,7 +24,7 @@ export function Milestone({ isExpanded, milestone }: Props): ReactNode {
         const currentCategoryName = currentGoal.category.name
 
         // Group initialization
-        previousGoalsByCategories[currentCategoryName] ||= [];
+        previousGoalsByCategories[currentCategoryName] ||= []
 
         // Grouping
         previousGoalsByCategories[currentCategoryName].push(currentGoal)
@@ -37,7 +37,7 @@ export function Milestone({ isExpanded, milestone }: Props): ReactNode {
 
   const goalsWithoutCategory = useMemo(() => {
     if (!milestone?.goals?.length) return []
-    return milestone.goals.filter(goal => !goal.category)
+    return milestone.goals.filter((goal) => !goal.category)
   }, [milestone])
 
   if (!milestone) {

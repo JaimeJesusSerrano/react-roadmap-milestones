@@ -12,9 +12,22 @@ export interface StateType {
 }
 
 export type ActionType =
-  | { type: typeof SET_ARE_SHOWING_PREVIOUS_MILESTONES; value: { showMilestonesFinished: boolean } }
-  | { type: typeof SET_TRANSLATION; value: { translation: ITranslation } }
-  | { type: typeof SET_STATE; value: StateType }
+  | {
+      type: typeof SET_ARE_SHOWING_PREVIOUS_MILESTONES
+      value: {
+        showMilestonesFinished: boolean
+      }
+    }
+  | {
+      type: typeof SET_TRANSLATION
+      value: {
+        translation: ITranslation
+      }
+    }
+  | {
+      type: typeof SET_STATE
+      value: StateType
+    }
 
 export interface ContextType {
   dispatch: React.Dispatch<ActionType>

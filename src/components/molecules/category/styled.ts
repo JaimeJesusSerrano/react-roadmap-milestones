@@ -37,14 +37,19 @@ export const LeftHeaderTitle = styled.div`
   letter-spacing: 1px;
 `
 
-export const RightHeader = styled.div<{ theme?: AppTheme }>`
+export const RightHeader = styled.div<{
+  theme?: AppTheme
+}>`
   color: ${(props) => props.theme.palette.category.expandIcon.default};
   display: flex;
   flex-direction: row;
 `
 
-export const Wrapper = styled.div<{ theme?: AppTheme }>`
-  background-color: ${(props) => props.theme.palette.category.background.default};
+export const Wrapper = styled.div<{
+  theme?: AppTheme
+}>`
+  background-color: ${(props) =>
+    props.theme.palette.category.background.default};
   border: 1px solid ${(props) => props.theme.palette.category.border.default};
   border-radius: 8px;
   display: flex;

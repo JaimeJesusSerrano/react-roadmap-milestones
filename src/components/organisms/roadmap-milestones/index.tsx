@@ -8,7 +8,10 @@ import { GlobalStyle } from '@/config/globalStyle'
 import { Provider as GlobalDialogProvider } from '@/store/global-dialog/Provider'
 import { Provider as GlobalSettingsProvider } from '@/store/global-settings/Provider'
 import type { RoadmapMilestones as IRoadmapMilestones } from '@/types/model/RoadmapMilestones'
-import type { Theme as ITheme, PartialTheme as IPartialTheme } from '@/types/app/Theme'
+import type {
+  Theme as ITheme,
+  PartialTheme as IPartialTheme,
+} from '@/types/app/Theme'
 import type { Translation as ITranslation } from '@/types/app/Translation'
 
 import { Logic } from './logic'

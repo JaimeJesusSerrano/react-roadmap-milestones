@@ -168,7 +168,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Infrastructure',
           },
-          description: 'Roboto will be added as default font with his several font weight',
+          description:
+            'Roboto will be added as default font with his several font weight',
           finishDate: new Date('2021-07-24'),
           name: 'Roboto as default font',
           startDate: new Date('2021-07-20'),
@@ -300,7 +301,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Infrastructure',
           },
-          description: 'Create new scrollbar style and apply it in whole application',
+          description:
+            'Create new scrollbar style and apply it in whole application',
           finishDate: new Date('2021-11-10'),
           name: 'New scrollbar style',
           startDate: new Date('2021-11-10'),
@@ -336,7 +338,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
             name: 'Infrastructure',
           },
           finishDate: new Date('2021-11-10'),
-          description: 'Create readme with instruction to use the Roadmap Milestone component',
+          description:
+            'Create readme with instruction to use the Roadmap Milestone component',
           name: 'Readme',
           startDate: new Date('2021-11-10'),
           status: 'Done',
@@ -459,7 +462,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
             'Goal v5. Add tags section in goal summary, below goal description, and goal dialog, on the right side below the category. The idea is to be able to allow adding all the tags that you want and shown them',
           finishDate: new Date('2023-10-05'),
           name: 'Goal v5',
-          shortDescription: 'Goal v5. Add tags below goal description and in the goal dialog',
+          shortDescription:
+            'Goal v5. Add tags below goal description and in the goal dialog',
           startDate: new Date('2023-10-05'),
           status: 'Done',
           tags: [
@@ -488,7 +492,8 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Infrastructure',
           },
-          description: 'Publish ReactRoadmapMilestone as npm package and do it public for everyone',
+          description:
+            'Publish ReactRoadmapMilestone as npm package and do it public for everyone',
           name: 'Publish into npm',
           status: 'Pending',
           updateDate: new Date('2023-01-09'),
@@ -562,13 +567,21 @@ const theme: ITheme = {
       default: '#0d2635',
     },
     category: {
-      background: { default: '#1a5a7f' },
+      background: {
+        default: '#1a5a7f',
+      },
       border: { default: '#3785ae' },
-      expandIcon: { default: '#ade1ff' },
+      expandIcon: {
+        default: '#ade1ff',
+      },
     },
     milestone: {
-      background: { default: '#164664' },
-      expandIcon: { default: '#ade1ff' },
+      background: {
+        default: '#164664',
+      },
+      expandIcon: {
+        default: '#ade1ff',
+      },
       finishDate: {
         font: { default: '#ade1ff' },
       },
@@ -578,10 +591,15 @@ const theme: ITheme = {
       },
     },
     oldMilestones: {
-      background: { default: '#164664' },
+      background: {
+        default: '#164664',
+      },
       border: { default: '#296d94' },
     },
-    scrollBar: { default: '#bac1c5', hover: '#949a9d' },
+    scrollBar: {
+      default: '#bac1c5',
+      hover: '#949a9d',
+    },
   },
 }
 

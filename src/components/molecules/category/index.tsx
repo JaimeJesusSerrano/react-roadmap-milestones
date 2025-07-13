@@ -16,11 +16,13 @@ export function Category({ goals, name = '' }: Props): ReactNode {
 
   return (
     <S.Wrapper>
-      <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
+      <S.Header
+        onClick={() => {
+          setIsExpanded(!isExpanded)
+        }}
+      >
         <S.LeftHeader>
-          <S.LeftHeaderTitle>
-            {name}
-          </S.LeftHeaderTitle>
+          <S.LeftHeaderTitle>{name}</S.LeftHeaderTitle>
 
           <S.LeftHeaderSubtitle>
             {goals.length === 1 ? '1 Entry' : `${goals.length} Entries`}

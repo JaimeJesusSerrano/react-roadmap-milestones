@@ -9,4 +9,8 @@ const devices: Devices = {
   laptopMin: `(min-width: ${breakpoints.laptop}px)`,
 }
 
-export const defaultTheme: Theme = { breakpoints, devices, palette: darkPalette }
+export const defaultTheme: Theme = {
+  breakpoints,
+  devices,
+  palette: darkPalette,
+}

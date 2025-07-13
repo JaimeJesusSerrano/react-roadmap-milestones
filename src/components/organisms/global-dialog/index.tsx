@@ -10,23 +10,20 @@ interface Props {
 }
 
 export function GlobalDialog({ className }: Props): ReactNode {
-  const { dispatch: globalDialogDispatch, state: globalDialogState } = useContext(globalDialogContext)
+  const { dispatch: globalDialogDispatch, state: globalDialogState } =
+    useContext(globalDialogContext)
 
   return (
     <Dialog
       maxWidth="lg"
-      onClose={() => { globalDialogDispatch(GlobalDialogActions.setOpen(false)) }}
+      onClose={() => {
+        globalDialogDispatch(GlobalDialogActions.setOpen(false))
+      }}
       open={globalDialogState.isOpen}
     >
-      {globalDialogState.Component
-        ? (
-            <div
-              className={className ?? ''}
-            >
-              {globalDialogState.Component}
-            </div>
-          )
-        : null}
+      {globalDialogState.Component ? (
+        <div className={className ?? ''}>{globalDialogState.Component}</div>
+      ) : null}
     </Dialog>
   )
 }

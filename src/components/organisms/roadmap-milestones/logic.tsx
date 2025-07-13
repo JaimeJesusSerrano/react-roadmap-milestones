@@ -13,7 +13,11 @@ interface Props {
   readonly translation: ITranslation
 }
 
-export function Logic({ className, milestones, translation }: Props): ReactNode {
+export function Logic({
+  className,
+  milestones,
+  translation,
+}: Props): ReactNode {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 
@@ -24,13 +28,13 @@ export function Logic({ className, milestones, translation }: Props): ReactNode 
       return milestones
     }
 
-    return milestones.filter(milestone => !milestone.finishDate)
+    return milestones.filter((milestone) => !milestone.finishDate)
   }, [milestones, globalSettings.state.showMilestonesFinished])
 
   const areThereMilestonesFinished = useMemo(() => {
     if (!milestones) return false
 
-    return !!milestones.filter(milestone => milestone.finishDate).length
+    return !!milestones.filter((milestone) => milestone.finishDate).length
   }, [milestones])
 
   useEffect(() => {

@@ -15,7 +15,7 @@ export function Provider({ children }: Props): ReactNode {
           return {
             ...currentState,
             Component: action.value.Component,
-            isOpen: action.value.isOpen
+            isOpen: action.value.isOpen,
           }
         case Types.SET_STATE:
           return action.value
@@ -26,9 +26,5 @@ export function Provider({ children }: Props): ReactNode {
 
   const value = useMemo(() => ({ dispatch, state }), [dispatch, state])
 
-  return (
-    <context.Provider value={value}>
-      {children}
-    </context.Provider>
-  )
+  return <context.Provider value={value}>{children}</context.Provider>
 }
