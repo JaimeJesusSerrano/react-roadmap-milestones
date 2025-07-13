@@ -4,8 +4,8 @@ import { Tags as TagsComponent } from '@/components/molecules/tags'
 import { context as globalDialogContext } from '@/store/global-dialog'
 import * as GlobalDialogActions from '@/store/global-dialog/actions'
 
-import { GoalDialogDetail } from './components/dialog-detail'
-import { MainImage } from './components/main-image'
+import { GoalDialog } from '@/components/organisms/goal-dialog'
+
 import { ImageNotFound } from './components/image-not-found'
 import type { GoalProps, TagsProps } from './index.types'
 import * as S from './styled'
@@ -17,7 +17,7 @@ export function Goal({ goal }: GoalProps): ReactNode {
     <S.Wrapper
       onClick={() => {
         globalDialogDispatch(
-          GlobalDialogActions.setOpen(true, <GoalDialogDetail goal={goal} />),
+          GlobalDialogActions.setOpen(true, <GoalDialog goal={goal} />),
         )
       }}
     >
@@ -29,7 +29,7 @@ export function Goal({ goal }: GoalProps): ReactNode {
         {goal.images.length === 0 ? (
           <ImageNotFound />
         ) : (
-          <MainImage imageSrc={goal.images[0]} />
+          <img alt="Goal" loading="lazy" src={goal.images[0]} />
         )}
       </S.ImageWrapper>
 
