@@ -9,7 +9,6 @@ export const Header = styled.div`
   display: flex;
   cursor: pointer;
   flex-direction: row;
-  min-height: 72px;
   padding: 16px;
   justify-content: space-between;
   user-select: none;
