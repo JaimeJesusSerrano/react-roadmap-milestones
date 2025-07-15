@@ -2,22 +2,16 @@ import type { ReactNode } from 'react'
 
 import { Category } from '@/components/molecules/category'
 import { Goal } from '@/components/organisms/goal'
-import type { Goal as IGoal } from '@/types/model/Goal'
-import type { GoalsByCategory as IGoalsByCategory } from '@/types/model/GoalsByCategory'
 
 import * as S from './styled'
+import type { BodyProps } from './types'
 
-interface Props {
-  readonly goalsByCategories: IGoalsByCategory
-  readonly goalsWithoutCategory: IGoal[]
-}
-
-export function MilestonesWrapper({
+export function Body({
   goalsByCategories,
   goalsWithoutCategory,
-}: Props): ReactNode {
+}: BodyProps): ReactNode {
   return (
-    <S.MilestonesWrapper>
+    <S.Wrapper>
       {Object.values(goalsByCategories).map((goals) => (
         <Category
           goals={goals}
@@ -29,6 +23,6 @@ export function MilestonesWrapper({
       {goalsWithoutCategory.map((goal) => (
         <Goal goal={goal} key={goal.name} />
       ))}
-    </S.MilestonesWrapper>
+    </S.Wrapper>
   )
 }

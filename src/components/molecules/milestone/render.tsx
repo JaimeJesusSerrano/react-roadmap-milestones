@@ -4,8 +4,8 @@ import type { Goal as IGoal } from '@/types/model/Goal'
 import type { GoalsByCategory as IGoalsByCategory } from '@/types/model/GoalsByCategory'
 import type { Milestone as IMilestone } from '@/types/model/Milestone'
 
-import { ExpandIconWrapper } from './ExpandIconWrapper'
-import { MilestonesWrapper } from './MilestonesWrapper'
+import { ExpandIcon } from './components/expand-icon'
+import { Body } from './components/body'
 import * as S from './styled'
 
 interface Props {
@@ -32,7 +32,7 @@ export function Render({
       >
         <S.HeaderTitleWrapper $isExpanded={isExpanded}>
           <S.ExpandIconWrapper>
-            <ExpandIconWrapper isExpanded={isExpanded} />
+            <ExpandIcon isExpanded={isExpanded} />
           </S.ExpandIconWrapper>
 
           <S.HeaderTitle $isExpanded={isExpanded} title={milestone.name}>
@@ -52,7 +52,7 @@ export function Render({
       </S.Header>
 
       {isExpanded ? (
-        <MilestonesWrapper
+        <Body
           goalsByCategories={goalsByCategories}
           goalsWithoutCategory={goalsWithoutCategory}
         />
