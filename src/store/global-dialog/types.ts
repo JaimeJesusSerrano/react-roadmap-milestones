@@ -6,7 +6,7 @@ export const SET_OPEN = `${BASE}_SET_OPEN`
 export const SET_STATE = `${BASE}_SET_STATE`
 
 export interface StateType {
-  Component: ReactNode
+  Component?: ReactNode
   isOpen: boolean
 }
 

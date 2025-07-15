@@ -1,17 +1,11 @@
 import type { ReactNode } from 'react'
 
 import { Tag } from '@/components/atoms/tag'
-import type { Tag as ITag } from '@/types/model/Tag'
 
+import type { TagsProps } from './index.types'
 import * as S from './styled'
 
-interface Props {
-  readonly tags: ITag[]
-}
-
-export function Tags({ tags, ...props }: Props): ReactNode {
-  if (!tags?.length) return null
-
+export function Tags({ tags, ...props }: TagsProps): ReactNode {
   return (
     <S.Wrapper {...props}>
       {tags.map((tag) => (

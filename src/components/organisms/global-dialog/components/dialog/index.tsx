@@ -1,27 +1,20 @@
 import React, { type ReactNode, useEffect } from 'react'
 
-import { Backdrop, DialogContainer } from './styled'
+import type { DialogProps } from './index.types'
+import * as S from './styled'
 
-interface DialogProps {
-  open: boolean
-  onClose?: () => void
-  children: ReactNode
-  maxWidth?: 'sm' | 'md' | 'lg'
-  fullWidth?: boolean
-}
-
-export const Dialog: React.FC<DialogProps> = ({
+export const Dialog = ({
   open,
   onClose,
   children,
   maxWidth = 'sm',
   fullWidth = false,
-}) => {
+}: DialogProps): ReactNode => {
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden'
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'Escape' && onClose) {
+      const handleKeyDown = (e: KeyboardEvent): void => {
+        if (e.key === 'Escape' && onClose !== undefined) {
           onClose()
         }
       }
@@ -40,17 +33,17 @@ export const Dialog: React.FC<DialogProps> = ({
 
   if (!open) return null
 
-  const handleBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget && onClose) {
+  const handleBackdropClick = (e: React.MouseEvent): void => {
+    if (e.target === e.currentTarget && onClose !== undefined) {
       onClose()
     }
   }
 
   return (
-    <Backdrop onClick={handleBackdropClick}>
-      <DialogContainer maxWidth={maxWidth} fullWidth={fullWidth}>
+    <S.Backdrop onClick={handleBackdropClick}>
+      <S.Wrapper maxWidth={maxWidth} fullWidth={fullWidth}>
         {children}
-      </DialogContainer>
-    </Backdrop>
+      </S.Wrapper>
+    </S.Backdrop>
   )
 }

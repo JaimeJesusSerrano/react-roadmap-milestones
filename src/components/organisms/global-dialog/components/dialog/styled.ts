@@ -11,7 +11,7 @@ export const Backdrop = styled.div`
   transition: background 0.3s;
 `
 
-export const DialogContainer = styled.div<{
+export const Wrapper = styled.div<{
   maxWidth?: string
   fullWidth?: boolean
 }>`
