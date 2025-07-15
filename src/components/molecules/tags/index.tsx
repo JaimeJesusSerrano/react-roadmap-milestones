@@ -2,8 +2,8 @@ import type { ReactNode } from 'react'
 
 import { Tag } from '@/components/atoms/tag'
 
-import type { TagsProps } from './index.types'
 import * as S from './styled'
+import type { TagsProps } from './types'
 
 export function Tags({ tags, ...props }: TagsProps): ReactNode {
   return (

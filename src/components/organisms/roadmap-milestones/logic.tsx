@@ -3,14 +3,14 @@ import { type ReactNode, useContext, useEffect, useMemo } from 'react'
 import { context as globalSettingsContext } from '@/store/global-settings'
 import * as GlobalSettingsActions from '@/store/global-settings/actions'
 
-import type { Props } from './index.types'
 import { Render } from './render'
+import type { LogicProps } from './types'
 
 export function Logic({
   className,
   milestones,
   translation,
-}: Props): ReactNode {
+}: LogicProps): ReactNode {
   const globalSettings = useContext(globalSettingsContext)
   const { dispatch: dispatchGlobalSettings } = globalSettings
 

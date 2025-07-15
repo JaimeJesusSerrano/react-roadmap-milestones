@@ -1,7 +1,7 @@
 import React, { type ReactNode, useEffect } from 'react'
 
-import type { DialogProps } from './index.types'
 import * as S from './styled'
+import type { DialogProps } from './types'
 
 export const Dialog = ({
   open,

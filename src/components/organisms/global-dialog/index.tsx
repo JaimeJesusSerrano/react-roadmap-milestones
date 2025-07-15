@@ -4,7 +4,7 @@ import { context as globalDialogContext } from '@/store/global-dialog'
 import * as GlobalDialogActions from '@/store/global-dialog/actions'
 
 import { Dialog } from './components/dialog'
-import type { GlobalDialogProps } from './index.types'
+import type { GlobalDialogProps } from './types'
 
 export function GlobalDialog({ className }: GlobalDialogProps): ReactNode {
   const { dispatch: globalDialogDispatch, state: globalDialogState } =

@@ -6,8 +6,8 @@ import { context as globalDialogContext } from '@/store/global-dialog'
 import * as GlobalDialogActions from '@/store/global-dialog/actions'
 
 import { ImageNotFound } from './components/image-not-found'
-import type { GoalDialogProps, TagsProps } from './index.types'
 import * as S from './styled'
+import type { GoalDialogProps, TagsProps } from './types'
 
 export function GoalDialog({ goal }: GoalDialogProps): ReactNode {
   const { dispatch: globalDialogDispatch } = useContext(globalDialogContext)

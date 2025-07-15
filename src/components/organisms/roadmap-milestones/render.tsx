@@ -1,22 +1,16 @@
 import type { ReactNode } from 'react'
 
 import { Milestone } from '@/components/molecules/milestone'
-import type { Milestone as IMilestone } from '@/types/model/Milestone'
 
 import { ShowPrevious } from './components/show-previous'
 import * as S from './styled'
-
-interface Props {
-  readonly areThereMilestonesFinished: boolean
-  readonly className?: string
-  readonly milestones: IMilestone[]
-}
+import type { RenderProps } from './types'
 
 export function Render({
   areThereMilestonesFinished,
   className,
   milestones,
-}: Props): ReactNode {
+}: RenderProps): ReactNode {
   return (
     <S.Wrapper className={className ?? ''}>
       {areThereMilestonesFinished ? (
