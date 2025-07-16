@@ -4,8 +4,6 @@ import { checker } from 'vite-plugin-checker'
 import dts from 'vite-plugin-dts'
 import react from '@vitejs/plugin-react-swc'
 
-import { peerDependencies } from './package.json'
-
 export default defineConfig({
   build: {
     lib: {
@@ -15,7 +13,14 @@ export default defineConfig({
       formats: ['cjs', 'es'], // Specifies the output formats (CommonJS and ES modules).
     },
     rollupOptions: {
-      external: [...Object.keys(peerDependencies)], // Defines external dependencies for Rollup building.
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+          'react/jsx-runtime': 'reactJsxRuntime',
+        },
+      },
     },
     sourcemap: false, // Generates source maps for debugging.
     emptyOutDir: true, // Clears the output directory before building.
