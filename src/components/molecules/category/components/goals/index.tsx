@@ -1,16 +1,18 @@
 import type { ReactNode } from 'react'
 
 import { Goal } from '@/components/organisms/goal'
-import type { Goal as IGoal } from '@/types/model/Goal'
 
 import * as S from './styled'
+import type { GoalsProps } from './types'
 
-export function Goals({ goals }: { readonly goals: IGoal[] }): ReactNode {
+export function Goals({
+  goals
+}: GoalsProps): ReactNode {
   return (
-    <S.GoalsWrapper>
+    <S.Wrapper>
       {goals.map((goal) => (
         <Goal goal={goal} key={goal.name} />
       ))}
-    </S.GoalsWrapper>
+    </S.Wrapper>
   )
 }

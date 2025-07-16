@@ -6,11 +6,16 @@ import type { GoalsByCategory as IGoalsByCategory } from '@/types/model/GoalsByC
 import { Render } from './render'
 import type { MilestoneProps } from './types'
 
-export function Milestone({ isExpanded, milestone }: MilestoneProps): ReactNode {
+export function Milestone({
+  isExpanded,
+  milestone,
+}: MilestoneProps): ReactNode {
   const goalsByCategories: IGoalsByCategory = useMemo(() => {
     if (milestone.goals === undefined) return {}
 
-    const goalsWithCategory = milestone.goals.filter((goal) => goal.category !== undefined)
+    const goalsWithCategory = milestone.goals.filter(
+      (goal) => goal.category !== undefined,
+    )
 
     return goalsWithCategory.reduce(
       (previousGoalsByCategories: IGoalsByCategory, currentGoal: IGoal) => {

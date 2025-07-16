@@ -1,10 +1,6 @@
 import styled from '@emotion/styled'
 import type { Theme as AppTheme } from '@/types/app/Theme'
 
-export const GoalsWrapper = styled.div`
-  padding: 10px;
-`
-
 export const Header = styled.div`
   display: flex;
   cursor: pointer;
