@@ -1,22 +1,10 @@
-import { styled } from 'styled-components'
+import styled from '@emotion/styled'
 
 export const Description = styled.div`
   color: #e8ebed;
   font-size: 0.9rem;
   font-weight: 400;
   padding: 16px;
-`
-
-export const ImageNotFoundWrapper = styled.div`
-  background-color: #78848c;
-  box-sizing: border-box;
-  height: 100%;
-  padding: 8px;
-  width: 100%;
-
-  svg {
-    max-height: 130px;
-  }
 `
 
 export const ImageWrapper = styled.div`
@@ -63,7 +51,7 @@ export const Wrapper = styled.div`
   margin-bottom: 8px;
   margin-top: 8px;
 
-  :first-child {
+  :first-of-type {
     margin-top: 0;
   }
 

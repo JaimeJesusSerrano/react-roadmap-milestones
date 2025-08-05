@@ -1,9 +1,4 @@
-import { type ReactNode } from 'react'
-
-import {
-  type ActionType as IActionTypeBase,
-  type ContextType as IContextTypeBase,
-} from 'types/app/Context'
+import type { ReactNode } from 'react'
 
 const BASE = 'GLOBAL_DIALOG'
 
@@ -11,12 +6,24 @@ export const SET_OPEN = `${BASE}_SET_OPEN`
 export const SET_STATE = `${BASE}_SET_STATE`
 
 export interface StateType {
-  Component: ReactNode
+  Component?: ReactNode
   isOpen: boolean
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type ActionType = IActionTypeBase<any>
+export type ActionType =
+  | {
+      type: typeof SET_OPEN
+      value: {
+        Component: ReactNode
+        isOpen: boolean
+      }
+    }
+  | {
+      type: typeof SET_STATE
+      value: StateType
+    }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type ContextType = IContextTypeBase<any, StateType>
+export interface ContextType {
+  dispatch: React.Dispatch<ActionType>
+  state: StateType
+}

@@ -1,4 +1,4 @@
-import { type Translation } from 'types/app/Translation'
+import type { Translation } from '@/types/app/Translation'
 
 export const defaultTranslation: Translation = {
   previousButton: {

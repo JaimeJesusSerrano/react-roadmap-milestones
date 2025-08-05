@@ -1,4 +1,4 @@
-import { type Dispatch } from 'react'
+import type { Dispatch } from 'react'
 
 export interface ActionType<ActionTypeValue> {
   type: string

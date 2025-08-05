@@ -1,9 +1,9 @@
-import { type ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
-import { SvgBase } from 'assets/svg/SvgBase'
+import { SvgBase } from '@/assets/svg/SvgBase'
+import type { Svg } from '@/types/model/Svg'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function ChevronUp(props: any): ReactNode {
+export function ChevronUp(props: Svg): ReactNode {
   return (
     <SvgBase
       fill="none"

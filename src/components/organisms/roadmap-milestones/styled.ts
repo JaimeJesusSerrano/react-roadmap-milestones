@@ -1,4 +1,5 @@
-import { styled } from 'styled-components'
+import styled from '@emotion/styled'
+import type { Theme as AppTheme } from '@/types/app/Theme'
 
 export const MilestoneWrapper = styled.div`
   display: flex;
@@ -7,8 +8,10 @@ export const MilestoneWrapper = styled.div`
   overflow-y: auto;
 `
 
-export const Wrapper = styled.div`
-  background-color: ${props => props.theme.palette.background.default};
+export const Wrapper = styled.div<{
+  theme?: AppTheme
+}>`
+  background-color: ${(props) => props.theme.palette.background.default};
   box-sizing: border-box;
   display: flex;
   height: 100%;

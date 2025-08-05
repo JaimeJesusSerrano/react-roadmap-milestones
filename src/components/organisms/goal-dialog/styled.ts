@@ -1,10 +1,13 @@
-import { styled } from 'styled-components'
+import styled from '@emotion/styled'
+import type { Theme as AppTheme } from '@/types/app/Theme'
 
-export const Body = styled.div`
+export const Body = styled.div<{
+  theme?: AppTheme
+}>`
   border-top: 2px solid #164664;
   display: flex;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     flex-direction: column;
   }
 `
@@ -38,10 +41,12 @@ export const CategoryTitle = styled.span`
   color: #bac1c5;
 `
 
-export const CategoryWrapper = styled.div`
+export const CategoryWrapper = styled.div<{
+  theme?: AppTheme
+}>`
   padding: 12px 24px;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     border-top: 2px solid #164664;
   }
 `
@@ -72,26 +77,16 @@ export const Header = styled.div`
   padding: 0 16px;
 `
 
-export const ImageNotFoundWrapper = styled.div`
-  background-color: #78848c;
-  box-sizing: border-box;
-  height: 100%;
-  padding: 8px;
-  width: 100%;
-
-  svg {
-    max-height: 294px;
-  }
-`
-
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled.div<{
+  theme?: AppTheme
+}>`
   align-items: center;
   border-bottom: 2px solid #164664;
   display: flex;
   justify-content: center;
   width: 500px;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     min-height: 0;
     width: 100%;
   }
@@ -101,18 +96,22 @@ export const ImageWrapper = styled.div`
   }
 `
 
-export const ImageAndDescriptionWrapper = styled.div`
+export const ImageAndDescriptionWrapper = styled.div<{
+  theme?: AppTheme
+}>`
   display: flex;
   flex-direction: column;
   max-width: 500px;
   width: 500px;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     width: 100%;
   }
 `
 
-export const Miscellaneous = styled.div`
+export const Miscellaneous = styled.div<{
+  theme?: AppTheme
+}>`
   border-left: 2px solid #164664;
   box-sizing: border-box;
   display: flex;
@@ -121,7 +120,7 @@ export const Miscellaneous = styled.div`
   max-width: 300px;
   width: 300px;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     border-left: unset;
     max-width: 100%;
     width: 100%;
@@ -152,14 +151,16 @@ export const Title = styled.div`
   padding: 16px 24px;
 `
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{
+  theme?: AppTheme
+}>`
   background-color: #103246;
   display: flex;
   flex-direction: column;
   max-width: 800px;
   width: 800px;
 
-  @media ${props => props.theme.devices.laptopMax} {
+  @media ${(props) => props.theme.devices.laptopMax} {
     width: 100%;
   }
 `

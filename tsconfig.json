@@ -7,11 +7,11 @@
     "skipLibCheck": true, // Skips type checking of declaration files.
     "baseUrl": ".",
     "paths": {
-      "assets/*": ["src/assets/*"],
-      "components/*": ["src/components/*"],
-      "config/*": ["src/config/*"],
-      "store/*": ["src/store/*"],
-      "types/*": ["src/types/*"],
+      "@/assets/*": ["src/assets/*"],
+      "@/components/*": ["src/components/*"],
+      "@/config/*": ["src/config/*"],
+      "@/store/*": ["src/store/*"],
+      "@/types/*": ["src/types/*"]
     },
 
     /* Blunder mode */
@@ -21,15 +21,16 @@
     "isolatedModules": true, // Ensures each file is treated as separate module.
     "noEmit": true, // Prevents TypeScript from emitting output files.
     "jsx": "react-jsx", // Configure JSX support for React.
+    "allowJs": true, // Allows JavaScript files to be compiled.
 
     /* Linting */
-    "strict": true, // Enables strick type checking.
+    "strict": true, // Enables strict type checking.
     "noUnusedLocals": true, // Flags unused local variables.
     "noUnusedParameters": true, // Flags unused function parameters.
     "noFallthroughCasesInSwitch": true, // Requires handling all cases in a switch statement.
     "declaration": true, // Generates declaration files for TypeScript.
-    "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names.
+    "forceConsistentCasingInFileNames": true // Ensure consistent casing in file names.
   },
-  "include": ["**/*", ".storybook/*", "eslint.config.js"],
-  "exclude": ["dist", "node_modules", "src/**/__docs__", "src/**/__test__"],
+  "include": ["src", ".storybook/*", "eslint.config.js", "vite.config.ts"],
+  "exclude": ["dist", "node_modules", "src/**/__docs__", "src/**/__test__"]
 }

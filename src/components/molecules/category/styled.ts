@@ -1,14 +1,10 @@
-import { styled } from 'styled-components'
-
-export const GoalsWrapper = styled.div`
-  padding: 10px;
-`
+import styled from '@emotion/styled'
+import type { Theme as AppTheme } from '@/types/app/Theme'
 
 export const Header = styled.div`
   display: flex;
   cursor: pointer;
   flex-direction: row;
-  min-height: 72px;
   padding: 16px;
   justify-content: space-between;
   user-select: none;
@@ -36,15 +32,20 @@ export const LeftHeaderTitle = styled.div`
   letter-spacing: 1px;
 `
 
-export const RightHeader = styled.div`
-  color: ${props => props.theme.palette.category.expandIcon.default};
+export const RightHeader = styled.div<{
+  theme?: AppTheme
+}>`
+  color: ${(props) => props.theme.palette.category.expandIcon.default};
   display: flex;
   flex-direction: row;
 `
 
-export const Wrapper = styled.div`
-  background-color: ${props => props.theme.palette.category.background.default};
-  border: 1px solid ${props => props.theme.palette.category.border.default};
+export const Wrapper = styled.div<{
+  theme?: AppTheme
+}>`
+  background-color: ${(props) =>
+    props.theme.palette.category.background.default};
+  border: 1px solid ${(props) => props.theme.palette.category.border.default};
   border-radius: 8px;
   display: flex;
   flex-direction: column;

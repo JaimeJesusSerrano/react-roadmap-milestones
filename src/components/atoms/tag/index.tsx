@@ -1,17 +1,12 @@
-import { type ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 import * as S from './styled'
+import type { TagProps } from './types'
 
-interface Props {
-  readonly children?: ReactNode
-}
-
-export function Tag({ children, ...props }: Props): ReactNode {
+export function Tag({ children, ...props }: TagProps): ReactNode {
   return (
     <S.Wrapper {...props}>
-      <S.Body>
-        {children}
-      </S.Body>
+      <S.Body>{children}</S.Body>
     </S.Wrapper>
   )
 }

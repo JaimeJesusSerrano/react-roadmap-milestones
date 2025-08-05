@@ -1,26 +1,22 @@
 import { type ReactNode, useState } from 'react'
 
-import { type Goal as IGoal } from 'types/model/Goal'
-
-import { Goals } from './Goals'
-import { RightHeader } from './RightHeader'
+import { Goals } from './components/goals'
+import { RightHeader } from './components/right-header'
 import * as S from './styled'
+import type { CategoryProps } from './types'
 
-interface Props {
-  readonly goals: IGoal[]
-  readonly name: string
-}
-
-export function Category({ goals, name = '' }: Props): ReactNode {
+export function Category({ goals, name = '' }: CategoryProps): ReactNode {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
     <S.Wrapper>
-      <S.Header onClick={() => { setIsExpanded(!isExpanded) }}>
+      <S.Header
+        onClick={() => {
+          setIsExpanded(!isExpanded)
+        }}
+      >
         <S.LeftHeader>
-          <S.LeftHeaderTitle>
-            {name}
-          </S.LeftHeaderTitle>
+          <S.LeftHeaderTitle>{name}</S.LeftHeaderTitle>
 
           <S.LeftHeaderSubtitle>
             {goals.length === 1 ? '1 Entry' : `${goals.length} Entries`}

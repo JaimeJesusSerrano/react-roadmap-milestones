@@ -1,8 +1,9 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+/* eslint-disable max-lines -- Disable due it is a story */
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { RoadmapMilestones } from 'components/organisms/roadmap-milestones'
-import { type RoadmapMilestones as IRoadmapMilestones } from 'types/model/RoadmapMilestones'
-import { type Theme as ITheme } from 'types/app/Theme'
+import { RoadmapMilestones } from '@/components/organisms/roadmap-milestones'
+import type { RoadmapMilestones as IRoadmapMilestones } from '@/types/model/RoadmapMilestones'
+import type { Theme as ITheme } from '@/types/app/Theme'
 
 const roadmapMilestonesData: IRoadmapMilestones = {
   name: 'Roadmap Milestone',
@@ -15,9 +16,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'This feature includes responsive styles and basic html',
           finishDate: new Date('2021-05-01'),
+          images: [],
           name: 'Board v1. Create Board component',
           startDate: new Date('2021-04-18'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-05-01'),
         },
         {
@@ -26,9 +29,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'This feature includes responsive styles and basic html',
           finishDate: new Date('2021-05-01'),
+          images: [],
           name: 'Milestone v1. Create Milestone component',
           startDate: new Date('2021-04-18'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-05-01'),
         },
         {
@@ -37,9 +42,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'This feature includes responsive styles and basic html',
           finishDate: new Date('2021-05-01'),
+          images: [],
           name: 'Goal v1. Create Goal component',
           startDate: new Date('2021-04-18'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-05-01'),
         },
         {
@@ -48,9 +55,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'It will be place and fixed in the application top',
           finishDate: new Date('2021-05-01'),
+          images: [],
           name: 'Header v1. Create Header component',
           startDate: new Date('2021-04-18'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-05-01'),
         },
         {
@@ -59,10 +68,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: '',
           finishDate: new Date('2021-04-04'),
+          images: [],
           name: 'Create repository',
           startDate: new Date('2021-03-13'),
           status: 'Done',
-
+          tags: [],
           updateDate: new Date('2021-04-04'),
         },
         {
@@ -71,9 +81,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: '',
           finishDate: new Date('2021-04-04'),
+          images: [],
           name: 'Install ReactJS and basic structure',
           startDate: new Date('2021-04-04'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-04-04'),
         },
         {
@@ -82,9 +94,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: '',
           finishDate: new Date('2021-04-18'),
+          images: [],
           name: 'Define initial Roadmap types',
           startDate: new Date('2021-04-04'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-04-18'),
         },
         {
@@ -94,9 +108,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           description:
             'With this feature we will can get a fake data from a fake service. It is necessary to future real connections.',
           finishDate: new Date('2021-05-09'),
+          images: [],
           name: 'Add services and react query structure',
           startDate: new Date('2021-05-01'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-05-09'),
         },
       ],
@@ -111,11 +127,14 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Components',
           },
-          description: 'We will updated Milestone component with new styles and expandable behavior',
+          description:
+            'We will updated Milestone component with new styles and expandable behavior',
           finishDate: new Date('2021-07-17'),
+          images: [],
           name: 'Milestone v2',
           startDate: new Date('2021-05-10'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-07-17'),
         },
         {
@@ -124,9 +143,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'We will updated Goal component with new styles',
           finishDate: new Date('2021-07-17'),
+          images: [],
           name: 'Goal v2',
           startDate: new Date('2021-05-10'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-07-17'),
         },
         {
@@ -135,9 +156,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: '',
           finishDate: new Date('2021-05-10'),
+          images: [],
           name: 'Check and update dependencies',
           startDate: new Date('2021-05-09'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-05-10'),
         },
         {
@@ -146,9 +169,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: '',
           finishDate: new Date('2021-05-09'),
+          images: [],
           name: 'Add Svg template to import them',
           startDate: new Date('2021-05-09'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-05-09'),
         },
         {
@@ -157,20 +182,25 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'It is required to add quality to code',
           finishDate: new Date('2021-07-20'),
+          images: [],
           name: 'Add tests infrastructure',
           startDate: new Date('2021-05-09'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-07-20'),
         },
         {
           category: {
             name: 'Infrastructure',
           },
-          description: 'Roboto will be added as default font with his several font weight',
+          description:
+            'Roboto will be added as default font with his several font weight',
           finishDate: new Date('2021-07-24'),
+          images: [],
           name: 'Roboto as default font',
           startDate: new Date('2021-07-20'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-07-24'),
         },
       ],
@@ -187,20 +217,25 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'Allow categorize goals to structure them',
           finishDate: new Date('2021-09-17'),
+          images: [],
           name: 'Milestone v3',
           startDate: new Date('2021-08-29'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-09-17'),
         },
         {
           category: {
             name: 'Components',
           },
-          description: 'Goal v3. Add behavior when click in a goal to open a dialog to expand it information',
+          description:
+            'Goal v3. Add behavior when click in a goal to open a dialog to expand it information',
           finishDate: new Date('2021-10-24'),
+          images: [],
           name: 'Goal v3',
           startDate: new Date('2021-09-17'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-10-24'),
         },
         {
@@ -209,21 +244,25 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'Create global dialog component',
           finishDate: new Date('2021-10-23'),
+          images: [],
           name: 'Dialog v1',
           startDate: new Date('2021-09-17'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-10-23'),
         },
         {
           category: {
             name: 'Components',
           },
-          description: 'Goal Dialog v1. Create dialog when click in a goal to expand it information',
+          description:
+            'Goal Dialog v1. Create dialog when click in a goal to expand it information',
           finishDate: new Date('2021-10-23'),
+          images: [],
           name: 'Goal Dialog v1',
           startDate: new Date('2021-09-17'),
           status: 'Done',
-
+          tags: [],
           updateDate: new Date('2021-10-23'),
         },
         {
@@ -233,10 +272,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           description:
             'Add context infrastructure to store data and it data can be shared between whole application components',
           finishDate: new Date('2021-09-21'),
+          images: [],
           name: 'Context to store data',
           startDate: new Date('2021-09-17'),
           status: 'Done',
-
+          tags: [],
           updateDate: new Date('2021-09-21'),
         },
         {
@@ -245,9 +285,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'Set default font styles as Roboto and apply rem sizes',
           finishDate: new Date('2021-10-31'),
+          images: [],
           name: 'Default font Roboto',
           startDate: new Date('2021-10-24'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-10-31'),
         },
       ],
@@ -264,9 +306,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'Goal Dialog v2. Add default image',
           finishDate: new Date('2021-11-01'),
+          images: [],
           name: 'Goal Dialog v2',
           startDate: new Date('2021-11-01'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-10-31'),
         },
         {
@@ -275,75 +319,95 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'Goal v4. Add default image preview',
           finishDate: new Date('2021-11-01'),
+          images: [],
           name: 'Goal v4',
           startDate: new Date('2021-11-01'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-10-31'),
         },
         {
           category: {
             name: 'Components',
           },
-          description: 'Milestone v4. Show current milestone status before all categories and goals',
+          description:
+            'Milestone v4. Show current milestone status before all categories and goals',
           finishDate: new Date('2021-11-01'),
+          images: [],
           name: 'Milestone v4',
           startDate: new Date('2021-11-01'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-11-01'),
         },
         {
           category: {
             name: 'Infrastructure',
           },
-          description: 'Create new scrollbar style and apply it in whole application',
+          description:
+            'Create new scrollbar style and apply it in whole application',
           finishDate: new Date('2021-11-10'),
+          images: [],
           name: 'New scrollbar style',
           startDate: new Date('2021-11-10'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-11-10'),
         },
         {
           category: {
             name: 'Infrastructure',
           },
-          description: 'To avoid several problems when execute npm install, we will establish a NodeJs version',
+          description:
+            'To avoid several problems when execute npm install, we will establish a NodeJs version',
           finishDate: new Date('2021-11-09'),
+          images: [],
           name: 'NodeJs version fixed',
           startDate: new Date('2021-11-09'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-11-09'),
         },
         {
           category: {
             name: 'Infrastructure',
           },
-          description: 'Is necessary set the project LICENSE to allow than other users use the component',
+          description:
+            'Is necessary set the project LICENSE to allow than other users use the component',
           finishDate: new Date('2021-11-10'),
+          images: [],
           name: 'Create LICENSE file',
           startDate: new Date('2021-11-10'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-11-10'),
         },
         {
           category: {
             name: 'Infrastructure',
           },
+          description:
+            'Create readme with instruction to use the Roadmap Milestone component',
           finishDate: new Date('2021-11-10'),
-          description: 'Create readme with instruction to use the Roadmap Milestone component',
+          images: [],
           name: 'Readme',
           startDate: new Date('2021-11-10'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-11-10'),
         },
         {
           category: {
             name: 'Infrastructure',
           },
-          description: 'We add store Global Dialog test to check its correct behavior automatically',
+          description:
+            'We add store Global Dialog test to check its correct behavior automatically',
           finishDate: new Date('2021-11-11'),
+          images: [],
           name: 'Add store test',
           startDate: new Date('2021-11-11'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-11-11'),
         },
         {
@@ -353,9 +417,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           description:
             'To improve the speed of application we will added a technical upgrade to load page in lazy mode also we will develop a Loader component to show the load',
           finishDate: new Date('2021-11-11'),
+          images: [],
           name: 'Lazy page import',
           startDate: new Date('2021-11-11'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-11-11'),
         },
       ],
@@ -372,9 +438,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description: 'Goal Dialog v3. Responsive dialog',
           finishDate: new Date('2021-11-11'),
+          images: [],
           name: 'Goal Dialog v3',
           startDate: new Date('2021-11-11'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-11-11'),
         },
         {
@@ -384,8 +452,10 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           description:
             'Milestone v5. Hide completed milestones, add an option to collapse/expand them and select initial behavior',
           finishDate: new Date('2022-04-06'),
+          images: [],
           name: 'Milestone v5',
           status: 'Done',
+          tags: [],
           updateDate: new Date('2022-04-06'),
         },
         {
@@ -395,20 +465,25 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           description:
             'We have to add Breakpoints (mobile and laptop) to handle the way to show components in different sizes depending screen size or device',
           finishDate: new Date('2021-11-11'),
+          images: [],
           name: 'Breakpoints and devices',
           startDate: new Date('2021-11-11'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-11-11'),
         },
         {
           category: {
             name: 'Infrastructure',
           },
-          description: 'With translation functionality we can show the principal labels in different languages',
+          description:
+            'With translation functionality we can show the principal labels in different languages',
           finishDate: new Date('2022-04-10'),
+          images: [],
           name: 'Add translation functionality',
           startDate: new Date('2022-04-09'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2022-04-10'),
         },
         {
@@ -418,8 +493,10 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           description:
             'Adding all colors to palette theme we get a robust color handling and we will can allow change current styles in the future easier',
           finishDate: new Date('2022-04-10'),
+          images: [],
           name: 'Add all color to palette theme',
           status: 'Done',
+          tags: [],
           updateDate: new Date('2021-11-11'),
         },
       ],
@@ -437,9 +514,11 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           description:
             'Milestone v6. Title with more space when milestone is collapsed. Add ellipsis if the title is long',
           finishDate: new Date('2023-10-03'),
+          images: [],
           name: 'Milestone v6',
           startDate: new Date('2023-10-03'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2023-10-03'),
         },
         {
@@ -449,8 +528,10 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           description:
             'Goal v5. Add tags section in goal summary, below goal description, and goal dialog, on the right side below the category. The idea is to be able to allow adding all the tags that you want and shown them',
           finishDate: new Date('2023-10-05'),
+          images: [],
           name: 'Goal v5',
-          shortDescription: 'Goal v5. Add tags below goal description and in the goal dialog',
+          shortDescription:
+            'Goal v5. Add tags below goal description and in the goal dialog',
           startDate: new Date('2023-10-05'),
           status: 'Done',
           tags: [
@@ -467,20 +548,26 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Infrastructure',
           },
-          description: 'Add and apply eslintrc and prettier airbnb rules to ensure the correct code style',
+          description:
+            'Add and apply eslintrc and prettier airbnb rules to ensure the correct code style',
           finishDate: new Date('2023-01-09'),
+          images: [],
           name: 'Add eslintrc and prettier',
           startDate: new Date('2023-01-09'),
           status: 'Done',
+          tags: [],
           updateDate: new Date('2023-01-09'),
         },
         {
           category: {
             name: 'Infrastructure',
           },
-          description: 'Publish ReactRoadmapMilestone as npm package and do it public for everyone',
+          description:
+            'Publish ReactRoadmapMilestone as npm package and do it public for everyone',
+          images: [],
           name: 'Publish into npm',
           status: 'Pending',
+          tags: [],
           updateDate: new Date('2023-01-09'),
         },
       ],
@@ -493,9 +580,12 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           category: {
             name: 'Components',
           },
-          description: 'Goal v6. Add different colors to differentiate between completed and uncompleted goals',
+          description:
+            'Goal v6. Add different colors to differentiate between completed and uncompleted goals',
+          images: [],
           name: 'Goal v6',
           status: 'Pending',
+          tags: [],
           updateDate: new Date('2023-01-09'),
         },
         {
@@ -504,8 +594,10 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description:
             'Milestone v7. Add different colors to differentiate between completed and uncompleted milestones',
+          images: [],
           name: 'Milestone v7',
           status: 'Pending',
+          tags: [],
           updateDate: new Date('2023-01-09'),
         },
         {
@@ -513,8 +605,10 @@ const roadmapMilestonesData: IRoadmapMilestones = {
             name: 'Global components',
           },
           description: 'Create an empty milestones status',
+          images: [],
           name: 'Empty milestones status',
           status: 'Pending',
+          tags: [],
           updateDate: new Date('2023-09-21'),
         },
         {
@@ -523,9 +617,12 @@ const roadmapMilestonesData: IRoadmapMilestones = {
           },
           description:
             'To ensure the easy use of the component the required types should be a few of them. Also use the import type directive to ensure a mayor documentation',
+          images: [],
           name: 'Update types and required values',
-          shortDescription: 'To ensure the easy use of the component the required types should be a few of them',
+          shortDescription:
+            'To ensure the easy use of the component the required types should be a few of them',
           status: 'Pending',
+          tags: [],
           updateDate: new Date('2023-09-21'),
         },
       ],
@@ -543,18 +640,28 @@ const theme: ITheme = {
   devices: {
     mobileMin: '(min-width: 0px)',
     laptopMax: '(max-width: 900px)',
-    laptopMin: '(min-width: 900px)' },
+    laptopMin: '(min-width: 900px)',
+  },
   palette: {
     background: {
       default: '#0d2635',
     },
     category: {
-      background: { default: '#1a5a7f' },
+      background: {
+        default: '#1a5a7f',
+      },
       border: { default: '#3785ae' },
-      expandIcon: { default: '#ade1ff' } },
+      expandIcon: {
+        default: '#ade1ff',
+      },
+    },
     milestone: {
-      background: { default: '#164664' },
-      expandIcon: { default: '#ade1ff' },
+      background: {
+        default: '#164664',
+      },
+      expandIcon: {
+        default: '#ade1ff',
+      },
       finishDate: {
         font: { default: '#ade1ff' },
       },
@@ -564,9 +671,15 @@ const theme: ITheme = {
       },
     },
     oldMilestones: {
-      background: { default: '#164664' },
-      border: { default: '#296d94' } },
-    scrollBar: { default: '#bac1c5', hover: '#949a9d' },
+      background: {
+        default: '#164664',
+      },
+      border: { default: '#296d94' },
+    },
+    scrollBar: {
+      default: '#bac1c5',
+      hover: '#949a9d',
+    },
   },
 }
 
@@ -587,6 +700,5 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const V1: Story = {
-  args: {
-  },
+  args: {},
 }

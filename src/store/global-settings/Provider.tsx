@@ -12,13 +12,17 @@ export function Provider({ children }: Props): ReactNode {
     (currentState: Types.StateType, action: Types.ActionType) => {
       switch (action.type) {
         case Types.SET_ARE_SHOWING_PREVIOUS_MILESTONES:
-          return { ...currentState, showMilestonesFinished: action.value.showMilestonesFinished }
+          return {
+            ...currentState,
+            showMilestonesFinished: action.value.showMilestonesFinished,
+          }
         case Types.SET_STATE:
           return action.value
         case Types.SET_TRANSLATION:
-          return { ...currentState, translation: action.value.translation }
-        default:
-          throw new Error()
+          return {
+            ...currentState,
+            translation: action.value.translation,
+          }
       }
     },
     initialState,
@@ -26,9 +30,5 @@ export function Provider({ children }: Props): ReactNode {
 
   const value = useMemo(() => ({ dispatch, state }), [dispatch, state])
 
-  return (
-    <context.Provider value={value}>
-      {children}
-    </context.Provider>
-  )
+  return <context.Provider value={value}>{children}</context.Provider>
 }
