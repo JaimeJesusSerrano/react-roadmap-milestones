@@ -19,15 +19,15 @@ export function Milestone({
 
     return goalsWithCategory.reduce(
       (previousGoalsByCategories: IGoalsByCategory, currentGoal: IGoal) => {
-        if (currentGoal.category === undefined) return previousGoalsByCategories
+        const { category } = currentGoal
+        if (category === undefined) return previousGoalsByCategories
 
-        // Group initialization
-        previousGoalsByCategories[currentGoal.category.name] ??= []
-
-        // Grouping
-        previousGoalsByCategories[currentGoal.category.name].push(currentGoal)
-
-        return previousGoalsByCategories
+        const { name: categoryName } = category
+        const currentCategoryGoals = previousGoalsByCategories[categoryName] ?? []
+        return {
+          ...previousGoalsByCategories,
+          [categoryName]: [...currentCategoryGoals, currentGoal],
+        }
       },
       {},
     )

@@ -18,9 +18,9 @@ export function GlobalDialog({ className }: GlobalDialogProps): ReactNode {
       }}
       open={globalDialogState.isOpen}
     >
-      {globalDialogState.Component !== undefined ? (
+      {globalDialogState.Component === undefined ? null : (
         <div className={className ?? ''}>{globalDialogState.Component}</div>
-      ) : null}
+      )}
     </Dialog>
   )
 }

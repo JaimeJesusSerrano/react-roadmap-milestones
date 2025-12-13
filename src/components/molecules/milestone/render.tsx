@@ -43,11 +43,11 @@ export function Render({
         <S.StatusWrapper>
           <S.Status title={milestone.status}>{milestone.status}</S.Status>
 
-          {milestone.finishDate !== undefined ? (
+          {milestone.finishDate === undefined ? null : (
             <S.StatusDate>
               {milestone.finishDate.toLocaleDateString()}
             </S.StatusDate>
-          ) : null}
+          )}
         </S.StatusWrapper>
       </S.Header>
 
